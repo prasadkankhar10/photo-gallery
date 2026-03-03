@@ -190,6 +190,16 @@ app.post('/api/upload_final', async (req, res) => {
 
     res.json({ success: true, id: result.lastID, ...telegramData });
     
+    // Cleanup: Delete the local temp file to save disk space
+    try {
+        if (fs.existsSync(absolutePath)) {
+            fs.unlinkSync(absolutePath);
+            console.log(`[Auto-Cleanup] Deleted local file: ${absolutePath}`);
+        }
+    } catch (cleanupErr) {
+        console.error("Cleanup error:", cleanupErr);
+    }
+
     // Trigger catalog regeneration and GitHub push in the background
     generateCatalogAndSync();
     
@@ -384,7 +394,21 @@ app.get('/api/review_queue', async (req, res) => {
 
 app.delete('/api/review_queue/:id', async (req, res) => {
   try {
+    const queueItem = await db.get('SELECT file_path FROM processing_queue WHERE id = ?', [req.params.id]);
     await db.run('DELETE FROM processing_queue WHERE id = ?', [req.params.id]);
+    
+    // Cleanup the local file when rejected
+    if (queueItem && queueItem.file_path) {
+        try {
+            if (fs.existsSync(queueItem.file_path)) {
+                fs.unlinkSync(queueItem.file_path);
+                console.log(`[Auto-Cleanup] Deleted rejected file: ${queueItem.file_path}`);
+            }
+        } catch (e) {
+            console.error("Failed to delete local rejection file:", e);
+        }
+    }
+
     res.json({ success: true });
   } catch (error) {
     console.error("Delete from queue error:", error);
