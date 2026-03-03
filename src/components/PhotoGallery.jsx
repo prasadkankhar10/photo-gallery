@@ -18,6 +18,7 @@ export default function PhotoGallery() {
   }, [searchTerm, semanticMode]);
   
   const isCloudHost = window.location.hostname.includes('github.io');
+  const workerUrl = import.meta.env.VITE_CLOUDFLARE_WORKER_URL;
 
   const fetchPhotos = async () => {
     setLoading(true);
@@ -244,17 +245,23 @@ export default function PhotoGallery() {
           {photos.map(photo => (
             <div key={photo.id} className="break-inside-avoid glass-panel rounded-2xl overflow-hidden group">
               <div className="relative">
-                {isCloudHost && photo.telegram_embed_url ? (
-                    // Cloud Mode: Proxy image requests through services or use public embeds
-                    // Note: Browsers block <iframe> in columns well, using a public reverse proxy for images is standard if telegram direct links fail due to CORS
-                    // For pure serverless without proxy, the user clicks to view. But we can embed the thumbnail directly via public link:
+                {isCloudHost && workerUrl && photo.telegram_file_id ? (
+                    // Cloud Mode (Perfect): Proxy through Cloudflare Worker
                     <img 
-                      src={`https://api.allorigins.win/raw?url=${encodeURIComponent(photo.telegram_embed_url)}`} 
-                      onError={(e) => { e.target.style.display = 'none'; }}
+                      src={`${workerUrl}?file_id=${photo.telegram_file_id}`} 
                       alt="Gallery Item" 
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
+                ) : isCloudHost && photo.telegram_embed_url ? (
+                    // Cloud Mode (Fallback): Simple link to Telegram WebView
+                    // Due to strict CORS, if a custom proxy isn't configured, we fallback to a simple click-to-view UI.
+                    <div className="w-full h-48 bg-gray-800 flex items-center justify-center p-4 py-8 text-center border border-white/5">
+                       <a href={photo.telegram_embed_url.replace('?embed=1', '')} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-blue-400 hover:text-blue-300 transition-colors">
+                          <ImageIcon className="w-8 h-8 mb-2 opacity-60" />
+                          <span className="text-sm font-medium">View Full Photo on Telegram</span>
+                       </a>
+                    </div>
                 ) : (
                     // Local Mode: Serve directly from node uploads/tests folders
                     <img 
