@@ -5,10 +5,13 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-import { spawn } from 'child_process';
+import { spawn, exec } from 'child_process';
+import util from 'util';
 import { initializeDatabase } from './db_init.js';
 import { uploadToTelegram, getTelegramFileUrl } from './telegram_handler.js';
 import { GoogleGenAI } from '@google/genai';
+
+const execPromise = util.promisify(exec);
 
 dotenv.config();
 
@@ -64,6 +67,46 @@ function fileToGenerativePart(filePath, mimeType) {
       mimeType
     },
   };
+}
+
+// --- CATALOG GENERATOR & GIT SYNC ---
+async function generateCatalogAndSync() {
+    try {
+        console.log("Generating static catalog for GitHub Pages...");
+        const rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
+        
+        const publicCatalog = rows.map(r => {
+            // Convert bot API link to public embed link
+            // e.g. https://t.me/c/1003597554125/123 -> https://t.me/MyChannelUsername/123?embed=1
+            // We need the user's public channel name. We'll store it in ENV or fallback to ID
+            const publicChannelName = process.env.TELEGRAM_PUBLIC_CHANNEL_NAME || process.env.TELEGRAM_CHANNEL_ID.replace('-100', '');
+            
+            return {
+                id: r.id,
+                telegram_message_id: r.telegram_message_id,
+                telegram_file_id: r.telegram_file_id,
+                telegram_embed_url: `https://t.me/${publicChannelName}/${r.telegram_message_id}?embed=1`,
+                people: JSON.parse(r.people || '[]'),
+                tags: JSON.parse(r.tags || '[]'),
+                upload_timestamp: r.upload_timestamp
+            };
+        });
+
+        const catalogPath = path.join(__dirname, '..', 'public', 'catalog.json');
+        fs.writeFileSync(catalogPath, JSON.stringify(publicCatalog, null, 2));
+        console.log("Written public/catalog.json");
+        
+        // Disable git sync if not configured to prevent crash loops locally
+        if (process.env.GIT_AUTO_SYNC === 'true') {
+            console.log("Pushing updates to GitHub...");
+            await execPromise('git add public/catalog.json');
+            await execPromise('git commit -m "Auto-update gallery catalog" || true'); // || true ignores empty commit error
+            await execPromise('git push origin main || git push origin master');
+            console.log("Catalog synced to GitHub successfully.");
+        }
+    } catch (error) {
+        console.error("Catalog generation / sync failed:", error);
+    }
 }
 
 app.post('/api/tag_image', upload.single('photo'), async (req, res) => {
@@ -146,6 +189,10 @@ app.post('/api/upload_final', async (req, res) => {
     }
 
     res.json({ success: true, id: result.lastID, ...telegramData });
+    
+    // Trigger catalog regeneration and GitHub push in the background
+    generateCatalogAndSync();
+    
   } catch (error) {
     console.error("Final upload error:", error);
     res.status(500).json({ error: "Failed to upload to Telegram and save metadata" });
@@ -257,6 +304,9 @@ app.delete('/api/delete_photo/:id', async (req, res) => {
     const photoId = req.params.id;
     await db.run('DELETE FROM media WHERE id = ?', [photoId]);
     res.json({ success: true, message: "Photo metadata removed from local gallery" });
+    
+    // Trigger catalog update
+    generateCatalogAndSync();
   } catch (error) {
     console.error("Delete photo error:", error);
     res.status(500).json({ error: "Failed to delete photo metadata" });

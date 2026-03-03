@@ -21,12 +21,14 @@ export default function App() {
           >
             Gallery
           </button>
-          <button 
-            onClick={() => setActiveTab('upload')}
-            className={`px-4 py-2 rounded-lg transition-all ${activeTab === 'upload' ? 'bg-primary/20 text-blue-300 border border-primary/50' : 'hover:bg-white/10 text-gray-400'}`}
-          >
-            Bulk Review Queue
-          </button>
+          {!window.location.hostname.includes('github.io') && (
+              <button 
+                onClick={() => setActiveTab('upload')}
+                className={`px-4 py-2 rounded-lg transition-all ${activeTab === 'upload' ? 'bg-primary/20 text-blue-300 border border-primary/50' : 'hover:bg-white/10 text-gray-400'}`}
+              >
+                Bulk Review Queue
+              </button>
+          )}
         </nav>
       </header>
 

@@ -16,16 +16,37 @@ export default function PhotoGallery() {
       fetchPhotos();
     }
   }, [searchTerm, semanticMode]);
+  
+  const isCloudHost = window.location.hostname.includes('github.io');
 
   const fetchPhotos = async () => {
     setLoading(true);
     try {
-      const url = searchTerm ? `/api/photos?q=${encodeURIComponent(searchTerm)}` : '/api/photos';
-      const res = await fetch(url);
-      const data = await res.json();
-      setPhotos(data);
+      if (isCloudHost) {
+          // CLOUD MODE (Github Pages)
+          const res = await fetch('./catalog.json');
+          if (!res.ok) throw new Error("Catalog not found");
+          const allData = await res.json();
+          
+          if (searchTerm) {
+              const query = searchTerm.toLowerCase();
+              const filtered = allData.filter(row => {
+                 return row.people.some(p => p.toLowerCase().includes(query)) || row.tags.some(t => t.toLowerCase().includes(query));
+              });
+              setPhotos(filtered);
+          } else {
+              setPhotos(allData);
+          }
+      } else {
+          // LOCAL MODE (Node Backend)
+          const url = searchTerm ? `/api/photos?q=${encodeURIComponent(searchTerm)}` : '/api/photos';
+          const res = await fetch(url);
+          const data = await res.json();
+          setPhotos(data);
+      }
     } catch (e) {
       console.error(e);
+      setPhotos([]);
     }
     setLoading(false);
   };
@@ -174,21 +195,23 @@ export default function PhotoGallery() {
                 </div>
             </div>
             
-            <button 
-                type="button" 
-                onClick={() => {
-                    setSemanticMode(!semanticMode);
-                    if (!semanticMode && searchTerm) {
-                        // Triggers semantic search on the existing query if switching mode
-                        setTimeout(() => handleSemanticSearch(new Event('submit')), 0);
-                    }
-                }}
-                className={`flex items-center gap-2 px-4 py-4 rounded-2xl font-medium transition-all ${semanticMode ? 'bg-purple-500/20 text-purple-300 border border-purple-500/50' : 'bg-gray-800 text-gray-400 border border-white/10 hover:bg-gray-700'}`}
-                title="Toggle Semantic AI Search"
-            >
-                <Brain className="w-5 h-5" />
-                AI Search
-            </button>
+            {/* Disable Semantic Search in Cloud Mode */
+             !isCloudHost && (
+                <button 
+                    type="button" 
+                    onClick={() => {
+                        setSemanticMode(!semanticMode);
+                        if (!semanticMode && searchTerm) {
+                            setTimeout(() => handleSemanticSearch(new Event('submit')), 0);
+                        }
+                    }}
+                    className={`flex items-center gap-2 px-4 py-4 rounded-2xl font-medium transition-all ${semanticMode ? 'bg-purple-500/20 text-purple-300 border border-purple-500/50' : 'bg-gray-800 text-gray-400 border border-white/10 hover:bg-gray-700'}`}
+                    title="Toggle Semantic AI Search"
+                >
+                    <Brain className="w-5 h-5" />
+                    AI Search
+                </button>
+             )}
 
             {semanticMode && (
                 <button 
@@ -221,12 +244,26 @@ export default function PhotoGallery() {
           {photos.map(photo => (
             <div key={photo.id} className="break-inside-avoid glass-panel rounded-2xl overflow-hidden group">
               <div className="relative">
-                <img 
-                  src={`/${photo.local_cache_path}`} 
-                  alt="Gallery Item" 
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+                {isCloudHost && photo.telegram_embed_url ? (
+                    // Cloud Mode: Proxy image requests through services or use public embeds
+                    // Note: Browsers block <iframe> in columns well, using a public reverse proxy for images is standard if telegram direct links fail due to CORS
+                    // For pure serverless without proxy, the user clicks to view. But we can embed the thumbnail directly via public link:
+                    <img 
+                      src={`https://api.allorigins.win/raw?url=${encodeURIComponent(photo.telegram_embed_url)}`} 
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                      alt="Gallery Item" 
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                ) : (
+                    // Local Mode: Serve directly from node uploads/tests folders
+                    <img 
+                      src={`/${photo.local_cache_path}`} 
+                      alt="Gallery Item" 
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                   <div className="flex gap-2">
                     <button 
@@ -245,13 +282,15 @@ export default function PhotoGallery() {
                     >
                       <ExternalLink className="w-4 h-4 text-white" />
                     </a>
-                    <button 
-                      onClick={() => handleDeletePhoto(photo.id)}
-                      className="p-2 bg-white/20 hover:bg-red-500/80 rounded-lg backdrop-blur-md transition-colors ml-auto"
-                      title="Delete Photo"
-                    >
-                      <Trash2 className="w-4 h-4 text-white" />
-                    </button>
+                    {!isCloudHost && (
+                        <button 
+                          onClick={() => handleDeletePhoto(photo.id)}
+                          className="p-2 bg-white/20 hover:bg-red-500/80 rounded-lg backdrop-blur-md transition-colors ml-auto"
+                          title="Delete Photo"
+                        >
+                          <Trash2 className="w-4 h-4 text-white" />
+                        </button>
+                    )}
                   </div>
                 </div>
               </div>
