@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Image as ImageIcon, ExternalLink, Download, Loader2, Trash2, Brain, X, Upload } from 'lucide-react';
+import { Search, Image as ImageIcon, ExternalLink, Download, Loader2, Trash2, Brain, X, Upload, Maximize } from 'lucide-react';
 
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState([]);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   const [semanticMode, setSemanticMode] = useState(false);
@@ -112,18 +113,38 @@ export default function PhotoGallery() {
       }
   };
 
-  const handleFetchHighRes = async (fileId) => {
-    try {
-       const res = await fetch(`/api/photo_url/${fileId}`);
-       const data = await res.json();
-       if (data.url) {
-           window.open(data.url, '_blank');
-       } else {
-           alert("Could not fetch high-res URL");
-       }
-    } catch (e) {
-       console.error(e);
-    }
+  const handleDownload = async (photo) => {
+      try {
+          let urlToFetch = '';
+          if (isCloudHost && workerUrl && photo.telegram_file_id) {
+              urlToFetch = `${workerUrl}?file_id=${photo.telegram_file_id}`;
+          } else if (!isCloudHost) {
+               const res = await fetch(`/api/photo_url/${photo.telegram_file_id}`);
+               const data = await res.json();
+               urlToFetch = data.url;
+          } else {
+              if (photo.telegram_embed_url) {
+                   window.open(photo.telegram_embed_url.replace('?embed=1', ''), '_blank');
+              }
+              return;
+          }
+
+          if (urlToFetch) {
+              const response = await fetch(urlToFetch);
+              const blob = await response.blob();
+              const blobUrl = window.URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = blobUrl;
+              a.download = `photo_${photo.id}.jpg`;
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              window.URL.revokeObjectURL(blobUrl);
+          }
+      } catch (e) {
+          console.error(e);
+          alert("Error downloading photo. Please try again or open in Telegram.");
+      }
   };
 
   const handleDeletePhoto = async (photoId) => {
@@ -273,19 +294,29 @@ export default function PhotoGallery() {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                   <div className="flex gap-2">
+                    {(!isCloudHost || workerUrl) && (
+                      <button 
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFullscreenImage(isCloudHost ? `${workerUrl}?file_id=${photo.telegram_file_id}` : `/${photo.local_cache_path}`); }}
+                        className="p-2 bg-white/20 hover:bg-primary/80 rounded-lg backdrop-blur-md transition-colors"
+                        title="Fullscreen"
+                      >
+                        <Maximize className="w-4 h-4 text-white" />
+                      </button>
+                    )}
                     <button 
-                      onClick={() => handleFetchHighRes(photo.telegram_file_id)}
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleDownload(photo); }}
                       className="p-2 bg-white/20 hover:bg-primary/80 rounded-lg backdrop-blur-md transition-colors"
-                      title="View High-Res"
+                      title="Download"
                     >
                       <Download className="w-4 h-4 text-white" />
                     </button>
                     <a 
-                      href={photo.telegram_link} 
+                      href={photo.telegram_link || (photo.telegram_embed_url ? photo.telegram_embed_url.replace('?embed=1', '') : '#')} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-2 bg-white/20 hover:bg-primary/80 rounded-lg backdrop-blur-md transition-colors"
                       title="Open in Telegram"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink className="w-4 h-4 text-white" />
                     </a>
@@ -320,6 +351,27 @@ export default function PhotoGallery() {
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Fullscreen Modal Overlay */}
+      {fullscreenImage && (
+        <div 
+           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md cursor-zoom-out" 
+           onClick={() => setFullscreenImage(null)}
+        >
+            <button 
+                className="absolute top-6 right-6 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors z-[110]"
+                onClick={(e) => { e.stopPropagation(); setFullscreenImage(null); }}
+            >
+                <X className="w-6 h-6" />
+            </button>
+            <img 
+                src={fullscreenImage} 
+                alt="Fullscreen view" 
+                className="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl rounded-sm"
+                onClick={(e) => e.stopPropagation()}
+            />
         </div>
       )}
     </div>
