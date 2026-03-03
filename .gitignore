@@ -1,0 +1,6 @@
+node_modules
+dist
+.env
+photos.db
+photos.db-journal
+uploads/
