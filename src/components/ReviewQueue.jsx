@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Square, Check, X, User as UserIcon } from 'lucide-react';
 
-export default function ReviewQueue() {
+export default function ReviewQueue({ addToast }) {
   const [isProcessorRunning, setIsProcessorRunning] = useState(false);
   const [queue, setQueue] = useState([]);
   const [pendingLabels, setPendingLabels] = useState({});
@@ -75,9 +75,11 @@ export default function ReviewQueue() {
       });
       if (res.ok) {
         setQueue(queue.filter(q => q.id !== item.id));
+        if (addToast) addToast("Photo Approved & Synced to Cloud!", "success");
       }
     } catch (error) {
       console.error("Failed to approve photo", error);
+      if (addToast) addToast("Failed to approve photo", "error");
     }
   };
 
@@ -85,7 +87,11 @@ export default function ReviewQueue() {
     try {
       await fetch(`http://localhost:3000/api/review_queue/${id}`, { method: 'DELETE' });
       setQueue(queue.filter(q => q.id !== id));
-    } catch (e) { console.error("Failed to discard", e); }
+      if (addToast) addToast("Photo Discarded & Permanently Deleted", "info");
+    } catch (e) { 
+        console.error("Failed to discard", e); 
+        if (addToast) addToast("Failed to discard photo", "error");
+    }
   };
 
   return (
@@ -141,11 +147,13 @@ export default function ReviewQueue() {
                 });
                 if (res.ok) {
                     btn.innerText = "+ Upload to Queue";
-                    alert(`Successfully added ${files.length} photos to the processing directory! Start the AI Daemon to scan them.`);
+                    if (addToast) addToast(`Successfully queued ${files.length} photos! Start AI daemon to scan them.`, 'success');
+                    else alert(`Successfully added ${files.length} photos to the processing directory! Start the AI Daemon to scan them.`);
                 }
             } catch (err) {
                 console.error("Upload failed", err);
-                alert("Failed to upload photos.");
+                if (addToast) addToast("Failed to upload photos.", 'error');
+                else alert("Failed to upload photos.");
             }
           }}
         />

@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
+import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
 import ReviewQueue from './components/ReviewQueue';
 import PhotoGallery from './components/PhotoGallery';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('gallery');
+  const [toasts, setToasts] = useState([]);
+
+  const addToast = (message, type = 'info') => {
+    const id = Date.now();
+    setToasts(prev => [...prev, { id, message, type }]);
+    setTimeout(() => {
+      setToasts(prev => prev.filter(t => t.id !== id));
+    }, 4000);
+  };
+
+  const removeToast = (id) => {
+    setToasts(prev => prev.filter(t => t.id !== id));
+  };
 
   return (
     <div className="min-h-screen container mx-auto px-4 py-8">
@@ -33,8 +47,32 @@ export default function App() {
       </header>
 
       <main>
-        {activeTab === 'upload' ? <ReviewQueue /> : <PhotoGallery />}
+        {activeTab === 'upload' ? <ReviewQueue addToast={addToast} /> : <PhotoGallery addToast={addToast} />}
       </main>
+
+      {/* Global Toast Container */}
+      <div className="fixed bottom-6 right-6 z-[200] space-y-3 flex flex-col items-end pointer-events-none">
+        {toasts.map(t => (
+          <div 
+            key={t.id} 
+            className={`animate-slide-up pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.5)] border backdrop-blur-md min-w-[280px] max-w-[400px] ${
+              t.type === 'error' ? 'bg-red-500/10 border-red-500/30 text-red-200' :
+              t.type === 'success' ? 'bg-green-500/10 border-green-500/30 text-green-200' :
+              'bg-blue-500/10 border-blue-500/30 text-blue-200'
+            }`}
+          >
+             {t.type === 'success' ? <CheckCircle2 className="w-5 h-5 text-green-400" /> :
+              t.type === 'error' ? <AlertCircle className="w-5 h-5 text-red-400" /> :
+              <Info className="w-5 h-5 text-blue-400" />}
+             
+             <span className="text-sm font-medium flex-1">{t.message}</span>
+             
+             <button onClick={() => removeToast(t.id)} className="p-1 hover:bg-white/10 rounded-lg transition-colors ml-2 opacity-70 hover:opacity-100">
+                <X className="w-4 h-4" />
+             </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

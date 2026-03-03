@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Image as ImageIcon, ExternalLink, Download, Loader2, Trash2, Brain, X, Upload, Maximize } from 'lucide-react';
 
-export default function PhotoGallery() {
+export default function PhotoGallery({ addToast }) {
   const [photos, setPhotos] = useState([]);
-  const [fullscreenImage, setFullscreenImage] = useState(null);
+  const [allPhotos, setAllPhotos] = useState([]);
+  const [popularTags, setPopularTags] = useState([]);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   const [semanticMode, setSemanticMode] = useState(false);
@@ -45,12 +47,29 @@ export default function PhotoGallery() {
           const res = await fetch(url);
           const data = await res.json();
           setPhotos(data);
+          if (!searchTerm) {
+              setAllPhotos(data);
+              extractPopularTags(data);
+          }
       }
     } catch (e) {
       console.error(e);
       setPhotos([]);
     }
     setLoading(false);
+  };
+
+  const extractPopularTags = (dataList) => {
+      const counts = {};
+      dataList.forEach(p => {
+          p.people.forEach(person => counts[person] = (counts[person] || 0) + 1);
+          p.tags.forEach(tag => counts[tag] = (counts[tag] || 0) + 1);
+      });
+      const topTags = Object.entries(counts)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 8)
+          .map(entry => entry[0]);
+      setPopularTags(topTags);
   };
 
   const handleSemanticSearch = async (e) => {
@@ -84,13 +103,15 @@ export default function PhotoGallery() {
         const data = await res.json();
         
         if (data.error) {
-           alert(data.error);
+           if (addToast) addToast(data.error, 'error');
+           else alert(data.error);
         } else if (data.success) {
            setPhotos(data.photos || []);
         }
     } catch (e) {
         console.error("Semantic search error", e);
-        alert("Semantic search failed. Ensure AI daemon and Flask API are running.");
+        if (addToast) addToast("Semantic search failed. Ensure AI daemon is running.", 'error');
+        else alert("Semantic search failed. Ensure AI daemon and Flask API are running.");
     }
     setLoading(false);
   };
@@ -143,7 +164,7 @@ export default function PhotoGallery() {
           }
       } catch (e) {
           console.error(e);
-          alert("Error downloading photo. Please try again or open in Telegram.");
+          if (addToast) addToast("Error downloading photo.", 'error');
       }
   };
 
@@ -156,12 +177,13 @@ export default function PhotoGallery() {
       });
       if (res.ok) {
         setPhotos(photos.filter(p => p.id !== photoId));
+        if (addToast) addToast("Photo deleted successfully", 'success');
       } else {
-        alert("Failed to delete photo");
+        if (addToast) addToast("Failed to delete photo", 'error');
       }
     } catch (e) {
       console.error(e);
-      alert("Error deleting photo");
+      if (addToast) addToast("Error deleting photo", 'error');
     }
   };
 
@@ -250,11 +272,37 @@ export default function PhotoGallery() {
                   Semantic Search uses CLIP. You can search using natural sentences instead of exact tags.
               </p>
           )}
+
+          {popularTags.length > 0 && !semanticMode && (
+              <div className="flex flex-wrap gap-2 justify-center pt-2">
+                  {popularTags.map(tag => (
+                      <button
+                         key={tag}
+                         onClick={(e) => { e.preventDefault(); setSearchTerm(searchTerm === tag ? '' : tag); }}
+                         className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                             searchTerm === tag 
+                             ? 'bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.6)]' 
+                             : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10'
+                         }`}
+                      >
+                         #{tag}
+                      </button>
+                  ))}
+              </div>
+          )}
       </div>
 
       {(loading && !searchTerm && !semanticMode) ? (
-        <div className="flex justify-center py-20">
-          <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="break-inside-avoid glass-panel rounded-2xl overflow-hidden animate-pulse">
+               <div className="w-full h-64 bg-white/5"></div>
+               <div className="p-4 space-y-3">
+                   <div className="h-4 bg-white/10 rounded w-1/3"></div>
+                   <div className="h-4 bg-white/5 rounded w-1/2"></div>
+               </div>
+            </div>
+          ))}
         </div>
       ) : photos.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 text-gray-500">
@@ -296,7 +344,7 @@ export default function PhotoGallery() {
                   <div className="flex gap-2">
                     {(!isCloudHost || workerUrl) && (
                       <button 
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFullscreenImage(isCloudHost ? `${workerUrl}?file_id=${photo.telegram_file_id}` : `/${photo.local_cache_path}`); }}
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedPhoto(photo); }}
                         className="p-2 bg-white/20 hover:bg-primary/80 rounded-lg backdrop-blur-md transition-colors"
                         title="Fullscreen"
                       >
@@ -354,25 +402,82 @@ export default function PhotoGallery() {
         </div>
       )}
 
-      {/* Fullscreen Modal Overlay */}
-      {fullscreenImage && (
-        <div 
-           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md cursor-zoom-out" 
-           onClick={() => setFullscreenImage(null)}
-        >
-            <button 
-                className="absolute top-6 right-6 p-2 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors z-[110]"
-                onClick={(e) => { e.stopPropagation(); setFullscreenImage(null); }}
-            >
-                <X className="w-6 h-6" />
-            </button>
-            <img 
-                src={fullscreenImage} 
-                alt="Fullscreen view" 
-                className="max-w-[95vw] max-h-[95vh] object-contain shadow-2xl rounded-sm"
-                onClick={(e) => e.stopPropagation()}
-            />
-        </div>
+      {/* Premium Split-Pane Modal Overlay */}
+      {selectedPhoto && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-8" onClick={() => setSelectedPhoto(null)}>
+              <button 
+                  className="absolute top-6 right-6 p-3 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-colors z-[110]" 
+                  onClick={(e) => { e.stopPropagation(); setSelectedPhoto(null); }}
+              >
+                  <X className="w-6 h-6" />
+              </button>
+
+              <div 
+                  className="flex flex-col md:flex-row w-full max-w-7xl h-full max-h-[90vh] bg-[#0a0a0f]/80 border border-white/10 rounded-3xl overflow-hidden shadow-2xl animate-slide-up" 
+                  onClick={e => e.stopPropagation()}
+              >
+                  {/* Left: Huge Image */}
+                  <div className="relative flex-1 bg-black/50 flex items-center justify-center p-4">
+                      <img 
+                          src={isCloudHost && workerUrl && selectedPhoto.telegram_file_id ? `${workerUrl}?file_id=${selectedPhoto.telegram_file_id}` : `/${selectedPhoto.local_cache_path}`} 
+                          className="max-w-full max-h-full object-contain rounded-lg drop-shadow-2xl"
+                          alt="Selected fullscreen"
+                      />
+                  </div>
+
+                  {/* Right: Sidebar Metadata */}
+                  <div className="w-full md:w-[400px] md:min-w-[400px] bg-white/5 border-l border-white/10 p-8 flex flex-col overflow-y-auto custom-scrollbar">
+                      <h3 className="text-2xl font-bold w-full text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-8">Metadata</h3>
+                      
+                      <div className="space-y-8 flex-1">
+                          {selectedPhoto.people && selectedPhoto.people.length > 0 && (
+                              <div>
+                                  <h4 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-widest flex items-center">
+                                      <UserIcon className="w-4 h-4 mr-2" /> Detected People
+                                  </h4>
+                                  <div className="flex flex-wrap gap-2">
+                                     {selectedPhoto.people.map(p => <span key={p} className="px-3 py-1.5 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-medium border border-blue-500/30">@{p}</span> )}
+                                  </div>
+                              </div>
+                          )}
+
+                          {selectedPhoto.tags && selectedPhoto.tags.length > 0 && (
+                              <div>
+                                  <h4 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-widest flex items-center">
+                                      <Brain className="w-4 h-4 mr-2" /> Generated AI Tags
+                                  </h4>
+                                  <div className="flex flex-wrap gap-2">
+                                     {selectedPhoto.tags.map(t => <span key={t} className="px-3 py-1 text-gray-300 bg-white/5 hover:bg-white/10 transition-colors rounded-md text-sm border border-white/10 cursor-pointer" onClick={() => { setSearchTerm(t); setSelectedPhoto(null); }}>#{t}</span> )}
+                                  </div>
+                              </div>
+                          )}
+
+                          <div>
+                              <h4 className="text-xs font-semibold text-gray-500 mb-2 uppercase tracking-widest">Date Uploaded</h4>
+                              <p className="text-gray-300 text-sm font-medium">{new Date(selectedPhoto.upload_timestamp).toLocaleString()}</p>
+                          </div>
+                      </div>
+
+                      <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-2 gap-3">
+                          <button onClick={() => handleDownload(selectedPhoto)} className="flex items-center justify-center py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-colors font-medium shadow-lg">
+                              <Download className="w-5 h-5 mr-2" /> Save
+                          </button>
+                          <a href={selectedPhoto.telegram_link || (selectedPhoto.telegram_embed_url ? selectedPhoto.telegram_embed_url.replace('?embed=1', '') : '#')} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center py-3 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 rounded-xl transition-colors border border-blue-500/30 font-medium shadow-lg">
+                              <ExternalLink className="w-5 h-5 mr-2" /> Open Link
+                          </a>
+                      </div>
+                      
+                      {!isCloudHost && (
+                          <button 
+                             onClick={() => { handleDeletePhoto(selectedPhoto.id); setSelectedPhoto(null); }} 
+                             className="mt-3 flex items-center justify-center py-3 w-full bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition-colors border border-red-500/20 font-medium"
+                          >
+                              <Trash2 className="w-5 h-5 mr-2" /> Delete Permanently
+                          </button>
+                      )}
+                  </div>
+              </div>
+          </div>
       )}
     </div>
   );
