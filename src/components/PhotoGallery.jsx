@@ -266,8 +266,8 @@ export default function PhotoGallery() {
           {photos.map(photo => (
             <div key={photo.id} className="break-inside-avoid glass-panel rounded-2xl overflow-hidden group">
               <div className="relative">
-                {isCloudHost && workerUrl && photo.telegram_file_id ? (
-                    // Cloud Mode (Perfect): Proxy through Cloudflare Worker
+                {workerUrl && photo.telegram_file_id ? (
+                    // Cloud/Proxy Mode: Secure image stream via Cloudflare 
                     <img 
                       src={`${workerUrl}?file_id=${photo.telegram_file_id}`} 
                       alt="Gallery Item" 
