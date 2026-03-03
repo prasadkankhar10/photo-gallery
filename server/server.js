@@ -70,8 +70,15 @@ function fileToGenerativePart(filePath, mimeType) {
 }
 
 // --- CATALOG GENERATOR & GIT SYNC ---
+let isDeploying = false;
+
 async function generateCatalogAndSync() {
+    if (isDeploying) {
+        console.log("Deploy already in progress. Skipping duplicate catalog build.");
+        return;
+    }
     try {
+        isDeploying = true;
         console.log("Generating static catalog for GitHub Pages...");
         const rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
         
@@ -98,14 +105,19 @@ async function generateCatalogAndSync() {
         
         // Disable git sync if not configured to prevent crash loops locally
         if (process.env.GIT_AUTO_SYNC === 'true') {
-            console.log("Pushing updates to GitHub...");
+            console.log("Pushing updates to GitHub main branch...");
             await execPromise('git add public/catalog.json');
-            await execPromise('git commit -m "Auto-update gallery catalog" || true'); // || true ignores empty commit error
+            await execPromise('git commit -m "Auto-update gallery catalog" || true');
             await execPromise('git push origin main || git push origin master');
-            console.log("Catalog synced to GitHub successfully.");
+            
+            console.log("Rebuilding React App and Deploying to GitHub Pages (gh-pages branch)...");
+            await execPromise('npm run deploy');
+            console.log("Gallery Cloud Site successfully updated!");
         }
     } catch (error) {
         console.error("Catalog generation / sync failed:", error);
+    } finally {
+        isDeploying = false;
     }
 }
 
