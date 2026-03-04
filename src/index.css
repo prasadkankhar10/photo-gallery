@@ -3,45 +3,55 @@
 @tailwind utilities;
 
 @layer utilities {
-  .glass-panel {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-500 hover:bg-white/10 hover:border-white/20;
+  .sketch-border {
+    border: 2px solid #2c2e33;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
+  
+  .sketch-button {
+    @apply sketch-border bg-white text-ink shadow-sketch transition-all duration-200 hover:shadow-sketchHover hover:translate-y-[2px] hover:translate-x-[2px] active:shadow-none active:translate-y-[4px] active:translate-x-[4px];
+  }
+  
+  .sketch-card {
+    @apply sketch-border bg-white shadow-sketch;
   }
 }
 
 body {
-    background: radial-gradient(circle at 50% 0%, #1a1a3e 0%, #050508 100%);
-    background-size: 200% 200%;
-    animation: gradientMove 15s ease infinite;
-    color: #f1f5f9;
+    background-color: #fdfbf7;
+    background-image: radial-gradient(#d1cfc9 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #2c2e33;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 0.5px;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Custom Sleek Scrollbar */
+/* Custom Sketchy Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  background: #fdfbf7;
+  border-left: 2px solid #2c2e33;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.3);
+  background: #2c2e33;
+  border: 2px solid #fdfbf7;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.6);
+  background: #5c5f66;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  border: none;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: #d1cfc9;
+  border: none;
+  border-radius: 4px;
 }

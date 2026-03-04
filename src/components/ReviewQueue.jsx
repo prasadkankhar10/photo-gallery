@@ -206,21 +206,21 @@ export default function ReviewQueue({ addToast }) {
   const popularQueueTags = extractPopularQueueTags();
 
   return (
-    <div className="space-y-6 max-w-5xl mx-auto">
-      <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md flex items-center justify-between shadow-xl">
+    <div className="space-y-8 max-w-5xl mx-auto">
+      <div className="sketch-card p-6 flex items-center justify-between">
         <div>
-          <h2 className="text-xl font-semibold text-gray-100 flex items-center">
+          <h2 className="text-2xl font-bold text-ink flex items-center sketch-font uppercase">
             Python AI Daemon
-            <span className={`ml-3 w-3 h-3 rounded-full ${isProcessorRunning ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
+            <span className={`ml-3 w-4 h-4 rounded-full border-2 border-ink ${isProcessorRunning ? 'bg-successInk animate-pulse' : 'bg-errorInk'}`}></span>
           </h2>
-          <p className="text-gray-400 text-sm mt-1">Background task for Offline Face Detection & Clustering</p>
+          <p className="text-pencil text-sm mt-1 font-mono">Background task for Offline Face Detection & Clustering</p>
         </div>
         <button
           onClick={toggleProcessor}
-          className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all shadow-lg ${
+          className={`sketch-button flex items-center px-6 py-3 font-bold text-lg ${
             isProcessorRunning 
-            ? 'bg-red-500/20 text-red-400 border border-red-500/50 hover:bg-red-500/30' 
-            : 'bg-green-500/20 text-green-400 border border-green-500/50 hover:bg-green-500/30'
+            ? 'bg-[#fff0f2] text-errorInk' 
+            : 'bg-[#f0fdf4] text-successInk'
           }`}
         >
           {isProcessorRunning ? <><Square className="w-5 h-5 mr-2" /> Stop Processing</> : <><Play className="w-5 h-5 mr-2" /> Start Processing</>}
@@ -228,9 +228,9 @@ export default function ReviewQueue({ addToast }) {
       </div>
 
       {/* Manual Upload Area */}
-      <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md shadow-xl text-center">
-        <h3 className="text-lg font-medium text-gray-200 mb-2">Upload Photos for AI Processing</h3>
-        <p className="text-gray-400 text-sm mb-4">You can drop photos here manually, and the local AI daemon will pick them up to find faces.</p>
+      <div className="sketch-card p-8 bg-paper text-center">
+        <h3 className="text-2xl font-bold text-ink mb-2">Upload Photos for AI Processing</h3>
+        <p className="text-pencil font-mono text-sm mb-6">You can drop photos here manually, and the local AI daemon will pick them up to find faces.</p>
         
         <input 
           type="file" 
@@ -270,7 +270,7 @@ export default function ReviewQueue({ addToast }) {
         />
         <label 
           htmlFor="queue-upload"
-          className="inline-block cursor-pointer bg-blue-500/20 border border-blue-500/50 text-blue-300 px-6 py-3 rounded-xl hover:bg-blue-500/30 transition-colors"
+          className="sketch-button cursor-pointer inline-block px-8 py-4 bg-white text-ink text-xl font-bold"
         >
           <span id="upload-btn-text" className="font-medium">+ Upload to Queue</span>
         </label>
@@ -278,60 +278,60 @@ export default function ReviewQueue({ addToast }) {
 
       {/* Advanced Control Toolbar */}
       {queue.length > 0 && (
-          <div className="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-md shadow-xl flex flex-col gap-5">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-white/10 pb-5">
-                  <div className="flex items-center gap-3 w-full md:w-auto">
-                      <Tag className="w-5 h-5 text-purple-400" />
+          <div className="sketch-card p-6 bg-paper flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b-2 border-dashed border-ink pb-6">
+                  <div className="flex items-center gap-4 w-full md:w-auto">
+                      <Tag className="w-6 h-6 text-ink" />
                       <input 
                          type="text" 
                          placeholder="Event Name (e.g. Birthday 2024)" 
                          value={globalEventTag}
                          onChange={(e) => setGlobalEventTag(e.target.value)}
                          onKeyDown={(e) => { if (e.key === 'Enter') applyGlobalTag(); }}
-                         className="bg-black/40 border border-gray-700/50 focus:border-purple-500 rounded-xl px-4 py-2.5 text-sm text-gray-200 outline-none w-full md:w-72 shadow-inner transition-colors"
+                         className="sketch-border bg-white px-4 py-3 text-lg text-ink font-bold outline-none w-full md:w-72 shadow-inner focus:shadow-sketchHover transition-shadow"
                       />
                       <button 
                          onClick={applyGlobalTag}
-                         className="px-5 py-2.5 bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 border border-purple-500/50 rounded-xl text-sm font-medium transition-colors whitespace-nowrap shadow-lg flex-shrink-0"
+                         className="sketch-button px-6 py-3 bg-highlight text-ink text-lg font-bold whitespace-nowrap"
                       >
                          Apply Tag {selectedItems.size > 0 ? `to ${selectedItems.size} Selected` : 'to All'}
                       </button>
                   </div>
                   
-                  <label className="flex items-center gap-3 text-sm font-medium text-gray-300 cursor-pointer hover:text-white transition-colors bg-black/20 px-4 py-2.5 rounded-xl border border-white/5">
+                  <label className="flex items-center gap-3 text-lg font-bold text-ink cursor-pointer hover:bg-gray-100 transition-colors bg-white px-4 py-3 sketch-border shadow-sketchHover">
                       <input 
                           type="checkbox" 
                           checked={showUnlabeledOnly} 
                           onChange={(e) => setShowUnlabeledOnly(e.target.checked)}
-                          className="w-4 h-4 rounded border-gray-600 bg-black/40 text-blue-500 focus:ring-blue-500/50"
+                          className="w-5 h-5 sketch-border text-ink cursor-pointer accent-ink"
                       />
                       Only Show Unlabeled Faces
                   </label>
               </div>
               
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-1">
-                  <label className="flex items-center gap-3 text-sm font-medium text-blue-300 cursor-pointer hover:text-blue-200 transition-colors">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                  <label className="flex items-center gap-3 text-xl font-bold text-ink cursor-pointer hover:underline transition-colors">
                       <input 
                           type="checkbox"
                           checked={selectedItems.size === filteredQueue.length && filteredQueue.length > 0}
                           onChange={toggleSelectAll}
-                          className="w-5 h-5 rounded border-blue-500/50 bg-black/40 text-blue-500 focus:ring-blue-500/50"
+                          className="w-6 h-6 sketch-border cursor-pointer accent-ink"
                       />
                       Select All ({selectedItems.size}/{filteredQueue.length})
                   </label>
                   
-                  <div className="flex items-center gap-3 w-full md:w-auto">
+                  <div className="flex items-center gap-4 w-full md:w-auto">
                       <button 
                          onClick={handleBulkDiscard}
                          disabled={selectedItems.size === 0 || isProcessingBulk}
-                         className="flex-1 md:flex-none px-6 py-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                         className="sketch-button flex-1 md:flex-none px-6 py-3 bg-[#fff0f2] text-errorInk text-lg font-bold disabled:opacity-50 flex items-center justify-center border-errorInk"
                       >
                          Discard Selected
                       </button>
                       <button 
                          onClick={handleBulkApprove}
                          disabled={selectedItems.size === 0 || isProcessingBulk}
-                         className="flex-1 md:flex-none px-6 py-2.5 bg-green-500/20 hover:bg-green-500/30 text-green-300 border border-green-500/50 rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-lg"
+                         className="sketch-button flex-1 md:flex-none px-6 py-3 bg-[#f0fdf4] text-successInk text-lg font-bold disabled:opacity-50 flex items-center justify-center border-successInk"
                       >
                          {isProcessingBulk ? <Loader2 className="w-5 h-5 mr-2 animate-spin" /> : <Check className="w-5 h-5 mr-2" />}
                          Approve Selected
@@ -341,9 +341,9 @@ export default function ReviewQueue({ addToast }) {
           </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {queue.length === 0 && (
-            <div className="col-span-full py-20 text-center text-gray-500 bg-white/5 border border-white/10 rounded-2xl shadow-inner">
+            <div className="col-span-full py-20 text-center text-pencil text-2xl font-bold sketch-card bg-paper shadow-inner">
                 {isProcessorRunning ? "Scanning for new photos in tests/..." : "Review queue is empty. Start the daemon or upload photos to process them."}
             </div>
         )}
@@ -362,35 +362,35 @@ export default function ReviewQueue({ addToast }) {
           return (
             <div 
               key={item.id} 
-              className={`bg-white/5 rounded-2xl overflow-hidden border shadow-lg flex flex-col md:flex-row p-4 gap-6 transition-all duration-300 relative ${
-                 isSelected ? 'border-blue-500/50 bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.15)] ring-1 ring-blue-500/50' : 'border-white/10'
+              className={`sketch-card bg-white flex flex-col md:flex-row p-6 gap-6 transition-all duration-300 relative ${
+                 isSelected ? 'bg-highlight shadow-sketchHover translate-y-[2px] translate-x-[2px]' : ''
               }`}
             >
-              <div className="absolute top-6 left-6 z-20">
+              <div className="absolute top-8 left-8 z-20">
                   <input 
                       type="checkbox" 
                       checked={isSelected} 
                       onChange={() => toggleSelect(item.id)} 
-                      className="w-5 h-5 rounded border-gray-600 bg-black/40 text-blue-500 focus:ring-blue-500/50 cursor-pointer shadow-lg drop-shadow-lg"
+                      className="w-6 h-6 sketch-border cursor-pointer accent-ink shadow-sketchHover"
                   />
               </div>
 
               {/* Left Column: Original Photo & Caption */}
               <div className="w-full md:w-1/2 flex flex-col gap-4">
                   <div 
-                      className="relative bg-black/30 rounded-xl overflow-hidden aspect-video flex-shrink-0 border border-white/5 cursor-zoom-in group"
+                      className="relative bg-paper sketch-border border-2 overflow-hidden aspect-video flex-shrink-0 cursor-zoom-in group shadow-sketchHover"
                       onClick={() => setLightboxImage(imgUrl)}
                   >
-                    <img src={imgUrl} alt="Review" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Maximize className="w-8 h-8 text-white drop-shadow-lg" />
+                    <img src={imgUrl} alt="Review" className="w-full h-full object-contain" />
+                    <div className="absolute inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <Maximize className="w-10 h-10 text-ink drop-shadow-md" />
                     </div>
                   </div>
                   
-                  <div className="flex flex-col flex-1 bg-black/20 rounded-xl p-4 border border-white/5">
-                      <label className="text-sm text-gray-400 mb-2 font-medium">Auto-Generated Tags (Editable)</label>
+                  <div className="flex flex-col flex-1 sketch-border bg-paper p-4 border-2 shadow-sketchHover">
+                      <label className="text-sm text-pencil mb-2 font-bold uppercase tracking-wider">Auto-Generated Tags (Editable)</label>
                       <textarea 
-                        className="w-full flex-1 bg-black/40 border border-gray-700 focus:border-blue-500 rounded-lg p-3 text-gray-200 text-sm outline-none resize-none transition-colors custom-scrollbar"
+                        className="w-full flex-1 bg-white sketch-border border-2 p-3 text-ink text-sm outline-none resize-none custom-scrollbar focus:shadow-sketchHover font-mono"
                         value={currentCaption}
                         onChange={(e) => {
                              setPendingLabels(prev => ({...prev, [`caption-${item.id}`]: e.target.value}))
@@ -398,14 +398,14 @@ export default function ReviewQueue({ addToast }) {
                       />
                       
                       {popularQueueTags.length > 0 && (
-                          <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-white/5">
+                          <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t-2 border-dashed border-ink/30">
                               {popularQueueTags.map(tag => (
                                   <button 
                                       key={tag}
                                       onClick={() => {
                                           if (!currentCaption.includes(tag)) setPendingLabels(prev => ({...prev, [`caption-${item.id}`]: `${currentCaption} ${tag}`}));
                                       }}
-                                      className="text-xs px-2.5 py-1 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white border border-white/10 rounded-md transition-colors"
+                                      className="text-sm font-bold px-3 py-1 sketch-border bg-white text-ink shadow-[2px_2px_0px_#2c2e33] hover:bg-highlight hover:-translate-y-[1px] transition-transform"
                                       title={`Quick append ${tag}`}
                                   >
                                       {tag}
@@ -418,30 +418,30 @@ export default function ReviewQueue({ addToast }) {
               
               {/* Right Column: Detected Faces List */}
               <div className="w-full md:w-1/2 flex flex-col flex-1">
-                <h4 className="text-gray-300 font-medium mb-4 flex items-center">
-                    <UserIcon className="w-4 h-4 mr-2 text-blue-400" />
+                <h4 className="text-ink font-bold text-xl mb-4 flex items-center">
+                    <UserIcon className="w-5 h-5 mr-2 text-ink" />
                     Detected People ({item.detected_faces.length})
                 </h4>
                 
-                <div className="space-y-3 mb-4 flex-1 overflow-y-auto pr-2 custom-scrollbar">
-                  {item.detected_faces.length === 0 && <span className="text-gray-500 text-sm bg-black/20 p-4 rounded-xl block text-center">No faces detected.</span>}
+                <div className="space-y-4 mb-4 flex-1 overflow-y-auto pr-2 custom-scrollbar">
+                  {item.detected_faces.length === 0 && <span className="text-pencil text-lg bg-paper sketch-border border-2 p-4 block text-center shadow-sketchHover">No faces detected.</span>}
                   
                   {item.detected_faces.map((face, idx) => (
-                    <div key={idx} className="flex items-center gap-4 bg-black/30 p-2 rounded-xl border border-white/5">
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-black/50 border border-gray-700 flex-shrink-0 flex items-center justify-center">
+                    <div key={idx} className="flex items-center gap-4 bg-white p-3 sketch-border border-2 shadow-sketchHover">
+                      <div className="w-14 h-14 sketch-border border-2 overflow-hidden bg-paper flex-shrink-0 flex items-center justify-center">
                           {face.crop ? (
                               <img src={face.crop} alt="Face Crop" className="w-full h-full object-cover" />
                           ) : (
-                              <UserIcon className="w-6 h-6 text-gray-600" />
+                              <UserIcon className="w-8 h-8 text-pencil" />
                           )}
                       </div>
 
                       <div className="flex-1 flex flex-col justify-center">
-                          <label className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">Name Person</label>
+                          <label className="text-xs text-pencil uppercase tracking-wider font-bold">Name Person</label>
                           <input 
                             type="text"
                             placeholder="Type name..."
-                            className="w-full bg-transparent border-b border-gray-600 focus:border-blue-400 outline-none text-gray-200 text-sm placeholder-gray-600 py-1 transition-colors"
+                            className="w-full bg-transparent border-b-2 border-dashed border-pencil focus:border-ink outline-none text-ink text-xl font-sketch font-bold placeholder-pencil/50 py-1 transition-colors"
                             value={pendingLabels[`${item.id}-${idx}`] !== undefined ? pendingLabels[`${item.id}-${idx}`] : face.name}
                             onChange={(e) => handleLabelChange(item.id, idx, e.target.value)}
                           />
@@ -451,21 +451,21 @@ export default function ReviewQueue({ addToast }) {
                 </div>
 
                 {/* Actions */}
-                <div className="flex space-x-3 mt-auto pt-4 border-t border-white/10">
+                <div className="flex space-x-4 mt-auto pt-6 border-t-2 border-dashed border-ink/30">
                   <button 
                     onClick={() => discardPhoto(item.id)}
-                    className="flex-1 py-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 hover:bg-red-500/20 transition-colors flex items-center justify-center font-medium shadow-lg"
+                    className="sketch-button flex-1 py-3 bg-[#fff0f2] text-errorInk border-errorInk hover:bg-errorInk hover:text-white flex items-center justify-center font-bold text-xl"
                   >
-                    <X className="w-5 h-5 mr-2" /> Discard
+                    <X className="w-6 h-6 mr-2" /> Discard
                   </button>
                   <button 
                     onClick={() => {
                         const finalCaption = pendingLabels[`caption-${item.id}`] !== undefined ? pendingLabels[`caption-${item.id}`] : item.ai_caption;
                         approvePhoto({...item, ai_caption: finalCaption});
                     }}
-                    className="flex-1 py-3 rounded-xl bg-green-500/20 border border-green-500/50 text-green-300 hover:bg-green-500/30 transition-colors flex items-center justify-center font-medium shadow-lg"
+                    className="sketch-button flex-1 py-3 bg-[#f0fdf4] text-successInk border-successInk hover:bg-successInk hover:text-white flex items-center justify-center font-bold text-xl"
                   >
-                    <Check className="w-5 h-5 mr-2" /> Approve
+                    <Check className="w-6 h-6 mr-2" /> Approve
                   </button>
                 </div>
               </div>
@@ -475,11 +475,11 @@ export default function ReviewQueue({ addToast }) {
       </div>
 
       {lightboxImage && (
-          <div className="fixed inset-0 z-[250] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 cursor-zoom-out animate-slide-up" onClick={() => setLightboxImage(null)}>
-              <button className="absolute top-6 right-6 p-4 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 rounded-full transition-colors z-[260]" onClick={() => setLightboxImage(null)}>
-                  <X className="w-6 h-6" />
+          <div className="fixed inset-0 z-[250] flex items-center justify-center bg-ink/90 p-4 cursor-zoom-out animate-slide-up" onClick={() => setLightboxImage(null)}>
+              <button className="sketch-button absolute top-6 right-6 p-4 bg-white z-[260]" onClick={() => setLightboxImage(null)}>
+                  <X className="w-8 h-8 text-ink" />
               </button>
-              <img src={lightboxImage} className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]" alt="Inspection" />
+              <img src={lightboxImage} className="max-w-[95vw] max-h-[95vh] object-contain sketch-card shadow-sketch" alt="Inspection" />
           </div>
       )}
     </div>

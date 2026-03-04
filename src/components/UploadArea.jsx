@@ -181,57 +181,57 @@ export default function UploadArea({ onUploadSuccess }) {
     return (
       <div 
         {...getRootProps()} 
-        className={`glass-panel border-2 border-dashed rounded-3xl p-16 text-center cursor-pointer transition-all duration-300 flex flex-col items-center justify-center min-h-[400px]
-        ${isDragActive ? 'border-primary bg-primary/10' : 'border-white/20 hover:border-primary/50 hover:bg-white/5'}`}
+        className={`sketch-card border-2 border-dashed border-ink p-16 text-center cursor-pointer flex flex-col items-center justify-center min-h-[400px]
+        ${isDragActive ? 'bg-highlight shadow-sketchHover translate-y-[2px] translate-x-[2px]' : 'bg-paper hover:bg-white shadow-sketch hover:shadow-sketchHover hover:translate-y-[2px] hover:translate-x-[2px] transition-all'}`}
       >
         <input {...getInputProps()} />
-        <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-          <UploadCloud className="w-10 h-10 text-blue-400" />
+        <div className="w-24 h-24 sketch-border border-2 bg-white flex items-center justify-center mb-8 shadow-sketchHover transform rotate-3">
+          <UploadCloud className="w-12 h-12 text-ink" />
         </div>
-        <h3 className="text-2xl font-semibold mb-2">Drag & Drop your photo here</h3>
-        <p className="text-gray-400">Or click to browse from your computer</p>
+        <h3 className="text-4xl font-bold mb-4 text-ink sketch-font">Drop Photo Outline Here</h3>
+        <p className="text-pencil font-mono text-lg">Or click to select a file from your sketchbook folder</p>
       </div>
     );
   }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <div className="glass-panel p-4 rounded-3xl flex flex-col h-fit">
-        <div className="relative rounded-2xl overflow-hidden bg-black/50 aspect-auto min-h-[300px] flex items-center justify-center">
+      <div className="sketch-card bg-white p-6 flex flex-col h-fit">
+        <div className="relative sketch-border border-2 overflow-hidden bg-paper aspect-auto min-h-[300px] flex items-center justify-center shadow-sketchHover">
           {preview && (
             <img 
               ref={imageRef}
               src={preview} 
               alt="Preview" 
-              className="max-w-full max-h-[600px] object-contain rounded-xl"
+              className="max-w-full max-h-[600px] object-contain"
               crossOrigin="anonymous"
             />
           )}
           {isProcessing && (
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center z-10">
-               <Loader2 className="w-12 h-12 text-blue-400 animate-spin mb-4" />
-               <p className="text-lg font-medium text-white shadow-sm">{processingStep}</p>
+            <div className="absolute inset-0 bg-white/80 flex flex-col items-center justify-center z-10">
+               <Loader2 className="w-16 h-16 text-ink animate-spin mb-4" />
+               <p className="text-2xl font-bold text-ink bg-white px-4 py-2 sketch-border shadow-sketchHover">{processingStep}</p>
             </div>
           )}
         </div>
       </div>
 
-      <div className="flex flex-col space-y-6">
-        <div className="glass-panel p-6 rounded-3xl">
-          <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <Sparkles className="text-cyan-400 w-5 h-5"/> AI Generated Tags
+      <div className="flex flex-col space-y-8">
+        <div className="sketch-card bg-paper p-8">
+          <h3 className="text-3xl font-bold text-ink mb-6 flex items-center gap-3">
+            <Sparkles className="text-ink w-8 h-8"/> AI Generated Tags
           </h3>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {tags.map((tag, idx) => (
-              <span key={idx} className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm flex items-center gap-2">
+              <span key={idx} className="px-4 py-2 bg-white sketch-border text-lg font-bold flex items-center gap-2 shadow-[2px_2px_0px_#2c2e33]">
                 {tag}
-                <button onClick={() => removeTag(idx)} className="hover:text-red-400"><X className="w-3 h-3"/></button>
+                <button onClick={() => removeTag(idx)} className="hover:text-errorInk"><X className="w-4 h-4"/></button>
               </span>
             ))}
             <input 
               type="text" 
               placeholder="Add tag..." 
-              className="px-3 py-1 bg-black/30 border border-white/10 rounded-full text-sm outline-none focus:border-primary w-24"
+              className="px-4 py-2 bg-white sketch-border text-lg font-bold outline-none focus:shadow-sketchHover shadow-inner w-32 font-mono"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && e.target.value) {
                   setTags([...tags, e.target.value]);
@@ -242,45 +242,45 @@ export default function UploadArea({ onUploadSuccess }) {
           </div>
         </div>
 
-        <div className="glass-panel p-6 rounded-3xl">
-          <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <User className="text-blue-400 w-5 h-5"/> Detected People
+        <div className="sketch-card bg-paper p-8">
+          <h3 className="text-3xl font-bold text-ink mb-6 flex items-center gap-3">
+            <User className="text-ink w-8 h-8"/> Detected People
           </h3>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             {people.map((person, idx) => (
-              <div key={idx} className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-                    <User className="w-5 h-5 text-gray-300"/>
+              <div key={idx} className="flex items-center gap-4 bg-white sketch-border p-3 shadow-sketchHover">
+                <div className="w-12 h-12 bg-paper sketch-border flex items-center justify-center">
+                    <User className="w-6 h-6 text-pencil"/>
                 </div>
                 <input 
                   type="text" 
                   value={person}
                   onChange={(e) => updatePerson(idx, e.target.value)}
-                  className="flex-1 bg-black/30 border border-white/10 rounded-xl px-4 py-2 outline-none focus:border-primary text-white"
+                  className="flex-1 bg-transparent border-b-2 border-dashed border-ink px-4 py-2 outline-none text-ink text-xl font-bold font-sketch"
                 />
               </div>
             ))}
             {people.length === 0 && !isProcessing && (
-              <p className="text-gray-400 text-sm">No faces detected.</p>
+              <p className="text-pencil text-xl font-bold bg-white sketch-border p-4 shadow-sketchHover">No faces detected.</p>
             )}
           </div>
         </div>
 
-        <div className="pt-4 flex gap-4">
+        <div className="pt-4 flex gap-6">
           <button 
             onClick={() => { setPreview(null); setFile(null); setMetadata(null); }}
-            className="flex-1 py-3 px-6 rounded-xl border border-white/20 hover:bg-white/5 transition-all text-white font-medium"
+            className="sketch-button flex-1 py-4 px-6 text-ink font-bold text-2xl flex items-center justify-center"
             disabled={isProcessing}
           >
-            Cancel
+            Trash It
           </button>
           <button 
             onClick={handleConfirmUpload}
-            className="flex-1 py-3 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition-all text-white font-medium flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(59,130,246,0.3)] disabled:opacity-50"
+            className="sketch-button flex-1 py-4 px-6 bg-primary text-white hover:text-ink hover:bg-highlight font-bold text-2xl flex items-center justify-center gap-3 disabled:opacity-50"
             disabled={isProcessing || !metadata}
           >
-            <CheckCircle className="w-5 h-5" />
-            Confirm & Upload
+            <CheckCircle className="w-8 h-8" />
+            Sign & Save
           </button>
         </div>
       </div>

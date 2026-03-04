@@ -7,10 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0f',
-        surface: 'rgba(255, 255, 255, 0.05)',
+        paper: '#fdfbf7',
+        ink: '#2c2e33',
+        pencil: '#5c5f66',
         primary: '#3b82f6',
-        primaryGlow: 'rgba(59, 130, 246, 0.5)'
+        highlight: '#fde047',
+        errorInk: '#e11d48',
+        successInk: '#16a34a'
+      },
+      fontFamily: {
+        sketch: ['"Patrick Hand"', 'cursive'],
+        mono: ['"Space Mono"', 'monospace']
+      },
+      boxShadow: {
+        sketch: '4px 4px 0px rgba(44, 46, 51, 1)',
+        sketchHover: '2px 2px 0px rgba(44, 46, 51, 1)'
       },
       keyframes: {
         slideUp: {
