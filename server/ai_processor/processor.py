@@ -110,7 +110,9 @@ def process_directory():
             conn = get_db()
             cursor = conn.cursor()
             
-            # 1. Load Known Faces
+            # Find images
+            
+            # 1. Load Known Faces (Legacy fallback table - single embedding)
             cursor.execute("SELECT name, descriptor FROM faces")
             known_faces = []
             for row in cursor.fetchall():
@@ -121,6 +123,23 @@ def process_directory():
                     known_faces.append({'name': row['name'], 'descriptor': desc_list})
                 except Exception:
                     pass
+                    
+            # 2. Load Multi-Embeddings (Smart Learning loop mapping)
+            # This allows unlimited face encodings per person to solve angles, ages, and expressions
+            try:
+                cursor.execute("SELECT name, descriptor FROM face_embeddings")
+                for row in cursor.fetchall():
+                    try:
+                        desc_list = json.loads(row['descriptor']) 
+                        if isinstance(desc_list, dict):
+                            desc_list = list(desc_list.values())
+                        known_faces.append({'name': row['name'], 'descriptor': desc_list})
+                    except Exception:
+                        pass
+            except Exception as e:
+                # In case table doesn't exist yet
+                pass
+                
             # Find images
             image_extensions = ('*.jpg', '*.jpeg', '*.png', '*.webp', '*.JPG', '*.JPEG', '*.PNG', '*.WEBP')
             image_files = []

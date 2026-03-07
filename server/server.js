@@ -226,7 +226,30 @@ app.post('/api/upload_final', async (req, res) => {
       JSON.stringify(tags)
     ]);
 
-    if (queueId) {
+    if (queueId && queueId !== -1) {
+       // --- MULTI-EMBEDDING SMART LEARNING LOOP ---
+       // When a user manually approves a photo, we learn the mathematical face encodings
+       // and link them to the corrected name so we get smarter over time.
+       try {
+           const queueItem = await db.get('SELECT detected_faces FROM processing_queue WHERE id = ?', [queueId]);
+           if (queueItem && queueItem.detected_faces) {
+               const faces = JSON.parse(queueItem.detected_faces);
+               for (let i = 0; i < faces.length; i++) {
+                   const finalName = people[i];
+                   // Only learn if there is a name, it's not "Unknown", and we have a descriptor
+                   if (finalName && !finalName.toLowerCase().includes('unknown') && faces[i].descriptor) {
+                       await db.run(
+                           'INSERT INTO face_embeddings (name, descriptor) VALUES (?, ?)', 
+                           [finalName, JSON.stringify(faces[i].descriptor)]
+                       );
+                       console.log(`[Smart Learning] Saved completely new unique mathematical embedding for: ${finalName}`);
+                   }
+               }
+           }
+       } catch (learnErr) {
+           console.error("Smart Learning Error:", learnErr);
+       }
+       
        await db.run('DELETE FROM processing_queue WHERE id = ?', [queueId]);
     }
 
@@ -401,6 +424,9 @@ app.post('/api/save_face', async (req, res) => {
       ON CONFLICT(name) DO UPDATE SET descriptor=excluded.descriptor
     `, [name, JSON.stringify(descriptor)]);
     
+    // Modern multi-embedding approach
+    await db.run('INSERT INTO face_embeddings (name, descriptor) VALUES (?, ?)', [name, JSON.stringify(descriptor)]);
+    
     res.json({ success: true, message: `Saved face math for ${name}` });
   } catch (error) {
     console.error("Save face error:", error);
@@ -414,8 +440,7 @@ app.delete('/api/delete_photo/:id', async (req, res) => {
     await db.run('DELETE FROM media WHERE id = ?', [photoId]);
     res.json({ success: true, message: "Photo metadata removed from local gallery" });
     
-    // Trigger catalog update
-    generateCatalogAndSync();
+    // Auto sync removed by user request. Must use Publish to Cloud button manually.
   } catch (error) {
     console.error("Delete photo error:", error);
     res.status(500).json({ error: "Failed to delete photo metadata" });

@@ -428,6 +428,14 @@ export default function PhotoGallery({ addToast }) {
                   <div className="relative flex-1 bg-white border-b-2 md:border-b-0 md:border-r-2 border-ink flex items-center justify-center p-4">
                       <img 
                           src={isCloudHost && workerUrl && selectedPhoto.telegram_file_id ? `${workerUrl}?file_id=${selectedPhoto.telegram_file_id}` : `/${selectedPhoto.local_cache_path}`} 
+                          onError={(e) => {
+                              if (!e.target.dataset.retried && selectedPhoto.telegram_file_id) {
+                                  e.target.dataset.retried = 'true';
+                                  fetch(`/api/photo_url/${selectedPhoto.telegram_file_id}`)
+                                      .then(r => r.json())
+                                      .then(data => { if(data.url) e.target.src = data.url; });
+                              }
+                          }}
                           className="max-w-full max-h-full object-contain sketch-border shadow-sketch bg-paper hidden-scrollbar"
                           alt="Selected fullscreen"
                       />
