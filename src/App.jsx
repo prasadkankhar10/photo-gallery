@@ -24,9 +24,9 @@ export default function App() {
       <header className="mb-12 flex flex-col md:flex-row gap-4 justify-between items-center sketch-card p-6">
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold tracking-tight text-ink font-sketch uppercase">
-            Nexus Storage
+            Akṣayanidhi
           </h1>
-          <p className="text-sm text-pencil mt-1 font-mono">Local-First AI Photo Management</p>
+          <p className="text-sm text-pencil mt-1 font-mono">The Inexhaustible Photo Archive</p>
         </div>
         <nav className="flex space-x-4">
           <button 

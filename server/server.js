@@ -22,6 +22,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Daemon Logs Cache
+let daemonLogs = [];
+function addLog(msg) {
+    const text = msg.toString().trim();
+    if (!text) return;
+    daemonLogs.push({ time: Date.now(), text });
+    if (daemonLogs.length > 100) daemonLogs.shift();
+}
+
 // Setup uploads folder
 const uploadDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDir)) {
@@ -103,23 +112,44 @@ async function generateCatalogAndSync() {
         fs.writeFileSync(catalogPath, JSON.stringify(publicCatalog, null, 2));
         console.log("Written public/catalog.json");
         
-        // Disable git sync if not configured to prevent crash loops locally
-        if (process.env.GIT_AUTO_SYNC === 'true') {
-            console.log("Pushing updates to GitHub main branch...");
-            await execPromise('git add public/catalog.json');
-            await execPromise('git commit -m "Auto-update gallery catalog" || true');
-            await execPromise('git push origin main || git push origin master');
-            
-            console.log("Rebuilding React App and Deploying to GitHub Pages (gh-pages branch)...");
-            await execPromise('npm run deploy');
-            console.log("Gallery Cloud Site successfully updated!");
+        // --- CLEANUP LOCAL CACHE AFTER PUBLISHING ---
+        console.log("Cleaning up local cache for published media...");
+        for (const row of rows) {
+            try {
+                // local_cache_path is e.g. "uploads/..." or "tests/..."
+                const absoluteTarget = path.join(__dirname, '..', row.local_cache_path);
+                if (fs.existsSync(absoluteTarget)) {
+                    fs.unlinkSync(absoluteTarget);
+                    console.log(`Deleted cached copy: ${absoluteTarget}`);
+                }
+            } catch (cleanupErr) {
+                // Ignore errors
+            }
         }
+        
+        console.log("Pushing updates to GitHub main branch...");
+        await execPromise('git add public/catalog.json');
+        await execPromise('git commit -m "Auto-update gallery catalog" || true');
+        await execPromise('git push origin main || git push origin master');
+        
+        console.log("Rebuilding React App and Deploying to GitHub Pages (gh-pages branch)...");
+        await execPromise('npm run deploy');
+        console.log("Gallery Cloud Site successfully updated!");
+        return { success: true, message: "Successfully published to GitHub Pages" };
     } catch (error) {
         console.error("Catalog generation / sync failed:", error);
+        return { success: false, error: error.message };
     } finally {
         isDeploying = false;
     }
 }
+
+app.post('/api/deploy_github', async (req, res) => {
+    if (isDeploying) return res.status(429).json({ error: "Deploy already in progress" });
+    const result = await generateCatalogAndSync();
+    if (result.success) res.json(result);
+    else res.status(500).json(result);
+});
 
 app.post('/api/tag_image', upload.single('photo'), async (req, res) => {
   try {
@@ -202,18 +232,18 @@ app.post('/api/upload_final', async (req, res) => {
 
     res.json({ success: true, id: result.lastID, ...telegramData });
     
-    // Cleanup: Delete the local temp file to save disk space
+    // Preserving local temp file for high-speed local preview gallery.
     try {
         if (fs.existsSync(absolutePath)) {
-            fs.unlinkSync(absolutePath);
-            console.log(`[Auto-Cleanup] Deleted local file: ${absolutePath}`);
+            console.log(`[Cache Preserved] Kept local file: ${absolutePath} for local gallery viewing.`);
         }
     } catch (cleanupErr) {
         console.error("Cleanup error:", cleanupErr);
     }
 
-    // Trigger catalog regeneration and GitHub push in the background
-    generateCatalogAndSync();
+    // Trigger catalog generation (without github push) if they want local offline json... 
+    // Wait, the client only uses catalog.json when deployed up remote. We can just wait for manual sync!
+    // We will just do nothing here. The user triggers manual deployments.
     
   } catch (error) {
     console.error("Final upload error:", error);
@@ -234,19 +264,55 @@ const testStorage = multer.diskStorage({
 });
 const uploadToTests = multer({ storage: testStorage });
 
-app.post('/api/upload_to_tests', uploadToTests.array('photos', 50), (req, res) => {
-    try {
-        if (!req.files || req.files.length === 0) {
-            return res.status(400).json({ error: "No files uploaded" });
+app.post('/api/upload_to_tests', (req, res) => {
+    uploadToTests.array('photos', 500)(req, res, function (err) {
+        if (err instanceof multer.MulterError) {
+            console.error("Multer Error:", err);
+            return res.status(500).json({ error: "Upload limit error: " + err.message });
+        } else if (err) {
+            console.error("Upload Error:", err);
+            return res.status(500).json({ error: "Failed to upload files for processing: " + err.message });
         }
-        res.json({ 
-            success: true, 
-            message: `Successfully added ${req.files.length} photos to the offline processing directory.`,
-            files: req.files.map(f => f.filename)
-        });
+        
+        try {
+            if (!req.files || req.files.length === 0) {
+                return res.status(400).json({ error: "No files uploaded" });
+            }
+            res.json({ 
+                success: true, 
+                message: `Successfully added ${req.files.length} photos to the offline processing directory.`,
+                files: req.files.map(f => f.filename)
+            });
+        } catch (error) {
+            console.error("Upload to tests error:", error);
+            res.status(500).json({ error: "Failed to process upload payload" });
+        }
+    });
+});
+
+// --- SETTINGS APIS ---
+app.get('/api/settings', async (req, res) => {
+    try {
+        const rows = await db.all('SELECT * FROM settings');
+        const settings = rows.reduce((acc, row) => ({ ...acc, [row.key]: row.value }), {});
+        res.json(settings);
     } catch (error) {
-        console.error("Upload to tests error:", error);
-        res.status(500).json({ error: "Failed to upload files for processing" });
+        res.status(500).json({ error: "Failed to fetch settings" });
+    }
+});
+
+app.post('/api/settings', async (req, res) => {
+    try {
+        const settings = req.body;
+        for (const [key, value] of Object.entries(settings)) {
+            await db.run(
+                'INSERT INTO settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value',
+                [key, String(value)]
+            );
+        }
+        res.json({ success: true });
+    } catch (error) {
+        res.status(500).json({ error: "Failed to update settings" });
     }
 });
 
@@ -277,6 +343,27 @@ app.get('/api/photos', async (req, res) => {
   } catch (error) {
     console.error("Fetch photos error:", error);
     res.status(500).json({ error: "Failed to fetch photos" });
+  }
+});
+
+app.get('/api/unpublished_media', async (req, res) => {
+  try {
+      const rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
+      let publishedIds = new Set();
+      const catalogPath = path.join(__dirname, '..', 'public', 'catalog.json');
+      if (fs.existsSync(catalogPath)) {
+          const catalog = JSON.parse(fs.readFileSync(catalogPath));
+          catalog.forEach(item => publishedIds.add(item.id));
+      }
+      const unpublished = rows.filter(r => !publishedIds.has(r.id)).map(r => ({
+          ...r,
+          people: JSON.parse(r.people || '[]'),
+          tags: JSON.parse(r.tags || '[]')
+      }));
+      res.json(unpublished);
+  } catch(e) {
+      console.error("Fetch unpublished error:", e);
+      res.status(500).json([]);
   }
 });
 
@@ -349,10 +436,18 @@ app.post('/api/processor/start', (req, res) => {
   // 1. Start the Background Processor Daemon
   const scriptPath = path.join(__dirname, 'ai_processor', 'processor.py');
   pythonProcess = spawn(venvPython, [scriptPath]);
-  pythonProcess.stdout.on('data', (data) => console.log(`[AI Daemon]: ${data}`));
-  pythonProcess.stderr.on('data', (data) => console.error(`[AI Daemon Error]: ${data}`));
+  pythonProcess.stdout.on('data', (data) => {
+      console.log(`[AI Daemon]: ${data}`);
+      addLog(data);
+  });
+  pythonProcess.stderr.on('data', (data) => {
+      console.error(`[AI Daemon Error]: ${data}`);
+      addLog(`ERROR: ${data}`);
+  });
   pythonProcess.on('close', (code) => {
-    console.log(`[AI Daemon] exited with code ${code}`);
+    const msg = `[AI Daemon] exited with code ${code}`;
+    console.log(msg);
+    addLog(msg);
     pythonProcess = null;
   });
 
@@ -366,6 +461,7 @@ app.post('/api/processor/start', (req, res) => {
     flaskProcess = null;
   });
 
+  addLog("--- AI Processor & Search API Started ---");
   res.json({ success: true, message: "AI Processor and Search API started." });
 });
 
@@ -388,6 +484,10 @@ app.post('/api/processor/stop', (req, res) => {
 
 app.get('/api/processor/status', (req, res) => {
   res.json({ running: !!pythonProcess || !!flaskProcess });
+});
+
+app.get('/api/processor/logs', (req, res) => {
+  res.json(daemonLogs);
 });
 
 app.get('/api/review_queue', async (req, res) => {

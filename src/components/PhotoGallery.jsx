@@ -335,6 +335,14 @@ export default function PhotoGallery({ addToast }) {
                     // Local Mode: Serve directly from node uploads/tests folders
                     <img 
                       src={`/${photo.local_cache_path}`} 
+                      onError={(e) => {
+                          if (!e.target.dataset.retried && photo.telegram_file_id) {
+                              e.target.dataset.retried = 'true';
+                              fetch(`/api/photo_url/${photo.telegram_file_id}`)
+                                  .then(r => r.json())
+                                  .then(data => { if(data.url) e.target.src = data.url; });
+                          }
+                      }}
                       alt="Gallery Item" 
                       className="w-full h-auto object-cover"
                       loading="lazy"

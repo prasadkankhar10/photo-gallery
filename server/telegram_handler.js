@@ -1,5 +1,6 @@
 import TelegramBot from 'node-telegram-bot-api';
 import dotenv from 'dotenv';
+import fs from 'fs';
 dotenv.config();
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -24,7 +25,8 @@ export async function uploadToTelegram(filePath, metadata) {
   const caption = `Date: ${dateStr} | People: ${peopleStr} | Tags: ${tagsStr}`;
 
   try {
-    const msg = await bot.sendDocument(channelId, filePath, { caption });
+    const fileStream = fs.createReadStream(filePath);
+    const msg = await bot.sendDocument(channelId, fileStream, { caption });
     
     // Telegram format for links mapping channel ID to view URL roughly:
     const cleanChannelId = channelId.toString().replace('-100', '');

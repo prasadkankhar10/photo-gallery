@@ -121,13 +121,21 @@ def process_directory():
                     known_faces.append({'name': row['name'], 'descriptor': desc_list})
                 except Exception:
                     pass
-            
             # Find images
             image_extensions = ('*.jpg', '*.jpeg', '*.png', '*.webp', '*.JPG', '*.JPEG', '*.PNG', '*.WEBP')
             image_files = []
             for ext in image_extensions:
                 image_files.extend(glob(os.path.join(INPUT_DIR, ext)))
                 
+            # Load User Settings
+            cursor.execute("SELECT value FROM settings WHERE key='auto_approve'")
+            s_auto = cursor.fetchone()
+            is_auto_approve_enabled = (s_auto['value'] == 'true') if s_auto else True
+            
+            cursor.execute("SELECT value FROM settings WHERE key='auto_approve_tag'")
+            s_tag = cursor.fetchone()
+            auto_approve_tag = s_tag['value'] if s_tag else ""
+
             cluster_counter = 1
             processed_any = False
 
@@ -153,7 +161,8 @@ def process_directory():
                 if model and transforms and labels:
                     try:
                         import torch
-                        pil_img = Image.open(img_path).convert('RGB')
+                        with Image.open(img_path) as src_img:
+                            pil_img = src_img.convert('RGB')
                         img_tensor = transforms(pil_img).unsqueeze(0)
                         
                         with torch.no_grad():
@@ -236,7 +245,8 @@ def process_directory():
                 if clip_model and clip_processor:
                     try:
                         import torch
-                        pil_img = Image.open(img_path).convert('RGB')
+                        with Image.open(img_path) as src_img:
+                            pil_img = src_img.convert('RGB')
                         inputs = clip_processor(images=pil_img, return_tensors="pt")
                         with torch.no_grad():
                             image_features = clip_model.get_image_features(**inputs)
@@ -249,16 +259,22 @@ def process_directory():
                     except Exception as e:
                         print(f"CLIP encoding error: {e}", flush=True)
 
-                # Auto-Approve if all faces are recognized (or if it's just scenery)
-                if all_faces_known:
-                    try:
-                        print(f"100% face match detected. Auto-uploading to Telegram...", flush=True)
+                # Auto-Approve if all faces are recognized AND user has it enabled
+                is_auto_approved = False
+                final_caption = caption
+                
+                if all_faces_known and is_auto_approve_enabled:
+                    if auto_approve_tag:
+                        formatted_tag = auto_approve_tag.strip().replace(" ", "_").replace("#", "")
+                        final_caption = f"{caption} #{formatted_tag}"
                         
+                    try:
+                        print(f"100% face match. Auto-uploading...", flush=True)
                         payload = {
                             "absolutePath": img_path,
                             "localPath": f"tests/{os.path.basename(img_path)}",
                             "people": [f["name"] for f in detected_faces],
-                            "tags": [caption],
+                            "tags": [final_caption],
                             "queueId": -1
                         }
                         req = urllib.request.Request('http://localhost:3000/api/upload_final', method='POST')
@@ -267,18 +283,26 @@ def process_directory():
                         
                         urllib.request.urlopen(req, jsondata)
                         print(f"Auto-approved and uploaded {os.path.basename(img_path)} successfully!", flush=True)
-                        continue # Skip SQLite review queue insert
+                        is_auto_approved = True
+                        
+                        # We preserve the local file so the React UI can show high-speed local previews.
+                        # It won't be reprocessed because it's now logged in the SQLite `media` table.
+                        try:
+                            if os.path.exists(img_path):
+                                print(f"[Python] Preserved {os.path.basename(img_path)} for local preview.", flush=True)
+                        except Exception as del_err:
+                            pass
+                            
                     except Exception as e:
                         print(f"Auto-upload API failed (falling back to manual queue): {e}", flush=True)
 
-                # Save to Review Queue if unknown faces exist
-                cursor.execute(
-                    "INSERT INTO processing_queue (file_path, ai_caption, detected_faces, status) VALUES (?, ?, ?, ?)",
-                    (img_path, caption, json.dumps(detected_faces), 'PENDING_REVIEW')
-                )
-                conn.commit()
-                queue_id = cursor.lastrowid
-                print(f"Added to review queue.", flush=True)
+                if not is_auto_approved:
+                    cursor.execute(
+                        "INSERT INTO processing_queue (file_path, ai_caption, detected_faces, status) VALUES (?, ?, ?, ?)",
+                        (img_path, caption, json.dumps(detected_faces), 'PENDING_REVIEW')
+                    )
+                    conn.commit()
+                    print(f"Added to review queue.", flush=True)
                 
                 # Store CLIP Embedding in ChromaDB indexed by the absolute path
                 if clip_embedding:
@@ -287,7 +311,7 @@ def process_directory():
                         face_meta = ", ".join([f["name"] for f in detected_faces]) if detected_faces else "Unknown"
                         collection.add(
                             embeddings=[clip_embedding],
-                            documents=[caption], # Good to store the autogenerated caption alongside
+                            documents=[final_caption], # Use the tagged caption if auto-approved
                             metadatas=[{"source": img_path, "local_path": f"tests/{os.path.basename(img_path)}", "faces": face_meta}],
                             ids=[img_path] # Use path as unique ID
                         )

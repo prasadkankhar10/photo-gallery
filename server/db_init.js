@@ -35,6 +35,17 @@ export async function initializeDatabase() {
       detected_faces TEXT,
       status TEXT DEFAULT 'PENDING_REVIEW'
     );
+
+    CREATE TABLE IF NOT EXISTS settings (
+      key TEXT PRIMARY KEY,
+      value TEXT
+    );
+  `);
+
+  // Insert default settings if they don't exist
+  await db.exec(`
+    INSERT OR IGNORE INTO settings (key, value) VALUES ('auto_approve', 'true');
+    INSERT OR IGNORE INTO settings (key, value) VALUES ('auto_approve_tag', '');
   `);
 
   return db;

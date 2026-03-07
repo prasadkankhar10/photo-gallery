@@ -10,13 +10,75 @@ export default function ReviewQueue({ addToast }) {
   const [showUnlabeledOnly, setShowUnlabeledOnly] = useState(false);
   const [isProcessingBulk, setIsProcessingBulk] = useState(false);
   const [lightboxImage, setLightboxImage] = useState(null);
+  const [daemonSettings, setDaemonSettings] = useState({ auto_approve: 'true', auto_approve_tag: '' });
+  const [isDeploying, setIsDeploying] = useState(false);
+  const [daemonLogs, setDaemonLogs] = useState([]);
+  const [unpublishedMedia, setUnpublishedMedia] = useState([]);
+
+  const fetchLogs = async () => {
+      try {
+          const res = await fetch('http://localhost:3000/api/processor/logs');
+          setDaemonLogs(await res.json());
+      } catch(e) {}
+  };
+
+  const fetchUnpublished = async () => {
+      try {
+          const res = await fetch('http://localhost:3000/api/unpublished_media');
+          setUnpublishedMedia(await res.json());
+      } catch(e) {}
+  };
+
+  const fetchSettings = async () => {
+    try {
+      const res = await fetch('http://localhost:3000/api/settings');
+      const data = await res.json();
+      setDaemonSettings({ 
+        auto_approve: data.auto_approve || 'true', 
+        auto_approve_tag: data.auto_approve_tag || '' 
+      });
+    } catch(e) {}
+  };
+
+  const updateSetting = async (key, value) => {
+    setDaemonSettings(prev => ({ ...prev, [key]: value }));
+    try {
+      await fetch('http://localhost:3000/api/settings', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({ [key]: value })
+      });
+    } catch(e) {}
+  };
+
+  const deployToGithub = async () => {
+      setIsDeploying(true);
+      if (addToast) addToast("Starting GitHub deployment. This may take 10-30 seconds...", "info");
+      try {
+          const res = await fetch('http://localhost:3000/api/deploy_github', { method: 'POST' });
+          const data = await res.json();
+          if (data.success) {
+              if (addToast) addToast("Successfully published gallery to Cloud!", "success");
+          } else {
+              if (addToast) addToast("Deployment failed: " + data.error, "error");
+          }
+      } catch (e) {
+          if (addToast) addToast("Failed to connect for deployment", "error");
+      }
+      setIsDeploying(false);
+  };
 
   useEffect(() => {
+    fetchSettings();
     checkProcessorStatus();
     fetchQueue();
+    fetchLogs();
+    fetchUnpublished();
     const interval = setInterval(() => {
       checkProcessorStatus();
       fetchQueue();
+      fetchLogs();
+      fetchUnpublished();
     }, 5000); // Polling every 5 seconds
     return () => clearInterval(interval);
   }, []);
@@ -63,7 +125,7 @@ export default function ReviewQueue({ addToast }) {
     const people = item.detected_faces.map((face, idx) => {
         const customName = pendingLabels[`${item.id}-${idx}`];
         return customName || face.name;
-    });
+    }).filter(p => !p.toLowerCase().includes('unknown'));
 
     // Upload Final
     try {
@@ -138,7 +200,7 @@ export default function ReviewQueue({ addToast }) {
           const people = item.detected_faces.map((face, idx) => {
               const customName = pendingLabels[`${item.id}-${idx}`];
               return customName || face.name;
-          });
+          }).filter(p => !p.toLowerCase().includes('unknown'));
           const caption = pendingLabels[`caption-${item.id}`] !== undefined ? pendingLabels[`caption-${item.id}`] : item.ai_caption;
           
           try {
@@ -207,25 +269,125 @@ export default function ReviewQueue({ addToast }) {
 
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
-      <div className="sketch-card p-6 flex items-center justify-between">
+      <div className="sketch-card p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <h2 className="text-2xl font-bold text-ink flex items-center sketch-font uppercase">
             Python AI Daemon
             <span className={`ml-3 w-4 h-4 rounded-full border-2 border-ink ${isProcessorRunning ? 'bg-successInk animate-pulse' : 'bg-errorInk'}`}></span>
           </h2>
           <p className="text-pencil text-sm mt-1 font-mono">Background task for Offline Face Detection & Clustering</p>
+          
+          <div className="mt-6 flex flex-col gap-3 bg-paper p-4 sketch-border border-2 shadow-inner">
+             <label className="flex items-center gap-3 text-ink font-bold cursor-pointer hover:underline transition-colors w-fit">
+                  <input 
+                      type="checkbox" 
+                      checked={daemonSettings.auto_approve === 'true'} 
+                      onChange={(e) => updateSetting('auto_approve', e.target.checked ? 'true' : 'false')}
+                      className="w-5 h-5 sketch-border cursor-pointer accent-highlight shadow-[1px_1px_0px_#2c2e33]"
+                  />
+                  Auto-Approve 100% Matches directly to Gallery
+              </label>
+              {daemonSettings.auto_approve === 'true' && (
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 mt-2 pt-2 border-t-2 border-dashed border-pencil/30">
+                      <span className="text-sm font-bold text-pencil">Event Tag to append:</span>
+                      <input 
+                          type="text" 
+                          placeholder="e.g. Birthday" 
+                          value={daemonSettings.auto_approve_tag}
+                          onChange={(e) => updateSetting('auto_approve_tag', e.target.value)}
+                          className="sketch-border bg-white px-3 py-2 text-sm text-ink font-bold outline-none shadow-[2px_2px_0px_#2c2e33] w-full md:w-64 focus:shadow-sketchHover transition-shadow"
+                      />
+                  </div>
+              )}
+          </div>
         </div>
-        <button
-          onClick={toggleProcessor}
-          className={`sketch-button flex items-center px-6 py-3 font-bold text-lg ${
-            isProcessorRunning 
-            ? 'bg-[#fff0f2] text-errorInk' 
-            : 'bg-[#f0fdf4] text-successInk'
-          }`}
-        >
-          {isProcessorRunning ? <><Square className="w-5 h-5 mr-2" /> Stop Processing</> : <><Play className="w-5 h-5 mr-2" /> Start Processing</>}
-        </button>
+        
+        <div className="flex flex-col gap-4 w-full md:w-auto">
+            <button
+              onClick={toggleProcessor}
+              className={`sketch-button flex justify-center items-center px-6 py-4 font-bold text-lg ${
+                isProcessorRunning 
+                ? 'bg-[#fff0f2] text-errorInk' 
+                : 'bg-[#f0fdf4] text-successInk'
+              }`}
+            >
+              {isProcessorRunning ? <><Square className="w-5 h-5 mr-2" /> Stop Daemon</> : <><Play className="w-5 h-5 mr-2" /> Start Daemon</>}
+            </button>
+            <button 
+                onClick={deployToGithub}
+                disabled={isDeploying}
+                className="sketch-button flex flex-col justify-center items-center px-6 py-3 font-bold text-lg bg-[#f0f8ff] text-[#0369a1] border-[#0369a1] disabled:opacity-50"
+            >
+                {isDeploying ? (
+                    <><Loader2 className="w-6 h-6 animate-spin mb-1"/> Deploying...</>
+                ) : (
+                    <>
+                        <span className="flex items-center">
+                            <svg className="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.24 4.8 4.8 0 0 0-3.3-1.6c-4.3-.4-5.2 2-6.5 2L3 14c-.6-2-.2-4.5 1.5-6.5S8.5 4 10.5 4a3.8 3.8 0 0 1 3.5 2 3.8 3.8 0 0 1 3.4-1.9A3.8 3.8 0 0 1 20 7c.4 1 0 2.5-1 3.2-1.5 2-4.5 2.5-4.5 2.5a5 5 0 0 0 1.5 3.5A3.5 3.5 0 0 1 15 22z"/></svg> 
+                            Publish to Cloud
+                        </span>
+                        <span className="text-xs font-mono font-normal opacity-80 mt-1">Manual Git Sync</span>
+                    </>
+                )}
+            </button>
+        </div>
       </div>
+
+      {/* Live Activity Console */}
+      <div className="sketch-card p-4 bg-[#f8f9fa] border-2 border-pencil text-ink font-mono text-sm h-48 overflow-y-auto custom-scrollbar shadow-inner flex flex-col-reverse">
+          {daemonLogs.length === 0 ? (
+              <span className="opacity-50 text-pencil">Waiting for AI daemon output...</span>
+          ) : (
+              [...daemonLogs].reverse().map((log, i) => (
+                  <div key={i} className="mb-1 flex gap-3 border-b border-dashed border-gray-200 pb-1">
+                      <span className="text-pencil font-bold flex-shrink-0">[{new Date(log.time).toLocaleTimeString()}]</span> 
+                      <span className={`${log.text.includes('ERROR') ? 'text-errorInk font-bold' : 'text-ink'}`}>{log.text}</span>
+                  </div>
+              ))
+          )}
+      </div>
+
+      {/* Unpublished (Auto-Approved) Items Ready for Cloud */}
+      {unpublishedMedia.length > 0 && (
+          <div className="sketch-card p-6 bg-[#fffbea] border-highlight sketch-border border-2">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+                  <h3 className="text-xl font-bold text-ink">
+                      Ready for Cloud ({unpublishedMedia.length})
+                      <span className="block text-sm font-mono text-pencil mt-1">These photos were auto-approved or manually approved, but haven't been pushed to GitHub yet.</span>
+                  </h3>
+                  <button 
+                      onClick={deployToGithub}
+                      disabled={isDeploying}
+                      className="sketch-button px-6 py-2 bg-[#f0f8ff] text-[#0369a1] font-bold border-[#0369a1] disabled:opacity-50 whitespace-nowrap"
+                  >
+                      {isDeploying ? "Deploying..." : "Push to GitHub Now"}
+                  </button>
+              </div>
+              <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
+                  {unpublishedMedia.map(m => (
+                      <div key={m.id} className="w-32 h-32 flex-shrink-0 sketch-border border-2 bg-paper p-1 shadow-sketchHover group relative">
+                  <img 
+                      src={`http://localhost:3000/${m.local_cache_path}`} 
+                      onError={(e) => {
+                          if (!e.target.dataset.retried && m.telegram_file_id) {
+                              e.target.dataset.retried = 'true';
+                              fetch(`http://localhost:3000/api/photo_url/${m.telegram_file_id}`)
+                                  .then(r => r.json())
+                                  .then(data => { if(data.url) e.target.src = data.url; });
+                          }
+                      }}
+                      className="w-full h-full object-cover" 
+                  />
+                  {m.tags.length > 0 && (
+                             <div className="absolute bottom-0 left-0 right-0 bg-ink/80 text-white text-xs p-1 truncate text-center">
+                                 {m.tags[0]}
+                             </div>
+                          )}
+                      </div>
+                  ))}
+              </div>
+          </div>
+      )}
 
       {/* Manual Upload Area */}
       <div className="sketch-card p-8 bg-paper text-center">
