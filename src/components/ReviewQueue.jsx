@@ -14,6 +14,7 @@ export default function ReviewQueue({ addToast }) {
   const [isDeploying, setIsDeploying] = useState(false);
   const [daemonLogs, setDaemonLogs] = useState([]);
   const [unpublishedMedia, setUnpublishedMedia] = useState([]);
+  const [fallbackUrls, setFallbackUrls] = useState({});
 
   const fetchLogs = async () => {
       try {
@@ -367,13 +368,17 @@ export default function ReviewQueue({ addToast }) {
                   {unpublishedMedia.map(m => (
                       <div key={m.id} className="w-32 h-32 flex-shrink-0 sketch-border border-2 bg-paper p-1 shadow-sketchHover group relative">
                   <img 
-                      src={`http://localhost:3000/${m.local_cache_path}`} 
-                      onError={(e) => {
-                          if (!e.target.dataset.retried && m.telegram_file_id) {
-                              e.target.dataset.retried = 'true';
+                      src={fallbackUrls[m.id] ? fallbackUrls[m.id] : `http://localhost:3000/${m.local_cache_path}`} 
+                      onError={() => {
+                          if (!fallbackUrls[m.id] && m.telegram_file_id) {
+                              setFallbackUrls(prev => ({...prev, [m.id]: 'loading'}));
                               fetch(`http://localhost:3000/api/photo_url/${m.telegram_file_id}`)
                                   .then(r => r.json())
-                                  .then(data => { if(data.url) e.target.src = data.url; });
+                                  .then(data => { 
+                                      if(data.url) {
+                                          setFallbackUrls(prev => ({...prev, [m.id]: data.url})); 
+                                      }
+                                  });
                           }
                       }}
                       className="w-full h-full object-cover" 

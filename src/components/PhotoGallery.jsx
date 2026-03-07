@@ -11,6 +11,7 @@ export default function PhotoGallery({ addToast }) {
   const [semanticMode, setSemanticMode] = useState(false);
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState('');
+  const [fallbackUrls, setFallbackUrls] = useState({});
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -314,51 +315,36 @@ export default function PhotoGallery({ addToast }) {
           {photos.map(photo => (
             <div key={photo.id} className="break-inside-avoid sketch-card overflow-hidden group">
               <div className="relative border-b-2 border-ink bg-white">
-                {workerUrl && photo.telegram_file_id ? (
-                    // Cloud/Proxy Mode: Secure image stream via Cloudflare 
                     <img 
-                      src={`${workerUrl}?file_id=${photo.telegram_file_id}`} 
-                      alt="Gallery Item" 
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                ) : isCloudHost && photo.telegram_embed_url ? (
-                    // Cloud Mode (Fallback): Simple link to Telegram WebView
-                    // Due to strict CORS, if a custom proxy isn't configured, we fallback to a simple click-to-view UI.
-                    <div className="w-full h-48 bg-gray-100 flex items-center justify-center p-4 py-8 text-center">
-                       <a href={photo.telegram_embed_url.replace('?embed=1', '')} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-primary font-bold text-xl hover:text-blue-700 transition-colors">
-                          <ImageIcon className="w-10 h-10 mb-2 opacity-60" />
-                          <span>View Full Photo on Telegram</span>
-                       </a>
-                    </div>
-                ) : (
-                    // Local Mode: Serve directly from node uploads/tests folders
-                    <img 
-                      src={`/${photo.local_cache_path}`} 
-                      onError={(e) => {
-                          if (!e.target.dataset.retried && photo.telegram_file_id) {
-                              e.target.dataset.retried = 'true';
-                              fetch(`/api/photo_url/${photo.telegram_file_id}`)
-                                  .then(r => r.json())
-                                  .then(data => { if(data.url) e.target.src = data.url; });
+                      src={fallbackUrls[photo.id] || (photo.local_thumb_path ? `/${photo.local_thumb_path}` : `/${photo.local_cache_path}`)} 
+                      onError={() => {
+                          if (!fallbackUrls[photo.id] && photo.telegram_file_id) {
+                              setFallbackUrls(prev => ({...prev, [photo.id]: 'loading'}));
+                              
+                              if (isCloudHost && workerUrl) {
+                                  setFallbackUrls(prev => ({...prev, [photo.id]: `${workerUrl}?file_id=${photo.telegram_file_id}`}));
+                              } else if (!isCloudHost) {
+                                  fetch(`/api/photo_url/${photo.telegram_file_id}`)
+                                      .then(r => r.json())
+                                      .then(data => { 
+                                          if(data.url) setFallbackUrls(prev => ({...prev, [photo.id]: data.url})); 
+                                      });
+                              }
                           }
                       }}
                       alt="Gallery Item" 
-                      className="w-full h-auto object-cover"
+                      className="w-full h-auto object-cover aspect-square md:aspect-auto"
                       loading="lazy"
                     />
-                )}
                 <div className="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
                   <div className="flex gap-4">
-                    {(!isCloudHost || workerUrl) && (
-                      <button 
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedPhoto(photo); }}
-                        className="sketch-button p-3 bg-white hover:bg-highlight text-ink"
-                        title="Fullscreen"
-                      >
-                        <Maximize className="w-6 h-6" />
-                      </button>
-                    )}
+                    <button 
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); setSelectedPhoto(photo); }}
+                      className="sketch-button p-3 bg-white hover:bg-highlight text-ink"
+                      title="Fullscreen"
+                    >
+                      <Maximize className="w-6 h-6" />
+                    </button>
                     <button 
                       onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleDownload(photo); }}
                       className="sketch-button p-3 bg-white hover:bg-highlight text-ink"
@@ -427,13 +413,20 @@ export default function PhotoGallery({ addToast }) {
                   {/* Left: Huge Image */}
                   <div className="relative flex-1 bg-white border-b-2 md:border-b-0 md:border-r-2 border-ink flex items-center justify-center p-4">
                       <img 
-                          src={isCloudHost && workerUrl && selectedPhoto.telegram_file_id ? `${workerUrl}?file_id=${selectedPhoto.telegram_file_id}` : `/${selectedPhoto.local_cache_path}`} 
-                          onError={(e) => {
-                              if (!e.target.dataset.retried && selectedPhoto.telegram_file_id) {
-                                  e.target.dataset.retried = 'true';
-                                  fetch(`/api/photo_url/${selectedPhoto.telegram_file_id}`)
-                                      .then(r => r.json())
-                                      .then(data => { if(data.url) e.target.src = data.url; });
+                          src={isCloudHost && workerUrl && selectedPhoto.telegram_file_id ? `${workerUrl}?file_id=${selectedPhoto.telegram_file_id}` : (fallbackUrls[selectedPhoto.id] || `/${selectedPhoto.local_cache_path}`)} 
+                          onError={() => {
+                              if (!fallbackUrls[selectedPhoto.id] && selectedPhoto.telegram_file_id) {
+                                  setFallbackUrls(prev => ({...prev, [selectedPhoto.id]: 'loading'}));
+                                  
+                                  if (isCloudHost && workerUrl) {
+                                      setFallbackUrls(prev => ({...prev, [selectedPhoto.id]: `${workerUrl}?file_id=${selectedPhoto.telegram_file_id}`}));
+                                  } else if (!isCloudHost) {
+                                      fetch(`/api/photo_url/${selectedPhoto.telegram_file_id}`)
+                                          .then(r => r.json())
+                                          .then(data => { 
+                                              if(data.url) setFallbackUrls(prev => ({...prev, [selectedPhoto.id]: data.url})); 
+                                          });
+                                  }
                               }
                           }}
                           className="max-w-full max-h-full object-contain sketch-border shadow-sketch bg-paper hidden-scrollbar"

@@ -13,6 +13,7 @@ export async function initializeDatabase() {
     CREATE TABLE IF NOT EXISTS media (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       local_cache_path TEXT,
+      local_thumb_path TEXT,
       telegram_message_id TEXT,
       telegram_file_id TEXT,
       telegram_link TEXT,
@@ -54,6 +55,13 @@ export async function initializeDatabase() {
     INSERT OR IGNORE INTO settings (key, value) VALUES ('auto_approve', 'true');
     INSERT OR IGNORE INTO settings (key, value) VALUES ('auto_approve_tag', '');
   `);
+
+  // Migrate existing databases to include new columns
+  try {
+      await db.exec('ALTER TABLE media ADD COLUMN local_thumb_path TEXT');
+  } catch (e) {
+      // Column likely already exists
+  }
 
   return db;
 }

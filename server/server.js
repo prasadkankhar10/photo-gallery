@@ -10,6 +10,7 @@ import util from 'util';
 import { initializeDatabase } from './db_init.js';
 import { uploadToTelegram, getTelegramFileUrl } from './telegram_handler.js';
 import { GoogleGenAI } from '@google/genai';
+import sharp from 'sharp';
 
 const execPromise = util.promisify(exec);
 
@@ -36,6 +37,12 @@ const uploadDir = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
+
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
+
+const thumbsDir = path.join(publicDir, 'thumbnails');
+if (!fs.existsSync(thumbsDir)) fs.mkdirSync(thumbsDir);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, uploadDir),
@@ -102,6 +109,7 @@ async function generateCatalogAndSync() {
                 telegram_message_id: r.telegram_message_id,
                 telegram_file_id: r.telegram_file_id,
                 telegram_embed_url: `https://t.me/${publicChannelName}/${r.telegram_message_id}?embed=1`,
+                local_thumb_path: r.local_thumb_path,
                 people: JSON.parse(r.people || '[]'),
                 tags: JSON.parse(r.tags || '[]'),
                 upload_timestamp: r.upload_timestamp
@@ -128,7 +136,7 @@ async function generateCatalogAndSync() {
         }
         
         console.log("Pushing updates to GitHub main branch...");
-        await execPromise('git add public/catalog.json');
+        await execPromise('git add public/catalog.json public/thumbnails/');
         await execPromise('git commit -m "Auto-update gallery catalog" || true');
         await execPromise('git push origin main || git push origin master');
         
@@ -225,6 +233,23 @@ app.post('/api/upload_final', async (req, res) => {
       JSON.stringify(people),
       JSON.stringify(tags)
     ]);
+
+    // Generate Thumbnail
+    let localThumbPath = null;
+    try {
+        const thumbFilename = `thumb_${result.lastID}.webp`;
+        const thumbAbsPath = path.join(thumbsDir, thumbFilename);
+        await sharp(absolutePath)
+            .resize({ width: 600, withoutEnlargement: true })
+            .webp({ quality: 80 })
+            .toFile(thumbAbsPath);
+        localThumbPath = `thumbnails/${thumbFilename}`;
+        
+        await db.run('UPDATE media SET local_thumb_path = ? WHERE id = ?', [localThumbPath, result.lastID]);
+        console.log(`[Thumbnail] Generated fast loading preview: ${localThumbPath}`);
+    } catch (e) {
+        console.error("Failed to generate thumbnail:", e);
+    }
 
     if (queueId && queueId !== -1) {
        // --- MULTI-EMBEDDING SMART LEARNING LOOP ---
