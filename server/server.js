@@ -394,6 +394,47 @@ app.get('/api/photos', async (req, res) => {
   }
 });
 
+app.get('/api/stats', async (req, res) => {
+    try {
+        const totalMediaRows = await db.get('SELECT COUNT(*) as count FROM media');
+        const queueRows = await db.get('SELECT COUNT(*) as count FROM processing_queue');
+        
+        let publishedCount = 0;
+        const catalogPath = path.join(__dirname, '..', 'public', 'catalog.json');
+        if (fs.existsSync(catalogPath)) {
+            const catalog = JSON.parse(fs.readFileSync(catalogPath));
+            publishedCount = catalog.length;
+        }
+        
+        const totalProcessed = totalMediaRows.count;
+        const unpublishedCount = Math.max(0, totalProcessed - publishedCount);
+        
+        res.json({
+            total_processed: totalProcessed,
+            published: publishedCount,
+            ready_for_cloud: unpublishedCount,
+            pending_review: queueRows.count
+        });
+    } catch (e) {
+        console.error("Stats Error:", e);
+        res.status(500).json({ error: "Failed to fetch stats" });
+    }
+});
+
+app.put('/api/photo/:id', async (req, res) => {
+    try {
+        const { people, tags } = req.body;
+        await db.run(
+            'UPDATE media SET people = ?, tags = ? WHERE id = ?', 
+            [JSON.stringify(people), JSON.stringify(tags), req.params.id]
+        );
+        res.json({ success: true, message: "Metadata updated successfully" });
+    } catch (e) {
+        console.error("Update metadata error:", e);
+        res.status(500).json({ error: "Failed to update metadata" });
+    }
+});
+
 app.get('/api/unpublished_media', async (req, res) => {
   try {
       const rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');

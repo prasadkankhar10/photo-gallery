@@ -282,7 +282,9 @@ def process_directory():
                 is_auto_approved = False
                 final_caption = caption
                 
-                if all_faces_known and is_auto_approve_enabled:
+                has_unknown_faces = any('unknown' in f["name"].lower() for f in detected_faces)
+                
+                if all_faces_known and is_auto_approve_enabled and not has_unknown_faces:
                     if auto_approve_tag:
                         formatted_tag = auto_approve_tag.strip().replace(" ", "_").replace("#", "")
                         final_caption = f"{caption} #{formatted_tag}"

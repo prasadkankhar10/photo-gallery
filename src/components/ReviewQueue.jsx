@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, Square, Check, X, User as UserIcon, Loader2, Tag, Maximize } from 'lucide-react';
+import { Play, Square, Check, X, User as UserIcon, Loader2, Tag, Maximize, Database, Inbox, CloudUpload, Globe, Trash2 } from 'lucide-react';
 
 export default function ReviewQueue({ addToast }) {
   const [isProcessorRunning, setIsProcessorRunning] = useState(false);
@@ -15,6 +15,15 @@ export default function ReviewQueue({ addToast }) {
   const [daemonLogs, setDaemonLogs] = useState([]);
   const [unpublishedMedia, setUnpublishedMedia] = useState([]);
   const [fallbackUrls, setFallbackUrls] = useState({});
+  const [stats, setStats] = useState(null);
+  const [editingCloudImage, setEditingCloudImage] = useState(null);
+
+  const fetchStats = async () => {
+      try {
+          const res = await fetch('http://localhost:3000/api/stats');
+          setStats(await res.json());
+      } catch(e) {}
+  };
 
   const fetchLogs = async () => {
       try {
@@ -75,11 +84,13 @@ export default function ReviewQueue({ addToast }) {
     fetchQueue();
     fetchLogs();
     fetchUnpublished();
+    fetchStats();
     const interval = setInterval(() => {
       checkProcessorStatus();
       fetchQueue();
       fetchLogs();
       fetchUnpublished();
+      fetchStats();
     }, 5000); // Polling every 5 seconds
     return () => clearInterval(interval);
   }, []);
@@ -270,6 +281,31 @@ export default function ReviewQueue({ addToast }) {
 
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
+      {stats && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-slide-up">
+              <div className="sketch-card p-4 bg-paper flex flex-col items-center justify-center text-center shadow-sketchHover border-ink border-2 hover:-translate-y-1 transition-transform">
+                  <Database className="w-8 h-8 text-ink mb-2" />
+                  <span className="text-3xl font-bold text-ink font-sketch">{stats.total_processed}</span>
+                  <span className="text-xs font-bold font-mono text-pencil mt-1 uppercase">Total Photos</span>
+              </div>
+              <div className="sketch-card p-4 bg-[#fffbea] flex flex-col items-center justify-center text-center border-highlight sketch-border border-2 hover:-translate-y-1 transition-transform">
+                  <CloudUpload className="w-8 h-8 text-highlight mb-2" />
+                  <span className="text-3xl font-bold text-ink font-sketch">{stats.ready_for_cloud}</span>
+                  <span className="text-xs font-bold font-mono text-pencil mt-1 uppercase">Ready for Cloud</span>
+              </div>
+              <div className="sketch-card p-4 bg-[#f0fdf4] flex flex-col items-center justify-center text-center border-successInk sketch-border border-2 hover:-translate-y-1 transition-transform">
+                  <Globe className="w-8 h-8 text-successInk mb-2" />
+                  <span className="text-3xl font-bold text-ink font-sketch">{stats.published}</span>
+                  <span className="text-xs font-bold font-mono text-pencil mt-1 uppercase">Published</span>
+              </div>
+              <div className="sketch-card p-4 bg-[#fff0f2] flex flex-col items-center justify-center text-center border-errorInk sketch-border border-2 hover:-translate-y-1 transition-transform">
+                  <Inbox className="w-8 h-8 text-errorInk mb-2" />
+                  <span className="text-3xl font-bold text-ink font-sketch">{stats.pending_review}</span>
+                  <span className="text-xs font-bold font-mono text-pencil mt-1 uppercase">Pending Review</span>
+              </div>
+          </div>
+      )}
+
       <div className="sketch-card p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <h2 className="text-2xl font-bold text-ink flex items-center sketch-font uppercase">
@@ -366,7 +402,11 @@ export default function ReviewQueue({ addToast }) {
               </div>
               <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
                   {unpublishedMedia.map(m => (
-                      <div key={m.id} className="w-32 h-32 flex-shrink-0 sketch-border border-2 bg-paper p-1 shadow-sketchHover group relative">
+                      <div 
+                          key={m.id} 
+                          onClick={() => setEditingCloudImage(m)}
+                          className="w-32 h-32 flex-shrink-0 sketch-border border-2 bg-paper p-1 shadow-sketchHover group relative cursor-pointer hover:-translate-y-1 transition-transform"
+                      >
                   <img 
                       src={fallbackUrls[m.id] ? fallbackUrls[m.id] : `http://localhost:3000/${m.local_cache_path}`} 
                       onError={() => {
@@ -640,6 +680,140 @@ export default function ReviewQueue({ addToast }) {
           );
         })}
       </div>
+
+      {editingCloudImage && (
+          <div className="fixed inset-0 z-[300] flex items-center justify-center bg-ink/90 p-4 animate-slide-up">
+              <div className="sketch-card bg-paper w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden relative">
+                  <button className="absolute top-4 right-4 z-10 p-2 bg-white sketch-border hover:bg-highlight hover:text-ink transition-colors" onClick={() => setEditingCloudImage(null)}>
+                      <X className="w-6 h-6" />
+                  </button>
+                  <div className="w-full md:w-1/2 bg-[#f8f9fa] flex items-center justify-center border-b-2 md:border-b-0 md:border-r-2 border-ink sketch-border p-4">
+                       <img 
+                          src={`http://localhost:3000/${editingCloudImage.local_cache_path}`} 
+                          onError={(e) => { 
+                              if (editingCloudImage.telegram_file_id && e.target.src !== fallbackUrls[editingCloudImage.id]) {
+                                  e.target.src = fallbackUrls[editingCloudImage.id] || e.target.src;
+                              }
+                          }}
+                          className="max-h-full max-w-full object-contain sketch-card shadow-sketchHover" 
+                       />
+                  </div>
+                  <div className="w-full md:w-1/2 p-8 overflow-y-auto custom-scrollbar flex flex-col gap-8">
+                      <h3 className="text-3xl font-bold font-sketch text-ink border-b-2 border-dashed border-pencil/30 pb-4">Edit Cloud Data</h3>
+                      
+                      <div>
+                          <label className="text-sm font-bold text-pencil uppercase tracking-wider mb-4 block flex items-center gap-2"><UserIcon className="w-4 h-4"/> People Identified</label>
+                          <div className="flex flex-wrap gap-3">
+                              {editingCloudImage.people.length === 0 && <span className="text-pencil italic text-sm">No people detected.</span>}
+                              {editingCloudImage.people.map((person, idx) => (
+                                  <div key={idx} className="flex items-center gap-2 bg-white px-4 py-2 sketch-border shadow-[2px_2px_0px_#2c2e33]">
+                                      <span className="text-md font-bold text-ink">{person}</span>
+                                      <button 
+                                          className="text-errorInk hover:text-red-700 hover:scale-110 transition-transform"
+                                          onClick={() => {
+                                              const newPeople = [...editingCloudImage.people];
+                                              newPeople.splice(idx, 1);
+                                              setEditingCloudImage({...editingCloudImage, people: newPeople});
+                                          }}
+                                      >
+                                          <X className="w-5 h-5" />
+                                      </button>
+                                  </div>
+                              ))}
+                              <button 
+                                  className="text-sm font-bold bg-[#f0fdf4] text-successInk px-4 py-2 sketch-border border-successInk hover:bg-successInk hover:text-white transition-colors flex items-center gap-1 shadow-[2px_2px_0px_#22c55e]"
+                                  onClick={() => {
+                                      const name = prompt("Enter a person's name:");
+                                      if (name) {
+                                          setEditingCloudImage({...editingCloudImage, people: [...editingCloudImage.people, name.toLowerCase()]});
+                                      }
+                                  }}
+                              >
+                                  + <UserIcon className="w-4 h-4" /> Add Person
+                              </button>
+                          </div>
+                      </div>
+
+                      <div>
+                          <label className="text-sm font-bold text-pencil uppercase tracking-wider mb-4 block flex items-center gap-2"><Tag className="w-4 h-4"/> Event Tags</label>
+                          <div className="flex flex-wrap gap-3">
+                              {editingCloudImage.tags.length === 0 && <span className="text-pencil italic text-sm">No tags added.</span>}
+                              {editingCloudImage.tags.map((tag, idx) => (
+                                  <div key={idx} className="flex items-center gap-2 bg-white px-4 py-2 sketch-border shadow-[2px_2px_0px_#2c2e33]">
+                                      <span className="text-md font-bold text-ink">{tag}</span>
+                                      <button 
+                                          className="text-errorInk hover:text-red-700 hover:scale-110 transition-transform"
+                                          onClick={() => {
+                                              const newTags = [...editingCloudImage.tags];
+                                              newTags.splice(idx, 1);
+                                              setEditingCloudImage({...editingCloudImage, tags: newTags});
+                                          }}
+                                      >
+                                          <X className="w-5 h-5" />
+                                      </button>
+                                  </div>
+                              ))}
+                              <button 
+                                  className="text-sm font-bold bg-[#f0f8ff] text-[#0369a1] px-4 py-2 sketch-border border-[#0369a1] hover:bg-[#0369a1] hover:text-white transition-colors flex items-center gap-1 shadow-[2px_2px_0px_#0369a1]"
+                                  onClick={() => {
+                                      let tag = prompt("Enter an event tag (e.g. Birthday):");
+                                      if (tag) {
+                                          if (!tag.startsWith('#')) tag = '#' + tag;
+                                          setEditingCloudImage({...editingCloudImage, tags: [...editingCloudImage.tags, tag]});
+                                      }
+                                  }}
+                              >
+                                  + <Tag className="w-4 h-4" /> Add Tag
+                              </button>
+                          </div>
+                      </div>
+
+                      <div className="mt-auto pt-8 border-t-2 border-dashed border-pencil/30 flex gap-4">
+                          <button 
+                              className="sketch-button flex-1 py-4 bg-[#fff0f2] text-errorInk border-errorInk font-bold text-lg flex items-center justify-center hover:bg-errorInk hover:text-white group transition-colors"
+                              onClick={async () => {
+                                  if (window.confirm("Are you sure you want to permanently delete this photo? It will be erased from the database forever.")) {
+                                      try {
+                                          await fetch(`http://localhost:3000/api/delete_photo/${editingCloudImage.id}`, { method: 'DELETE' });
+                                          setEditingCloudImage(null);
+                                          if (addToast) addToast("Photo obliterated.", "info");
+                                          fetchStats();
+                                          fetchUnpublished();
+                                      } catch(e) {
+                                          if (addToast) addToast("Failed to delete", "error");
+                                      }
+                                  }
+                              }}
+                          >
+                              <Trash2 className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" /> Shred Photo
+                          </button>
+                          <button 
+                              className="sketch-button flex-1 py-4 bg-highlight text-ink font-bold text-lg flex items-center justify-center hover:scale-[1.02] shadow:sketchHover transition-all"
+                              onClick={async () => {
+                                  try {
+                                      await fetch(`http://localhost:3000/api/photo/${editingCloudImage.id}`, {
+                                          method: 'PUT',
+                                          headers: { 'Content-Type': 'application/json' },
+                                          body: JSON.stringify({
+                                              people: editingCloudImage.people,
+                                              tags: editingCloudImage.tags
+                                          })
+                                      });
+                                      setEditingCloudImage(null);
+                                      if (addToast) addToast("Metadata saved!", "success");
+                                      fetchUnpublished();
+                                  } catch (e) {
+                                      if (addToast) addToast("Failed to save changes", "error");
+                                  }
+                              }}
+                          >
+                              <Check className="w-6 h-6 mr-2" /> Save Metadata
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      )}
 
       {lightboxImage && (
           <div className="fixed inset-0 z-[250] flex items-center justify-center bg-ink/90 p-4 cursor-zoom-out animate-slide-up" onClick={() => setLightboxImage(null)}>
