@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Image as ImageIcon, ExternalLink, Download, Loader2, Trash2, Brain, X, Upload, Maximize } from 'lucide-react';
+import { Search, Image as ImageIcon, ExternalLink, Download, Loader2, Trash2, Brain, X, Upload, Maximize, User as UserIcon } from 'lucide-react';
 
 export default function PhotoGallery({ addToast }) {
   const [photos, setPhotos] = useState([]);
@@ -316,7 +316,7 @@ export default function PhotoGallery({ addToast }) {
             <div key={photo.id} className="break-inside-avoid sketch-card overflow-hidden group">
               <div className="relative border-b-2 border-ink bg-white">
                     <img 
-                      src={fallbackUrls[photo.id] || (photo.local_thumb_path ? `/${photo.local_thumb_path}` : `/${photo.local_cache_path}`)} 
+                      src={fallbackUrls[photo.id] || (photo.local_thumb_path ? `${import.meta.env.BASE_URL}${photo.local_thumb_path.replace('public/', '')}` : `${import.meta.env.BASE_URL}${photo.local_cache_path}`)} 
                       onError={() => {
                           if (!fallbackUrls[photo.id] && photo.telegram_file_id) {
                               setFallbackUrls(prev => ({...prev, [photo.id]: 'loading'}));
