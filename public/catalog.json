@@ -58,65 +58,6 @@
     "upload_timestamp": "2026-03-10 19:35:57"
   },
   {
-    "id": 211,
-    "telegram_message_id": "214",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPWaa8Nsl03tSU5VNfrmXGrG21Ap7IAAsQjAAJ2H3lVwnmhal5QtPE6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/214?embed=1",
-    "local_thumb_path": "thumbnails/thumb_211.webp",
-    "people": [
-      "priya_kankhar",
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Feather Boa #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:13:11"
-  },
-  {
-    "id": 210,
-    "telegram_message_id": "213",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPVaa8NlUKsNL0g-lN7yh7uJqhwaOMAAsMjAAJ2H3lVV7dh_YnJktA6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/213?embed=1",
-    "local_thumb_path": "thumbnails/thumb_210.webp",
-    "people": [
-      "Unknown Person 1",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Potter'S Wheel, Windsor Tie #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:12:43"
-  },
-  {
-    "id": 209,
-    "telegram_message_id": "212",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPUaa8NbZylBIEDOTdph3lwB4rHLUEAAsIjAAJ2H3lVGWcciFtKtaM6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/212?embed=1",
-    "local_thumb_path": "thumbnails/thumb_209.webp",
-    "people": [
-      "Unknown Person 10",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Trench Coat, Mortarboard, Academic Gown, Jersey #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:12:02"
-  },
-  {
-    "id": 208,
-    "telegram_message_id": "211",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPTaa8NUVzZqPmIZit0Og1vK4LV-MwAAsEjAAJ2H3lVYFxYp-h7xlM6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/211?embed=1",
-    "local_thumb_path": "thumbnails/thumb_208.webp",
-    "people": [
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Swing #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:11:35"
-  },
-  {
     "id": 207,
     "telegram_message_id": "210",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPSaa8NMTTUdEQ5Phi63uvdzXhD_fwAAsAjAAJ2H3lVOMrKGR4E1q86BA",
@@ -129,22 +70,6 @@
       "Pajama, Cardigan, Groom, Grocery Store, Greenhouse #Diwali"
     ],
     "upload_timestamp": "2026-03-09 18:11:03"
-  },
-  {
-    "id": 206,
-    "telegram_message_id": "209",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPRaa8NG6YBgiRzp90Fwh8uBEL5mZ0AAr8jAAJ2H3lV5Xq5NgZ0Wc46BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/209?embed=1",
-    "local_thumb_path": "thumbnails/thumb_206.webp",
-    "people": [
-      "Unknown Person 1",
-      "prasad_kankhar",
-      "dad"
-    ],
-    "tags": [
-      "Bow Tie, Lab Coat, Bathing Cap, Sunglass, Jersey #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:10:40"
   },
   {
     "id": 205,
@@ -161,82 +86,6 @@
     "upload_timestamp": "2026-03-09 18:10:32"
   },
   {
-    "id": 204,
-    "telegram_message_id": "207",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPPaa8NBeAK_T2DnfMAASSKPQ3Ts3ePAAK9IwACdh95VaJaYYwFbpBTOgQ",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/207?embed=1",
-    "local_thumb_path": "thumbnails/thumb_204.webp",
-    "people": [
-      "Unknown Person 2",
-      "samruddhi_cheke"
-    ],
-    "tags": [
-      "Fur Coat, Stole, Seat Belt, Bikini #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:10:18"
-  },
-  {
-    "id": 203,
-    "telegram_message_id": "206",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPOaa8M-E_sgj9piKjaKW8Y3NEMiy8AArwjAAJ2H3lVA-uwWp01ybo6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/206?embed=1",
-    "local_thumb_path": "thumbnails/thumb_203.webp",
-    "people": [
-      "Unknown Person 1",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Bathing Cap #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:10:06"
-  },
-  {
-    "id": 202,
-    "telegram_message_id": "205",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPNaa8M1aSzEpiSzaidVIv8YwGiNyQAArsjAAJ2H3lVRV7MJVOPFZc6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/205?embed=1",
-    "local_thumb_path": "thumbnails/thumb_202.webp",
-    "people": [
-      "Unknown Person 2",
-      "samruddhi_cheke"
-    ],
-    "tags": [
-      "Candle #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:09:31"
-  },
-  {
-    "id": 201,
-    "telegram_message_id": "204",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPMaa8MvdfMzhZigUt17zQrlLckw_0AArojAAJ2H3lVbOcKk1fnfj06BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/204?embed=1",
-    "local_thumb_path": "thumbnails/thumb_201.webp",
-    "people": [
-      "Unknown Person 1",
-      "Unknown Person 10",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Mortarboard, Bow Tie, Academic Gown, Windsor Tie #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:09:06"
-  },
-  {
-    "id": 200,
-    "telegram_message_id": "203",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPLaa8MqhrFDYgueXYOzSnGkr54WAIAArkjAAJ2H3lVegFqTocpOeo6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/203?embed=1",
-    "local_thumb_path": "thumbnails/thumb_200.webp",
-    "people": [
-      "Unknown Person 1",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Lab Coat, Cowboy Hat, Spatula #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:48"
-  },
-  {
     "id": 199,
     "telegram_message_id": "202",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPKaa8Mozc0BDnwPE3Q6SZdDoBF1kQAArgjAAJ2H3lVFPfRVEW11I86BA",
@@ -250,78 +99,6 @@
       "Pajama, Sarong, Gown #Diwali"
     ],
     "upload_timestamp": "2026-03-09 18:08:41"
-  },
-  {
-    "id": 198,
-    "telegram_message_id": "201",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPJaa8Mn8SRAumRcfRbRBXiOptkg1UAArcjAAJ2H3lVhwAB0Cou5ppkOgQ",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/201?embed=1",
-    "local_thumb_path": "thumbnails/thumb_198.webp",
-    "people": [
-      "Unknown Person 2",
-      "samruddhi_cheke"
-    ],
-    "tags": [
-      "Fur Coat, Stole, Sarong, Seat Belt #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:36"
-  },
-  {
-    "id": 197,
-    "telegram_message_id": "200",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPIaa8MmU0OdVofoox5_eRSPx_ZxSUAArYjAAJ2H3lVmP_wFMUSV_I6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/200?embed=1",
-    "local_thumb_path": "thumbnails/thumb_197.webp",
-    "people": [
-      "Unknown Person 1",
-      "gaurav_raut"
-    ],
-    "tags": [
-      "Pajama, Lab Coat, Apron, Cowboy Hat, Cleaver #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:31"
-  },
-  {
-    "id": 196,
-    "telegram_message_id": "199",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPHaa8MlmwfTt-j33Rb51PLMhvaIgsAArUjAAJ2H3lVxusicJNCzWw6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/199?embed=1",
-    "local_thumb_path": "thumbnails/thumb_196.webp",
-    "people": [
-      "Unknown Person 1"
-    ],
-    "tags": [
-      "Groom, Pajama, Lab Coat, Bow Tie #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:27"
-  },
-  {
-    "id": 195,
-    "telegram_message_id": "198",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPGaa8Mjenb9sTgbCrisCEiZOPRJpoAArQjAAJ2H3lVpvAgLvlkPNA6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/198?embed=1",
-    "local_thumb_path": "thumbnails/thumb_195.webp",
-    "people": [
-      "Unknown Person 1"
-    ],
-    "tags": [
-      "Cardigan, Bow Tie, Pajama, Pot #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:18"
-  },
-  {
-    "id": 194,
-    "telegram_message_id": "197",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPFaa8MelQDM-I8iW67qPY5SjJMvGgAArMjAAJ2H3lVkCuwWckrPiQ6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/197?embed=1",
-    "local_thumb_path": "thumbnails/thumb_194.webp",
-    "people": [
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Hammerhead, Plunger, Broom, Cleaver, Eel #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:08:00"
   },
   {
     "id": 193,
@@ -372,36 +149,6 @@
     "upload_timestamp": "2026-03-09 18:07:36"
   },
   {
-    "id": 190,
-    "telegram_message_id": "193",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPBaa8MYnobdn6fCCeiA7EAAeyJ_ToVAAKvIwACdh95VWoH-AFwjzYJOgQ",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/193?embed=1",
-    "local_thumb_path": "thumbnails/thumb_190.webp",
-    "people": [
-      "samruddhi_cheke",
-      "Unknown Person 2"
-    ],
-    "tags": [
-      "Candle #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:35"
-  },
-  {
-    "id": 189,
-    "telegram_message_id": "192",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAPAaa8MXkugITgas5GUrVPbP_1U8RgAAq4jAAJ2H3lV2O1M7f4L3HA6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/192?embed=1",
-    "local_thumb_path": "thumbnails/thumb_189.webp",
-    "people": [
-      "Unknown Person 1",
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Racket, Croquet Ball, Spatula #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:32"
-  },
-  {
     "id": 188,
     "telegram_message_id": "191",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO_aa8MW4vP0rs44wn7mvgJ_7Ii4xgAAq0jAAJ2H3lVAcaFUrzugA06BA",
@@ -417,21 +164,6 @@
     "upload_timestamp": "2026-03-09 18:07:28"
   },
   {
-    "id": 187,
-    "telegram_message_id": "190",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO-aa8MWOQG6Z6MyXcki8LSo2lifosAAqwjAAJ2H3lVMVWTwQEAAdAQOgQ",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/190?embed=1",
-    "local_thumb_path": "thumbnails/thumb_187.webp",
-    "people": [
-      "Unknown Person 2",
-      "samruddhi_cheke"
-    ],
-    "tags": [
-      "Candle #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:25"
-  },
-  {
     "id": 186,
     "telegram_message_id": "189",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO9aa8MVICoBBLeaB6XUaimOdGQH44AAqsjAAJ2H3lV4XAzuQ5muBw6BA",
@@ -444,100 +176,6 @@
       "Pajama, Apron #Diwali"
     ],
     "upload_timestamp": "2026-03-09 18:07:21"
-  },
-  {
-    "id": 185,
-    "telegram_message_id": "188",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO8aa8MUCW1Jvh3gcqMn6V1aNjlhgADqiMAAnYfeVUeXmWxqjCvMjoE",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/188?embed=1",
-    "local_thumb_path": "thumbnails/thumb_185.webp",
-    "people": [
-      "Unknown Person 1"
-    ],
-    "tags": [
-      "Groom, Bow Tie, Lab Coat, Torch #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:17"
-  },
-  {
-    "id": 184,
-    "telegram_message_id": "187",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO7aa8MTFfUhgU6WcRLzfoOPJpcuOMAAqkjAAJ2H3lVuDp7wYmoPo06BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/187?embed=1",
-    "local_thumb_path": "thumbnails/thumb_184.webp",
-    "people": [
-      "Unknown Person 1",
-      "Unknown Person 10"
-    ],
-    "tags": [
-      "Racket #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:14"
-  },
-  {
-    "id": 183,
-    "telegram_message_id": "186",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO6aa8MSIBKDVPLYMqQ8G04QrhAcVQAAqgjAAJ2H3lVTewRSC-gqEY6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/186?embed=1",
-    "local_thumb_path": "thumbnails/thumb_183.webp",
-    "people": [
-      "priya_kankhar",
-      "samruddhi_cheke",
-      "gaurav_raut",
-      "prasad_kankhar",
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Mortarboard, Academic Gown #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:07:09"
-  },
-  {
-    "id": 182,
-    "telegram_message_id": "185",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO5aa8MNDbf8yX3Y4qed-Wlvaw-3JgAAqcjAAJ2H3lVMwiLSqbYRrg6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/185?embed=1",
-    "local_thumb_path": "thumbnails/thumb_182.webp",
-    "people": [
-      "Unknown Person 4"
-    ],
-    "tags": [
-      "American Lobster, Kimono #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:06:50"
-  },
-  {
-    "id": 181,
-    "telegram_message_id": "184",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO4aa8MJwJlW2OMLxY2cu7nRc6i6kUAAqYjAAJ2H3lVc0tktDQTYrI6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/184?embed=1",
-    "local_thumb_path": "thumbnails/thumb_181.webp",
-    "people": [
-      "Unknown Person 3",
-      "Unknown Person 2"
-    ],
-    "tags": [
-      "Sarong #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:06:36"
-  },
-  {
-    "id": 180,
-    "telegram_message_id": "183",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAO3aa8MDUs-FEvtvw1yYCWKcZQ_WGkAAqUjAAJ2H3lVRUym5ctO0Vo6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/183?embed=1",
-    "local_thumb_path": "thumbnails/thumb_180.webp",
-    "people": [
-      "priya_kankhar",
-      "prasad_kankhar",
-      "samruddhi_cheke",
-      "gaurav_raut",
-      "Unknown Person 5"
-    ],
-    "tags": [
-      "Mortarboard, Academic Gown, Groom #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:06:11"
   },
   {
     "id": 179,
@@ -679,36 +317,6 @@
       "Military Uniform, Fur Coat, Mortarboard, Abaya, Kimono #Diwali"
     ],
     "upload_timestamp": "2026-03-09 18:05:35"
-  },
-  {
-    "id": 170,
-    "telegram_message_id": "173",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAOtaa8L1eFenyptTF72sCs6xm3drZYAApsjAAJ2H3lVM6aKj6Yb4To6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/173?embed=1",
-    "local_thumb_path": "thumbnails/thumb_170.webp",
-    "people": [
-      "Unknown Person 6",
-      "Unknown Person 4"
-    ],
-    "tags": [
-      "Jersey #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:05:15"
-  },
-  {
-    "id": 169,
-    "telegram_message_id": "172",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAOsaa8LsC_OtCdKN-nIX9xAj3nNJucAApojAAJ2H3lVpsY1vayZ7Rc6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/172?embed=1",
-    "local_thumb_path": "thumbnails/thumb_169.webp",
-    "people": [
-      "mom",
-      "Unknown Person 2"
-    ],
-    "tags": [
-      "Pineapple, Sarong #Diwali"
-    ],
-    "upload_timestamp": "2026-03-09 18:04:37"
   },
   {
     "id": 168,
@@ -1180,21 +788,6 @@
     "upload_timestamp": "2026-03-05 09:31:33"
   },
   {
-    "id": 82,
-    "telegram_message_id": "84",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAANUaalNYwT1tJgPsjpVcR7egAGkOc0AAuQfAAJkTElVOyXAjL9eXbQ6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/84?embed=1",
-    "local_thumb_path": null,
-    "people": [
-      "prasad_kankhar",
-      "Unknown Person 9"
-    ],
-    "tags": [
-      "Trench Coat, Suit, Groom, Bow Tie, Crutch"
-    ],
-    "upload_timestamp": "2026-03-05 09:31:19"
-  },
-  {
     "id": 81,
     "telegram_message_id": "83",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAANTaalNVtIrLf3H7eGbfkWtp4iG2VIAAuIfAAJkTElVccd4nicXs6U6BA",
@@ -1207,21 +800,6 @@
       "Stole, Swab"
     ],
     "upload_timestamp": "2026-03-05 09:31:06"
-  },
-  {
-    "id": 80,
-    "telegram_message_id": "82",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAANSaalNSZlWZLZRBm22bOJ09pMiuaQAAuEfAAJkTElVU5pSArBp4gs6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/82?embed=1",
-    "local_thumb_path": null,
-    "people": [
-      "Unknown Person 5",
-      "Unknown Person 3"
-    ],
-    "tags": [
-      "Pajama, Lab Coat"
-    ],
-    "upload_timestamp": "2026-03-05 09:30:53"
   },
   {
     "id": 79,
@@ -1260,23 +838,6 @@
       "Sunglasses, Sunglass, Seat Belt, Lab Coat"
     ],
     "upload_timestamp": "2026-03-05 09:30:16"
-  },
-  {
-    "id": 76,
-    "telegram_message_id": "78",
-    "telegram_file_id": "BQACAgUAAyEGAATWblHNAANOaalNEC4RP9YwQhFxh_N3w3wTbWoAAt0fAAJkTElVAU2JDX3ltfM6BA",
-    "telegram_embed_url": "https://t.me/prasadkankhar10/78?embed=1",
-    "local_thumb_path": null,
-    "people": [
-      "Unknown Person 6",
-      "Unknown Person 5",
-      "Unknown Person 7",
-      "prasad_kankhar"
-    ],
-    "tags": [
-      "Crutch, Swing, Bow Tie"
-    ],
-    "upload_timestamp": "2026-03-05 09:29:56"
   },
   {
     "id": 75,
