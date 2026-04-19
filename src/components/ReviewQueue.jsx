@@ -208,27 +208,37 @@ export default function ReviewQueue({ addToast }) {
       const itemsToApprove = queue.filter(q => selectedItems.has(q.id));
       let successCount = 0;
       
-      for (const item of itemsToApprove) {
-          const people = item.detected_faces.map((face, idx) => {
-              const customName = pendingLabels[`${item.id}-${idx}`];
-              return customName || face.name;
-          }).filter(p => !p.toLowerCase().includes('unknown'));
-          const caption = pendingLabels[`caption-${item.id}`] !== undefined ? pendingLabels[`caption-${item.id}`] : item.ai_caption;
+      const CONCURRENCY_LIMIT = 4;
+      for (let i = 0; i < itemsToApprove.length; i += CONCURRENCY_LIMIT) {
+          const chunk = itemsToApprove.slice(i, i + CONCURRENCY_LIMIT);
+          const uploadPromises = chunk.map(async (item) => {
+              const people = item.detected_faces.map((face, idx) => {
+                  const customName = pendingLabels[`${item.id}-${idx}`];
+                  return customName || face.name;
+              }).filter(p => !p.toLowerCase().includes('unknown'));
+              const caption = pendingLabels[`caption-${item.id}`] !== undefined ? pendingLabels[`caption-${item.id}`] : item.ai_caption;
+              
+              try {
+                  const res = await fetch('http://localhost:3000/api/upload_final', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                          absolutePath: item.file_path,
+                          localPath: `tests/${item.file_path.split(/[\/\\]/).pop()}`,
+                          people: people.map(p => p.toLowerCase()),
+                          tags: [caption],
+                          queueId: item.id
+                      })
+                  });
+                  return res.ok;
+              } catch (e) {
+                  console.error(e);
+                  return false;
+              }
+          });
           
-          try {
-              const res = await fetch('http://localhost:3000/api/upload_final', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                      absolutePath: item.file_path,
-                      localPath: `tests/${item.file_path.split(/[\/\\]/).pop()}`,
-                      people: people.map(p => p.toLowerCase()),
-                      tags: [caption],
-                      queueId: item.id
-                  })
-              });
-              if (res.ok) successCount++;
-          } catch (e) { console.error(e); }
+          const results = await Promise.all(uploadPromises);
+          successCount += results.filter(Boolean).length;
       }
       
       fetchQueue();

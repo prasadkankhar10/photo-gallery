@@ -19,6 +19,8 @@ export async function initializeDatabase() {
       telegram_link TEXT,
       people TEXT,
       tags TEXT,
+      media_type TEXT DEFAULT 'photo',
+      captured_at DATETIME,
       upload_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
@@ -57,10 +59,13 @@ export async function initializeDatabase() {
   `);
 
   // Migrate existing databases to include new columns
-  try {
-      await db.exec('ALTER TABLE media ADD COLUMN local_thumb_path TEXT');
-  } catch (e) {
-      // Column likely already exists
+  const migrations = [
+    'ALTER TABLE media ADD COLUMN local_thumb_path TEXT',
+    `ALTER TABLE media ADD COLUMN media_type TEXT DEFAULT 'photo'`,
+    'ALTER TABLE media ADD COLUMN captured_at DATETIME',
+  ];
+  for (const sql of migrations) {
+    try { await db.exec(sql); } catch (e) { /* column already exists */ }
   }
 
   return db;

@@ -8,9 +8,10 @@ import fs from 'fs';
 import { spawn, exec } from 'child_process';
 import util from 'util';
 import { initializeDatabase } from './db_init.js';
-import { uploadToTelegram, getTelegramFileUrl } from './telegram_handler.js';
+import { uploadToTelegram, uploadVideoToTelegram, getTelegramFileUrl } from './telegram_handler.js';
 import { GoogleGenAI } from '@google/genai';
 import sharp from 'sharp';
+import ExifReader from 'exifr';
 
 const execPromise = util.promisify(exec);
 
@@ -85,6 +86,41 @@ function fileToGenerativePart(filePath, mimeType) {
   };
 }
 
+// --- EXIF DATE EXTRACTOR ---
+async function extractCapturedAt(filePath, mediaType) {
+    try {
+        if (mediaType === 'photo') {
+            const exif = await ExifReader.parse(filePath, { pick: ['DateTimeOriginal', 'CreateDate', 'DateTime'] });
+            const dateStr = exif?.DateTimeOriginal || exif?.CreateDate || exif?.DateTime;
+            if (dateStr) {
+                // EXIF format: "YYYY:MM:DD HH:MM:SS" → standard ISO
+                const iso = dateStr.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3');
+                const parsed = new Date(iso);
+                if (!isNaN(parsed)) return parsed.toISOString();
+            }
+        } else if (mediaType === 'video') {
+            // Try ffprobe if available
+            try {
+                const { stdout } = await execPromise(
+                    `ffprobe -v quiet -print_format json -show_entries format_tags=creation_time "${filePath}"`
+                );
+                const info = JSON.parse(stdout);
+                const ct = info?.format?.tags?.creation_time;
+                if (ct) { const d = new Date(ct); if (!isNaN(d)) return d.toISOString(); }
+            } catch (_) { /* ffprobe not available, use file stat */ }
+        }
+    } catch (e) {
+        console.warn('[EXIF] Could not read date from file:', e.message);
+    }
+    // Fallback: file modification time
+    try {
+        const stat = fs.statSync(filePath);
+        return (stat.mtime || stat.birthtime || new Date()).toISOString();
+    } catch (_) {
+        return new Date().toISOString();
+    }
+}
+
 // --- CATALOG GENERATOR & GIT SYNC ---
 let isDeploying = false;
 
@@ -99,17 +135,15 @@ async function generateCatalogAndSync() {
         const rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
         
         const publicCatalog = rows.map(r => {
-            // Convert bot API link to public embed link
-            // e.g. https://t.me/c/1003597554125/123 -> https://t.me/MyChannelUsername/123?embed=1
-            // We need the user's public channel name. We'll store it in ENV or fallback to ID
             const publicChannelName = process.env.TELEGRAM_PUBLIC_CHANNEL_NAME || process.env.TELEGRAM_CHANNEL_ID.replace('-100', '');
-            
             return {
                 id: r.id,
                 telegram_message_id: r.telegram_message_id,
                 telegram_file_id: r.telegram_file_id,
                 telegram_embed_url: `https://t.me/${publicChannelName}/${r.telegram_message_id}?embed=1`,
                 local_thumb_path: r.local_thumb_path,
+                media_type: r.media_type || 'photo',
+                captured_at: r.captured_at || r.upload_timestamp,
                 people: JSON.parse(r.people || '[]'),
                 tags: JSON.parse(r.tags || '[]'),
                 upload_timestamp: r.upload_timestamp
@@ -218,20 +252,24 @@ app.post('/api/tag_image', upload.single('photo'), async (req, res) => {
 
 app.post('/api/upload_final', async (req, res) => {
   try {
-    const { absolutePath, localPath, people, tags, queueId } = req.body;
-    
+    const { absolutePath, localPath, people, tags, queueId, media_type: rawMediaType } = req.body;
+    const mediaType = rawMediaType || 'photo';
+
+    const capturedAt = await extractCapturedAt(absolutePath, mediaType);
     const telegramData = await uploadToTelegram(absolutePath, { people, tags });
 
     const result = await db.run(`
-      INSERT INTO media (local_cache_path, telegram_message_id, telegram_file_id, telegram_link, people, tags)
-      VALUES (?, ?, ?, ?, ?, ?)
+      INSERT INTO media (local_cache_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `, [
       localPath,
       telegramData.telegram_message_id,
       telegramData.telegram_file_id,
       telegramData.telegram_link,
       JSON.stringify(people),
-      JSON.stringify(tags)
+      JSON.stringify(tags),
+      mediaType,
+      capturedAt
     ]);
 
     // Generate Thumbnail
@@ -280,7 +318,6 @@ app.post('/api/upload_final', async (req, res) => {
 
     res.json({ success: true, id: result.lastID, ...telegramData });
     
-    // Preserving local temp file for high-speed local preview gallery.
     try {
         if (fs.existsSync(absolutePath)) {
             console.log(`[Cache Preserved] Kept local file: ${absolutePath} for local gallery viewing.`);
@@ -288,15 +325,76 @@ app.post('/api/upload_final', async (req, res) => {
     } catch (cleanupErr) {
         console.error("Cleanup error:", cleanupErr);
     }
-
-    // Trigger catalog generation (without github push) if they want local offline json... 
-    // Wait, the client only uses catalog.json when deployed up remote. We can just wait for manual sync!
-    // We will just do nothing here. The user triggers manual deployments.
-    
   } catch (error) {
     console.error("Final upload error:", error);
     res.status(500).json({ error: "Failed to upload to Telegram and save metadata" });
   }
+});
+
+// --- VIDEO UPLOAD ENDPOINT ---
+const videoStorage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, uploadDir),
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + path.extname(file.originalname));
+    }
+});
+const videoUpload = multer({ 
+    storage: videoStorage,
+    limits: { fileSize: 2 * 1024 * 1024 * 1024 } // 2 GB
+});
+
+app.post('/api/upload_video', videoUpload.single('video'), async (req, res) => {
+    try {
+        if (!req.file) return res.status(400).json({ error: 'No video file received' });
+
+        const filePath = req.file.path;
+        const localPath = `uploads/${req.file.filename}`;
+        let people = [];
+        let tags = [];
+        try { people = JSON.parse(req.body.people || '[]'); } catch(_) {}
+        try { tags = JSON.parse(req.body.tags || '[]'); } catch(_) {}
+
+        const capturedAt = await extractCapturedAt(filePath, 'video');
+        const telegramData = await uploadVideoToTelegram(filePath, { people, tags });
+
+        // Generate a video thumbnail poster using ffmpeg if available
+        let localThumbPath = null;
+        try {
+            const thumbFilename = `thumb_video_${Date.now()}.webp`;
+            const thumbAbsPath = path.join(thumbsDir, thumbFilename);
+            await execPromise(
+                `ffmpeg -y -i "${filePath}" -vframes 1 -an -s 600x400 -ss 00:00:02 "${thumbAbsPath}"`
+            );
+            localThumbPath = `thumbnails/${thumbFilename}`;
+            console.log(`[Video Thumbnail] Generated poster: ${localThumbPath}`);
+        } catch (ffErr) {
+            console.warn('[Video Thumbnail] ffmpeg not available, skipping poster generation:', ffErr.message);
+        }
+
+        const result = await db.run(`
+            INSERT INTO media (local_cache_path, local_thumb_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, 'video', ?)
+        `, [
+            localPath,
+            localThumbPath,
+            telegramData.telegram_message_id,
+            telegramData.telegram_file_id,
+            telegramData.telegram_link,
+            JSON.stringify(people),
+            JSON.stringify(tags),
+            capturedAt
+        ]);
+
+        if (localThumbPath) {
+            await db.run('UPDATE media SET local_thumb_path = ? WHERE id = ?', [localThumbPath, result.lastID]);
+        }
+
+        res.json({ success: true, id: result.lastID, ...telegramData });
+    } catch (error) {
+        console.error('Video upload error:', error);
+        res.status(500).json({ error: 'Failed to upload video to Telegram' });
+    }
 });
 
 // --- NEW OFFLINE PROCESSING UPLOAD ENDPOINT ---
@@ -370,7 +468,7 @@ app.get('/api/photos', async (req, res) => {
     let rows;
     
     if (query) {
-      rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
+      rows = await db.all('SELECT * FROM media ORDER BY COALESCE(captured_at, upload_timestamp) DESC');
       rows = rows.filter(row => {
         const people = JSON.parse(row.people || '[]');
         const tags = JSON.parse(row.tags || '[]');
@@ -378,11 +476,13 @@ app.get('/api/photos', async (req, res) => {
                tags.some(t => t.toLowerCase().includes(query));
       });
     } else {
-      rows = await db.all('SELECT * FROM media ORDER BY upload_timestamp DESC');
+      rows = await db.all('SELECT * FROM media ORDER BY COALESCE(captured_at, upload_timestamp) DESC');
     }
 
     const mapped = rows.map(r => ({
       ...r,
+      media_type: r.media_type || 'photo',
+      captured_at: r.captured_at || r.upload_timestamp,
       people: JSON.parse(r.people || '[]'),
       tags: JSON.parse(r.tags || '[]')
     }));

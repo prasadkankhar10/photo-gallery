@@ -13,10 +13,14 @@
     "start": "node server/server.js"
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@google/genai": "latest",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "exifr": "^7.1.3",
+    "exiftool-vendored": "^35.18.0",
     "express": "^4.19.2",
+    "fluent-ffmpeg": "^2.1.3",
     "lucide-react": "^0.378.0",
     "multer": "^1.4.5-lts.1",
     "node-telegram-bot-api": "^0.65.1",

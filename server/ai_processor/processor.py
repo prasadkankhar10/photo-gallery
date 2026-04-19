@@ -159,6 +159,12 @@ def process_directory():
             processed_any = False
 
             for img_path in image_files:
+                # Skip video files — videos are uploaded directly via /api/upload_video
+                VIDEO_EXTENSIONS = {'.mp4', '.mov', '.avi', '.mkv', '.webm', '.3gp', '.m4v', '.wmv', '.flv'}
+                if os.path.splitext(img_path)[1].lower() in VIDEO_EXTENSIONS:
+                    print(f"Skipping video file — video processing not supported: {os.path.basename(img_path)}", flush=True)
+                    continue
+
                 # Check queue
                 cursor.execute("SELECT id FROM processing_queue WHERE file_path = ?", (img_path,))
                 if cursor.fetchone():

@@ -19,8 +19,8 @@ export async function uploadToTelegram(filePath, metadata) {
   }
 
   const dateStr = new Date().toISOString().split('T')[0];
-  const peopleStr = metadata.people?.map(p => `#${p.replace(/\\s+/g, '')}`).join(' ') || '';
-  const tagsStr = metadata.tags?.map(t => `#${t.replace(/\\s+/g, '')}`).join(' ') || '';
+  const peopleStr = metadata.people?.map(p => `#${p.replace(/\s+/g, '')}`).join(' ') || '';
+  const tagsStr = metadata.tags?.map(t => `#${t.replace(/\s+/g, '')}`).join(' ') || '';
   
   const caption = `Date: ${dateStr} | People: ${peopleStr} | Tags: ${tagsStr}`;
 
@@ -28,16 +28,46 @@ export async function uploadToTelegram(filePath, metadata) {
     const fileStream = fs.createReadStream(filePath);
     const msg = await bot.sendDocument(channelId, fileStream, { caption });
     
-    // Telegram format for links mapping channel ID to view URL roughly:
     const cleanChannelId = channelId.toString().replace('-100', '');
+    const fileId = msg.document?.file_id || msg.video?.file_id || msg.photo?.slice(-1)[0]?.file_id || '';
     
     return {
       telegram_message_id: msg.message_id.toString(),
-      telegram_file_id: msg.document.file_id,
+      telegram_file_id: fileId,
       telegram_link: `https://t.me/c/${cleanChannelId}/${msg.message_id}`
     };
   } catch (error) {
     console.error("Telegram Upload Error:", error);
+    throw error;
+  }
+}
+
+export async function uploadVideoToTelegram(filePath, metadata) {
+  if (!bot || !channelId) {
+    throw new Error("Telegram bot token or channel ID not configured.");
+  }
+
+  const dateStr = new Date().toISOString().split('T')[0];
+  const peopleStr = metadata.people?.map(p => `#${p.replace(/\s+/g, '')}`).join(' ') || '';
+  const tagsStr = metadata.tags?.map(t => `#${t.replace(/\s+/g, '')}`).join(' ') || '';
+  
+  const caption = `🎥 Video | Date: ${dateStr} | People: ${peopleStr} | Tags: ${tagsStr}`;
+
+  try {
+    const fileStream = fs.createReadStream(filePath);
+    // sendDocument preserves original file quality - best for archival video
+    const msg = await bot.sendDocument(channelId, fileStream, { caption });
+    
+    const cleanChannelId = channelId.toString().replace('-100', '');
+    const fileId = msg.document?.file_id || msg.video?.file_id || '';
+    
+    return {
+      telegram_message_id: msg.message_id.toString(),
+      telegram_file_id: fileId,
+      telegram_link: `https://t.me/c/${cleanChannelId}/${msg.message_id}`
+    };
+  } catch (error) {
+    console.error("Telegram Video Upload Error:", error);
     throw error;
   }
 }
