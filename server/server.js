@@ -86,39 +86,69 @@ function fileToGenerativePart(filePath, mimeType) {
   };
 }
 
-// --- EXIF DATE EXTRACTOR ---
-async function extractCapturedAt(filePath, mediaType) {
+// --- EXIF & GPS METADATA EXTRACTOR ---
+async function reverseGeocode(lat, lng) {
+    try {
+        const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json&zoom=10`,
+            { headers: { 'User-Agent': 'Akshayanidhi-PhotoArchive/1.0' } }
+        );
+        const data = await res.json();
+        const addr = data.address || {};
+        return addr.city || addr.town || addr.village || addr.county || addr.state || null;
+    } catch (e) {
+        console.warn('[Geocode]', e.message);
+        return null;
+    }
+}
+
+async function extractMediaMetadata(filePath, mediaType) {
+    const result = { capturedAt: null, lat: null, lng: null };
     try {
         if (mediaType === 'photo') {
+            // Date from EXIF
             const exif = await ExifReader.parse(filePath, { pick: ['DateTimeOriginal', 'CreateDate', 'DateTime'] });
             const dateStr = exif?.DateTimeOriginal || exif?.CreateDate || exif?.DateTime;
             if (dateStr) {
-                // EXIF format: "YYYY:MM:DD HH:MM:SS" → standard ISO
                 const iso = dateStr.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3');
                 const parsed = new Date(iso);
-                if (!isNaN(parsed)) return parsed.toISOString();
+                if (!isNaN(parsed)) result.capturedAt = parsed.toISOString();
             }
+            // GPS from EXIF
+            try {
+                const gps = await ExifReader.gps(filePath);
+                if (gps?.latitude != null && gps?.longitude != null) {
+                    result.lat = gps.latitude;
+                    result.lng = gps.longitude;
+                }
+            } catch (_) { /* no GPS in this photo */ }
         } else if (mediaType === 'video') {
-            // Try ffprobe if available
             try {
                 const { stdout } = await execPromise(
-                    `ffprobe -v quiet -print_format json -show_entries format_tags=creation_time "${filePath}"`
+                    `ffprobe -v quiet -print_format json -show_entries format_tags=creation_time,location "${filePath}"`
                 );
                 const info = JSON.parse(stdout);
                 const ct = info?.format?.tags?.creation_time;
-                if (ct) { const d = new Date(ct); if (!isNaN(d)) return d.toISOString(); }
-            } catch (_) { /* ffprobe not available, use file stat */ }
+                if (ct) { const d = new Date(ct); if (!isNaN(d)) result.capturedAt = d.toISOString(); }
+                // iOS/Android embed GPS as ISO 6709: +lat+lng/
+                const loc = info?.format?.tags?.location || info?.format?.tags?.['com.apple.quicktime.location.ISO6709'];
+                if (loc) {
+                    const m = loc.match(/([+-]\d+\.?\d*?)([+-]\d+\.?\d*?)\//);
+                    if (m) { result.lat = parseFloat(m[1]); result.lng = parseFloat(m[2]); }
+                }
+            } catch (_) { /* ffprobe unavailable */ }
         }
     } catch (e) {
-        console.warn('[EXIF] Could not read date from file:', e.message);
+        console.warn('[EXIF] Could not read metadata:', e.message);
     }
-    // Fallback: file modification time
-    try {
-        const stat = fs.statSync(filePath);
-        return (stat.mtime || stat.birthtime || new Date()).toISOString();
-    } catch (_) {
-        return new Date().toISOString();
+    // Fallback: file mtime → current time
+    if (!result.capturedAt) {
+        try {
+            const stat = fs.statSync(filePath);
+            result.capturedAt = (stat.mtime || stat.birthtime || new Date()).toISOString();
+        } catch (_) { result.capturedAt = new Date().toISOString(); }
     }
+    return result;
 }
 
 // --- CATALOG GENERATOR & GIT SYNC ---
@@ -144,6 +174,9 @@ async function generateCatalogAndSync() {
                 local_thumb_path: r.local_thumb_path,
                 media_type: r.media_type || 'photo',
                 captured_at: r.captured_at || r.upload_timestamp,
+                gps_lat: r.gps_lat || null,
+                gps_lng: r.gps_lng || null,
+                location_name: r.location_name || null,
                 people: JSON.parse(r.people || '[]'),
                 tags: JSON.parse(r.tags || '[]'),
                 upload_timestamp: r.upload_timestamp
@@ -255,12 +288,15 @@ app.post('/api/upload_final', async (req, res) => {
     const { absolutePath, localPath, people, tags, queueId, media_type: rawMediaType } = req.body;
     const mediaType = rawMediaType || 'photo';
 
-    const capturedAt = await extractCapturedAt(absolutePath, mediaType);
+    const { capturedAt, lat, lng } = await extractMediaMetadata(absolutePath, mediaType);
+    const location_name = (lat != null && lng != null) ? await reverseGeocode(lat, lng) : null;
+    if (lat != null) console.log(`[GPS] ${location_name || 'Unknown'} (${lat?.toFixed(4)}, ${lng?.toFixed(4)})`);
+
     const telegramData = await uploadToTelegram(absolutePath, { people, tags });
 
     const result = await db.run(`
-      INSERT INTO media (local_cache_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO media (local_cache_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at, gps_lat, gps_lng, location_name)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `, [
       localPath,
       telegramData.telegram_message_id,
@@ -269,7 +305,10 @@ app.post('/api/upload_final', async (req, res) => {
       JSON.stringify(people),
       JSON.stringify(tags),
       mediaType,
-      capturedAt
+      capturedAt,
+      lat,
+      lng,
+      location_name
     ]);
 
     // Generate Thumbnail
@@ -355,7 +394,8 @@ app.post('/api/upload_video', videoUpload.single('video'), async (req, res) => {
         try { people = JSON.parse(req.body.people || '[]'); } catch(_) {}
         try { tags = JSON.parse(req.body.tags || '[]'); } catch(_) {}
 
-        const capturedAt = await extractCapturedAt(filePath, 'video');
+        const { capturedAt, lat, lng } = await extractMediaMetadata(filePath, 'video');
+        const location_name = (lat != null && lng != null) ? await reverseGeocode(lat, lng) : null;
         const telegramData = await uploadVideoToTelegram(filePath, { people, tags });
 
         // Generate a video thumbnail poster using ffmpeg if available
@@ -369,12 +409,12 @@ app.post('/api/upload_video', videoUpload.single('video'), async (req, res) => {
             localThumbPath = `thumbnails/${thumbFilename}`;
             console.log(`[Video Thumbnail] Generated poster: ${localThumbPath}`);
         } catch (ffErr) {
-            console.warn('[Video Thumbnail] ffmpeg not available, skipping poster generation:', ffErr.message);
+            console.warn('[Video Thumbnail] ffmpeg not available:', ffErr.message);
         }
 
         const result = await db.run(`
-            INSERT INTO media (local_cache_path, local_thumb_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, 'video', ?)
+            INSERT INTO media (local_cache_path, local_thumb_path, telegram_message_id, telegram_file_id, telegram_link, people, tags, media_type, captured_at, gps_lat, gps_lng, location_name)
+            VALUES (?, ?, ?, ?, ?, ?, ?, 'video', ?, ?, ?, ?)
         `, [
             localPath,
             localThumbPath,
@@ -383,7 +423,10 @@ app.post('/api/upload_video', videoUpload.single('video'), async (req, res) => {
             telegramData.telegram_link,
             JSON.stringify(people),
             JSON.stringify(tags),
-            capturedAt
+            capturedAt,
+            lat,
+            lng,
+            location_name
         ]);
 
         if (localThumbPath) {
@@ -483,6 +526,9 @@ app.get('/api/photos', async (req, res) => {
       ...r,
       media_type: r.media_type || 'photo',
       captured_at: r.captured_at || r.upload_timestamp,
+      gps_lat: r.gps_lat || null,
+      gps_lng: r.gps_lng || null,
+      location_name: r.location_name || null,
       people: JSON.parse(r.people || '[]'),
       tags: JSON.parse(r.tags || '[]')
     }));

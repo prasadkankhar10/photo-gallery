@@ -63,6 +63,9 @@ export async function initializeDatabase() {
     'ALTER TABLE media ADD COLUMN local_thumb_path TEXT',
     `ALTER TABLE media ADD COLUMN media_type TEXT DEFAULT 'photo'`,
     'ALTER TABLE media ADD COLUMN captured_at DATETIME',
+    'ALTER TABLE media ADD COLUMN gps_lat REAL',
+    'ALTER TABLE media ADD COLUMN gps_lng REAL',
+    'ALTER TABLE media ADD COLUMN location_name TEXT',
   ];
   for (const sql of migrations) {
     try { await db.exec(sql); } catch (e) { /* column already exists */ }
