@@ -1,5 +1,43 @@
 [
   {
+    "id": 809,
+    "telegram_message_id": "813",
+    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAIDLWno9uXyylSh50HJ_c5yhHjniHqiAAKPIgACUkFIV4eoWolptnbkOwQ",
+    "telegram_embed_url": "https://t.me/prasadkankhar10/813?embed=1",
+    "local_thumb_path": "thumbnails/thumb_809.webp",
+    "media_type": "photo",
+    "captured_at": "2026-04-22T16:26:43.707Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
+    "people": [
+      "noone"
+    ],
+    "tags": [
+      "Rifle, Baseball, Revolver, Power Drill"
+    ],
+    "upload_timestamp": "2026-04-22 16:27:19"
+  },
+  {
+    "id": 808,
+    "telegram_message_id": "812",
+    "telegram_file_id": "BQACAgUAAyEGAATWblHNAAIDLGno9q2TOoL5gaaJSX50Cd6TnM_KAAKNIgACUkFIV3ldOlxvj-qYOwQ",
+    "telegram_embed_url": "https://t.me/prasadkankhar10/812?embed=1",
+    "local_thumb_path": "thumbnails/thumb_808.webp",
+    "media_type": "photo",
+    "captured_at": "2026-04-22T16:26:14.828Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
+    "people": [
+      "priya_kankhar"
+    ],
+    "tags": [
+      "Tub, Bathtub, Bikini, Wig"
+    ],
+    "upload_timestamp": "2026-04-22 16:26:24"
+  },
+  {
     "id": 807,
     "telegram_message_id": "811",
     "telegram_file_id": "BQACAgUAAyEGAATWblHNAAIDK2nnmNAditSfVp3fziZDLhr526g-AAL6GwACUkFAVxrCm1ZQKtK_OwQ",
@@ -7,6 +45,9 @@
     "local_thumb_path": "thumbnails/thumb_807.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.240Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "karan_satpute"
@@ -24,6 +65,9 @@
     "local_thumb_path": "thumbnails/thumb_804.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.976Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -40,6 +84,9 @@
     "local_thumb_path": "thumbnails/thumb_805.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.768Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -56,6 +103,9 @@
     "local_thumb_path": "thumbnails/thumb_806.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.004Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -72,6 +122,9 @@
     "local_thumb_path": "thumbnails/thumb_803.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.938Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -88,6 +141,9 @@
     "local_thumb_path": "thumbnails/thumb_802.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.671Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "tirtharaj_more",
@@ -111,6 +167,9 @@
     "local_thumb_path": "thumbnails/thumb_799.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.536Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "samruddhi_cheke",
@@ -130,6 +189,9 @@
     "local_thumb_path": "thumbnails/thumb_800.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.671Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "tirtharaj_more",
@@ -153,6 +215,9 @@
     "local_thumb_path": "thumbnails/thumb_801.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.573Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie"
     ],
@@ -169,6 +234,9 @@
     "local_thumb_path": "thumbnails/thumb_798.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.574Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie"
     ],
@@ -185,6 +253,9 @@
     "local_thumb_path": "thumbnails/thumb_797.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.319Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar",
@@ -205,6 +276,9 @@
     "local_thumb_path": "thumbnails/thumb_794.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.321Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar",
@@ -225,6 +299,9 @@
     "local_thumb_path": "thumbnails/thumb_795.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.926Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -241,6 +318,9 @@
     "local_thumb_path": "thumbnails/thumb_796.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.084Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -257,6 +337,9 @@
     "local_thumb_path": "thumbnails/thumb_793.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.897Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "prasad_kankhar",
@@ -277,6 +360,9 @@
     "local_thumb_path": "thumbnails/thumb_790.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.899Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "prasad_kankhar",
@@ -295,6 +381,9 @@
     "local_thumb_path": "thumbnails/thumb_791.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.786Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -311,6 +400,9 @@
     "local_thumb_path": "thumbnails/thumb_792.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.626Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -327,6 +419,9 @@
     "local_thumb_path": "thumbnails/thumb_789.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.547Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -343,6 +438,9 @@
     "local_thumb_path": "thumbnails/thumb_786.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.549Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -359,6 +457,9 @@
     "local_thumb_path": "thumbnails/thumb_787.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.492Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -375,6 +476,9 @@
     "local_thumb_path": "thumbnails/thumb_788.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.437Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -391,6 +495,9 @@
     "local_thumb_path": "thumbnails/thumb_785.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.371Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -407,6 +514,9 @@
     "local_thumb_path": "thumbnails/thumb_782.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.331Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar",
@@ -425,6 +535,9 @@
     "local_thumb_path": "thumbnails/thumb_783.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.361Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -441,6 +554,9 @@
     "local_thumb_path": "thumbnails/thumb_784.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.371Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -457,6 +573,9 @@
     "local_thumb_path": "thumbnails/thumb_780.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.951Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -476,6 +595,9 @@
     "local_thumb_path": "thumbnails/thumb_781.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.977Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku",
@@ -495,6 +617,9 @@
     "local_thumb_path": "thumbnails/thumb_778.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.943Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -512,6 +637,9 @@
     "local_thumb_path": "thumbnails/thumb_779.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.918Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -529,6 +657,9 @@
     "local_thumb_path": "thumbnails/thumb_777.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.702Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -545,6 +676,9 @@
     "local_thumb_path": "thumbnails/thumb_774.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.816Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -561,6 +695,9 @@
     "local_thumb_path": "thumbnails/thumb_775.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.843Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar"
@@ -578,6 +715,9 @@
     "local_thumb_path": "thumbnails/thumb_776.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.841Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar"
@@ -595,6 +735,9 @@
     "local_thumb_path": "thumbnails/thumb_772.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.718Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -611,6 +754,9 @@
     "local_thumb_path": "thumbnails/thumb_773.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.814Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -627,6 +773,9 @@
     "local_thumb_path": "thumbnails/thumb_770.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.507Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -643,6 +792,9 @@
     "local_thumb_path": "thumbnails/thumb_771.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.535Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -659,6 +811,9 @@
     "local_thumb_path": "thumbnails/thumb_769.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.461Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -675,6 +830,9 @@
     "local_thumb_path": "thumbnails/thumb_766.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.387Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -691,6 +849,9 @@
     "local_thumb_path": "thumbnails/thumb_767.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.437Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -707,6 +868,9 @@
     "local_thumb_path": "thumbnails/thumb_768.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.330Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -723,6 +887,9 @@
     "local_thumb_path": "thumbnails/thumb_765.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.327Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "chhatrapati_shivaji_maharaj",
@@ -743,6 +910,9 @@
     "local_thumb_path": "thumbnails/thumb_764.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.239Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "karan_satpute"
@@ -760,6 +930,9 @@
     "local_thumb_path": "thumbnails/thumb_763.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.902Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ru_kaku",
@@ -778,6 +951,9 @@
     "local_thumb_path": "thumbnails/thumb_762.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.867Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -794,6 +970,9 @@
     "local_thumb_path": "thumbnails/thumb_760.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.903Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku",
@@ -812,6 +991,9 @@
     "local_thumb_path": "thumbnails/thumb_761.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.867Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -828,6 +1010,9 @@
     "local_thumb_path": "thumbnails/thumb_758.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.849Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "noone",
@@ -847,6 +1032,9 @@
     "local_thumb_path": "thumbnails/thumb_759.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.848Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "noone",
@@ -867,6 +1055,9 @@
     "local_thumb_path": "thumbnails/thumb_757.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.783Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "sweet_tie"
@@ -884,6 +1075,9 @@
     "local_thumb_path": "thumbnails/thumb_755.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.785Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "gaurav_raut",
@@ -902,6 +1096,9 @@
     "local_thumb_path": "thumbnails/thumb_756.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.785Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "gaurav_raut",
@@ -920,6 +1117,9 @@
     "local_thumb_path": "thumbnails/thumb_753.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.782Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "tirtharaj_more"
@@ -937,6 +1137,9 @@
     "local_thumb_path": "thumbnails/thumb_754.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.781Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "tirtharaj_more"
@@ -954,6 +1157,9 @@
     "local_thumb_path": "thumbnails/thumb_752.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.780Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "sweet_tie"
@@ -971,6 +1177,9 @@
     "local_thumb_path": "thumbnails/thumb_750.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.779Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tia",
       "smart_bro"
@@ -988,6 +1197,9 @@
     "local_thumb_path": "thumbnails/thumb_751.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.773Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "baba",
       "balu_tie"
@@ -1005,6 +1217,9 @@
     "local_thumb_path": "thumbnails/thumb_748.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.772Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "priya_kankhar",
@@ -1033,6 +1248,9 @@
     "local_thumb_path": "thumbnails/thumb_749.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.773Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "baba",
       "balu_tie"
@@ -1050,6 +1268,9 @@
     "local_thumb_path": "thumbnails/thumb_746.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.767Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "big_tie"
@@ -1067,6 +1288,9 @@
     "local_thumb_path": "thumbnails/thumb_747.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.769Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "big_tie"
@@ -1084,6 +1308,9 @@
     "local_thumb_path": "thumbnails/thumb_744.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.766Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "big_tie"
@@ -1101,6 +1328,9 @@
     "local_thumb_path": "thumbnails/thumb_745.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.771Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "balu_tie",
@@ -1129,6 +1359,9 @@
     "local_thumb_path": "thumbnails/thumb_743.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.535Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "samruddhi_cheke",
@@ -1147,6 +1380,9 @@
     "local_thumb_path": "thumbnails/thumb_740.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.097Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1163,6 +1399,9 @@
     "local_thumb_path": "thumbnails/thumb_741.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.134Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1179,6 +1418,9 @@
     "local_thumb_path": "thumbnails/thumb_742.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.175Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1195,6 +1437,9 @@
     "local_thumb_path": "thumbnails/thumb_738.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.540Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1211,6 +1456,9 @@
     "local_thumb_path": "thumbnails/thumb_739.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.689Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -1227,6 +1475,9 @@
     "local_thumb_path": "thumbnails/thumb_736.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.540Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1243,6 +1494,9 @@
     "local_thumb_path": "thumbnails/thumb_737.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.528Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1259,6 +1513,9 @@
     "local_thumb_path": "thumbnails/thumb_735.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.360Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "priya_kankhar",
@@ -1278,6 +1535,9 @@
     "local_thumb_path": "thumbnails/thumb_733.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.362Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "priya_kankhar",
@@ -1297,6 +1557,9 @@
     "local_thumb_path": "thumbnails/thumb_734.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.482Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1313,6 +1576,9 @@
     "local_thumb_path": "thumbnails/thumb_732.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.447Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1329,6 +1595,9 @@
     "local_thumb_path": "thumbnails/thumb_731.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.248Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1345,6 +1614,9 @@
     "local_thumb_path": "thumbnails/thumb_729.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.962Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -1361,6 +1633,9 @@
     "local_thumb_path": "thumbnails/thumb_730.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.960Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "priya_kankhar"
@@ -1378,6 +1653,9 @@
     "local_thumb_path": "thumbnails/thumb_728.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.249Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1394,6 +1672,9 @@
     "local_thumb_path": "thumbnails/thumb_727.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.808Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "big_kaka",
@@ -1413,6 +1694,9 @@
     "local_thumb_path": "thumbnails/thumb_724.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.370Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -1429,6 +1713,9 @@
     "local_thumb_path": "thumbnails/thumb_725.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.414Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -1445,6 +1732,9 @@
     "local_thumb_path": "thumbnails/thumb_726.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.810Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "big_kaka",
@@ -1463,6 +1753,9 @@
     "local_thumb_path": "thumbnails/thumb_720.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.762Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -1479,6 +1772,9 @@
     "local_thumb_path": "thumbnails/thumb_721.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.764Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "adityaraj_more"
@@ -1496,6 +1792,9 @@
     "local_thumb_path": "thumbnails/thumb_722.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.764Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "small_tei",
       "adityaraj_more"
@@ -1513,6 +1812,9 @@
     "local_thumb_path": "thumbnails/thumb_723.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.766Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_tie",
       "balu_tie"
@@ -1530,6 +1832,9 @@
     "local_thumb_path": "thumbnails/thumb_719.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.762Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "baba"
@@ -1547,6 +1852,9 @@
     "local_thumb_path": "thumbnails/thumb_718.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.759Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie"
     ],
@@ -1563,6 +1871,9 @@
     "local_thumb_path": "thumbnails/thumb_716.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.760Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie"
     ],
@@ -1579,6 +1890,9 @@
     "local_thumb_path": "thumbnails/thumb_717.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.758Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "ie"
@@ -1596,6 +1910,9 @@
     "local_thumb_path": "thumbnails/thumb_714.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.749Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "uddhav_cheke"
@@ -1613,6 +1930,9 @@
     "local_thumb_path": "thumbnails/thumb_715.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.757Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "ie"
@@ -1630,6 +1950,9 @@
     "local_thumb_path": "thumbnails/thumb_712.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.746Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut"
     ],
@@ -1646,6 +1969,9 @@
     "local_thumb_path": "thumbnails/thumb_713.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.757Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "baba",
@@ -1669,6 +1995,9 @@
     "local_thumb_path": "thumbnails/thumb_711.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.747Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "smart_bro"
@@ -1686,6 +2015,9 @@
     "local_thumb_path": "thumbnails/thumb_709.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Tray, Plate, Shower Cap"
@@ -1700,6 +2032,9 @@
     "local_thumb_path": "thumbnails/thumb_710.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.744Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut"
     ],
@@ -1716,6 +2051,9 @@
     "local_thumb_path": "thumbnails/thumb_708.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.743Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Slide Rule, Window Shade, Menu, Radiator"
@@ -1730,6 +2068,9 @@
     "local_thumb_path": "thumbnails/thumb_707.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.738Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "small_tei",
       "tirtharaj_more",
@@ -1749,6 +2090,9 @@
     "local_thumb_path": "thumbnails/thumb_704.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tie",
       "tirtharaj_more",
@@ -1768,6 +2112,9 @@
     "local_thumb_path": "thumbnails/thumb_705.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.727Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "devansh",
       "noone",
@@ -1786,6 +2133,9 @@
     "local_thumb_path": "thumbnails/thumb_706.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.727Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "devansh",
@@ -1804,6 +2154,9 @@
     "local_thumb_path": "thumbnails/thumb_702.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.025Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1820,6 +2173,9 @@
     "local_thumb_path": "thumbnails/thumb_703.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.690Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -1836,6 +2192,9 @@
     "local_thumb_path": "thumbnails/thumb_700.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.241Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1852,6 +2211,9 @@
     "local_thumb_path": "thumbnails/thumb_701.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.823Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1868,6 +2230,9 @@
     "local_thumb_path": "thumbnails/thumb_697.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.198Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1884,6 +2249,9 @@
     "local_thumb_path": "thumbnails/thumb_698.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.309Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1900,6 +2268,9 @@
     "local_thumb_path": "thumbnails/thumb_699.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.242Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1916,6 +2287,9 @@
     "local_thumb_path": "thumbnails/thumb_696.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.130Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1932,6 +2306,9 @@
     "local_thumb_path": "thumbnails/thumb_694.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.046Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "priya_kankhar"
@@ -1949,6 +2326,9 @@
     "local_thumb_path": "thumbnails/thumb_695.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.137Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -1965,6 +2345,9 @@
     "local_thumb_path": "thumbnails/thumb_693.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.995Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "mom"
@@ -1982,6 +2365,9 @@
     "local_thumb_path": "thumbnails/thumb_691.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.993Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "mom"
@@ -1999,6 +2385,9 @@
     "local_thumb_path": "thumbnails/thumb_692.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.927Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -2016,6 +2405,9 @@
     "local_thumb_path": "thumbnails/thumb_689.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.880Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -2032,6 +2424,9 @@
     "local_thumb_path": "thumbnails/thumb_690.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.928Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -2049,6 +2444,9 @@
     "local_thumb_path": "thumbnails/thumb_687.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.663Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "big_bro"
@@ -2066,6 +2464,9 @@
     "local_thumb_path": "thumbnails/thumb_688.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.702Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro",
       "big_wahini"
@@ -2083,6 +2484,9 @@
     "local_thumb_path": "thumbnails/thumb_685.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.666Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro",
       "big_wahini"
@@ -2100,6 +2504,9 @@
     "local_thumb_path": "thumbnails/thumb_686.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.703Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "big_bro"
@@ -2117,6 +2524,9 @@
     "local_thumb_path": "thumbnails/thumb_684.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.528Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -2133,6 +2543,9 @@
     "local_thumb_path": "thumbnails/thumb_683.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.329Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku",
@@ -2151,6 +2564,9 @@
     "local_thumb_path": "thumbnails/thumb_682.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.270Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku"
@@ -2168,6 +2584,9 @@
     "local_thumb_path": "thumbnails/thumb_680.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.270Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku"
@@ -2185,6 +2604,9 @@
     "local_thumb_path": "thumbnails/thumb_681.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.265Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "ur_kaku"
     ],
@@ -2201,6 +2623,9 @@
     "local_thumb_path": "thumbnails/thumb_679.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.233Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -2217,6 +2642,9 @@
     "local_thumb_path": "thumbnails/thumb_678.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.263Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "ur_kaku"
     ],
@@ -2233,6 +2661,9 @@
     "local_thumb_path": "thumbnails/thumb_676.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.227Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -2249,6 +2680,9 @@
     "local_thumb_path": "thumbnails/thumb_677.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.235Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -2265,6 +2699,9 @@
     "local_thumb_path": "thumbnails/thumb_675.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.188Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -2284,6 +2721,9 @@
     "local_thumb_path": "thumbnails/thumb_674.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.208Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar"
@@ -2301,6 +2741,9 @@
     "local_thumb_path": "thumbnails/thumb_672.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.182Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -2327,6 +2770,9 @@
     "local_thumb_path": "thumbnails/thumb_673.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.189Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar",
@@ -2345,6 +2791,9 @@
     "local_thumb_path": "thumbnails/thumb_670.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.092Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar",
@@ -2363,6 +2812,9 @@
     "local_thumb_path": "thumbnails/thumb_671.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.181Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -2389,6 +2841,9 @@
     "local_thumb_path": "thumbnails/thumb_669.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.040Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar"
@@ -2406,6 +2861,9 @@
     "local_thumb_path": "thumbnails/thumb_668.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.094Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar",
@@ -2424,6 +2882,9 @@
     "local_thumb_path": "thumbnails/thumb_666.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.977Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "ur_kaku",
@@ -2443,6 +2904,9 @@
     "local_thumb_path": "thumbnails/thumb_667.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.039Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar"
@@ -2460,6 +2924,9 @@
     "local_thumb_path": "thumbnails/thumb_664.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.951Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -2479,6 +2946,9 @@
     "local_thumb_path": "thumbnails/thumb_665.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.018Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -2496,6 +2966,9 @@
     "local_thumb_path": "thumbnails/thumb_663.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.691Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -2516,6 +2989,9 @@
     "local_thumb_path": "thumbnails/thumb_662.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.688Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "small_tei"
@@ -2533,6 +3009,9 @@
     "local_thumb_path": "thumbnails/thumb_660.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.684Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro",
       "big_wahini"
@@ -2550,6 +3029,9 @@
     "local_thumb_path": "thumbnails/thumb_661.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.688Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "swati_cheke",
@@ -2569,6 +3051,9 @@
     "local_thumb_path": "thumbnails/thumb_658.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.683Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro",
       "big_wahini"
@@ -2586,6 +3071,9 @@
     "local_thumb_path": "thumbnails/thumb_659.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.680Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mahadev"
     ],
@@ -2602,6 +3090,9 @@
     "local_thumb_path": "thumbnails/thumb_657.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.680Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mahadev"
     ],
@@ -2618,6 +3109,9 @@
     "local_thumb_path": "thumbnails/thumb_656.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.675Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke"
     ],
@@ -2634,6 +3128,9 @@
     "local_thumb_path": "thumbnails/thumb_652.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.656Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -2656,6 +3153,9 @@
     "local_thumb_path": "thumbnails/thumb_653.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.667Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "tirtharaj_more"
     ],
@@ -2672,6 +3172,9 @@
     "local_thumb_path": "thumbnails/thumb_654.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.660Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "group"
     ],
@@ -2688,6 +3191,9 @@
     "local_thumb_path": "thumbnails/thumb_655.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.669Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro",
       "noone"
@@ -2705,6 +3211,9 @@
     "local_thumb_path": "thumbnails/thumb_650.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.655Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -2727,6 +3236,9 @@
     "local_thumb_path": "thumbnails/thumb_651.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.653Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_kaka",
       "noone",
@@ -2750,6 +3262,9 @@
     "local_thumb_path": "thumbnails/thumb_649.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.654Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_kaka",
       "noone",
@@ -2773,6 +3288,9 @@
     "local_thumb_path": "thumbnails/thumb_648.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.647Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka"
     ],
@@ -2789,6 +3307,9 @@
     "local_thumb_path": "thumbnails/thumb_646.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.602Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "adityaraj_more"
     ],
@@ -2805,6 +3326,9 @@
     "local_thumb_path": "thumbnails/thumb_647.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.608Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "karan_satpute"
     ],
@@ -2821,6 +3345,9 @@
     "local_thumb_path": "thumbnails/thumb_644.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.609Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "karan_satpute"
     ],
@@ -2837,6 +3364,9 @@
     "local_thumb_path": "thumbnails/thumb_645.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.604Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "adityaraj_more"
     ],
@@ -2853,6 +3383,9 @@
     "local_thumb_path": "thumbnails/thumb_643.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.792Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Altar, Guillotine, Torch, Throne"
@@ -2867,6 +3400,9 @@
     "local_thumb_path": "thumbnails/thumb_642.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.780Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "smart_tai"
@@ -2884,6 +3420,9 @@
     "local_thumb_path": "thumbnails/thumb_641.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.777Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "gaurav_raut",
       "smart_bro"
@@ -2901,6 +3440,9 @@
     "local_thumb_path": "thumbnails/thumb_640.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.779Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu_tia",
       "smart_bro"
@@ -2918,6 +3460,9 @@
     "local_thumb_path": "thumbnails/thumb_639.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.775Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Nematode"
@@ -2932,6 +3477,9 @@
     "local_thumb_path": "thumbnails/thumb_638.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.775Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "gaurav_raut",
       "smart_bro"
@@ -2949,6 +3497,9 @@
     "local_thumb_path": "thumbnails/thumb_637.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.773Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Nematode"
@@ -2963,6 +3514,9 @@
     "local_thumb_path": "thumbnails/thumb_636.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.756Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai",
       "priya_kankhar",
@@ -2986,6 +3540,9 @@
     "local_thumb_path": "thumbnails/thumb_635.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.673Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -3002,6 +3559,9 @@
     "local_thumb_path": "thumbnails/thumb_634.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.673Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -3018,6 +3578,9 @@
     "local_thumb_path": "thumbnails/thumb_633.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.670Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro"
     ],
@@ -3034,6 +3597,9 @@
     "local_thumb_path": "thumbnails/thumb_632.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.753Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "uddhav_cheke",
       "baba"
@@ -3051,6 +3617,9 @@
     "local_thumb_path": "thumbnails/thumb_631.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.753Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "uddhav_cheke",
       "baba"
@@ -3068,6 +3637,9 @@
     "local_thumb_path": "thumbnails/thumb_630.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.753Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "baba"
     ],
@@ -3084,6 +3656,9 @@
     "local_thumb_path": "thumbnails/thumb_629.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.751Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "uddhav_cheke"
@@ -3101,6 +3676,9 @@
     "local_thumb_path": "thumbnails/thumb_628.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.751Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "uddhav_cheke"
@@ -3118,6 +3696,9 @@
     "local_thumb_path": "thumbnails/thumb_627.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.749Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "uddhav_cheke"
@@ -3135,6 +3716,9 @@
     "local_thumb_path": "thumbnails/thumb_626.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.747Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "dhananjay_raut"
@@ -3152,6 +3736,9 @@
     "local_thumb_path": "thumbnails/thumb_625.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.722Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "uddhav_cheke",
       "swati_cheke",
@@ -3170,6 +3757,9 @@
     "local_thumb_path": "thumbnails/thumb_624.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.691Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone",
@@ -3190,6 +3780,9 @@
     "local_thumb_path": "thumbnails/thumb_623.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.722Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "swati_cheke",
       "uddhav_cheke",
@@ -3208,6 +3801,9 @@
     "local_thumb_path": "thumbnails/thumb_622.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.714Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -3224,6 +3820,9 @@
     "local_thumb_path": "thumbnails/thumb_621.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.713Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "papa"
     ],
@@ -3240,6 +3839,9 @@
     "local_thumb_path": "thumbnails/thumb_620.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.708Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -3256,6 +3858,9 @@
     "local_thumb_path": "thumbnails/thumb_619.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.707Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "noone"
@@ -3273,6 +3878,9 @@
     "local_thumb_path": "thumbnails/thumb_618.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.707Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone"
     ],
@@ -3289,6 +3897,9 @@
     "local_thumb_path": "thumbnails/thumb_617.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.704Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Moving Van, Garbage Truck, Bicycle-Built-For-Two"
@@ -3303,6 +3914,9 @@
     "local_thumb_path": "thumbnails/thumb_616.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.694Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site, Menu"
@@ -3317,6 +3931,9 @@
     "local_thumb_path": "thumbnails/thumb_615.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.694Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site, Menu"
@@ -3331,6 +3948,9 @@
     "local_thumb_path": "thumbnails/thumb_614.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.693Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site"
@@ -3345,6 +3965,9 @@
     "local_thumb_path": "thumbnails/thumb_613.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.691Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Tray, Toilet Seat, Diaper"
@@ -3359,6 +3982,9 @@
     "local_thumb_path": "thumbnails/thumb_612.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.690Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Tray, Toilet Seat"
@@ -3373,6 +3999,9 @@
     "local_thumb_path": "thumbnails/thumb_611.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.687Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Greenhouse, Hamper"
@@ -3387,6 +4016,9 @@
     "local_thumb_path": "thumbnails/thumb_610.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.685Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Greenhouse"
@@ -3401,6 +4033,9 @@
     "local_thumb_path": "thumbnails/thumb_609.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.684Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site, Menu"
@@ -3415,6 +4050,9 @@
     "local_thumb_path": "thumbnails/thumb_608.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.684Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Book Jacket, Scoreboard"
@@ -3429,6 +4067,9 @@
     "local_thumb_path": "thumbnails/thumb_607.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.679Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Christmas Stocking, Sleeping Bag"
@@ -3443,6 +4084,9 @@
     "local_thumb_path": "thumbnails/thumb_606.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.600Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3459,6 +4103,9 @@
     "local_thumb_path": "thumbnails/thumb_605.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.987Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro"
     ],
@@ -3475,6 +4122,9 @@
     "local_thumb_path": "thumbnails/thumb_604.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.985Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro"
     ],
@@ -3491,6 +4141,9 @@
     "local_thumb_path": "thumbnails/thumb_603.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.955Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro"
     ],
@@ -3507,6 +4160,9 @@
     "local_thumb_path": "thumbnails/thumb_602.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.953Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_bro"
     ],
@@ -3523,6 +4179,9 @@
     "local_thumb_path": "thumbnails/thumb_601.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.793Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3539,6 +4198,9 @@
     "local_thumb_path": "thumbnails/thumb_600.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.792Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3555,6 +4217,9 @@
     "local_thumb_path": "thumbnails/thumb_599.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.788Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3571,6 +4236,9 @@
     "local_thumb_path": "thumbnails/thumb_598.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.743Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3587,6 +4255,9 @@
     "local_thumb_path": "thumbnails/thumb_597.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.787Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3603,6 +4274,9 @@
     "local_thumb_path": "thumbnails/thumb_596.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3619,6 +4293,9 @@
     "local_thumb_path": "thumbnails/thumb_595.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.717Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3635,6 +4312,9 @@
     "local_thumb_path": "thumbnails/thumb_594.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.685Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "smart_bro",
@@ -3653,6 +4333,9 @@
     "local_thumb_path": "thumbnails/thumb_593.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.683Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar",
@@ -3671,6 +4354,9 @@
     "local_thumb_path": "thumbnails/thumb_592.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.679Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -3688,6 +4374,9 @@
     "local_thumb_path": "thumbnails/thumb_591.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.677Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -3705,6 +4394,9 @@
     "local_thumb_path": "thumbnails/thumb_590.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.623Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Pole, Thresher, Planetarium, Mobile Home"
@@ -3719,6 +4411,9 @@
     "local_thumb_path": "thumbnails/thumb_589.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.621Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Pole, Oxcart, Mobile Home, Thresher, Yurt"
@@ -3733,6 +4428,9 @@
     "local_thumb_path": "thumbnails/thumb_588.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.563Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3749,6 +4447,9 @@
     "local_thumb_path": "thumbnails/thumb_587.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.562Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3765,6 +4466,9 @@
     "local_thumb_path": "thumbnails/thumb_586.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.533Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3781,6 +4485,9 @@
     "local_thumb_path": "thumbnails/thumb_585.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.505Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3797,6 +4504,9 @@
     "local_thumb_path": "thumbnails/thumb_584.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.460Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3813,6 +4523,9 @@
     "local_thumb_path": "thumbnails/thumb_583.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.436Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3829,6 +4542,9 @@
     "local_thumb_path": "thumbnails/thumb_582.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.382Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -3845,6 +4561,9 @@
     "local_thumb_path": "thumbnails/thumb_581.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.269Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Window Shade"
@@ -3859,6 +4578,9 @@
     "local_thumb_path": "thumbnails/thumb_580.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.267Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Window Shade, Binder, Book Jacket, Web Site"
@@ -3873,6 +4595,9 @@
     "local_thumb_path": "thumbnails/thumb_579.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.182Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Binder, Broom, Ski"
@@ -3887,6 +4612,9 @@
     "local_thumb_path": "thumbnails/thumb_578.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.179Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Broom, Binder, Swab"
@@ -3901,6 +4629,9 @@
     "local_thumb_path": "thumbnails/thumb_577.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.147Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Pill Bottle, Web Site, Packet, Band Aid"
@@ -3915,6 +4646,9 @@
     "local_thumb_path": "thumbnails/thumb_576.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.145Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Pill Bottle, Packet, Band Aid"
@@ -3929,6 +4663,9 @@
     "local_thumb_path": "thumbnails/thumb_575.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.119Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "dad"
@@ -3946,6 +4683,9 @@
     "local_thumb_path": "thumbnails/thumb_574.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.118Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "dad"
@@ -3963,6 +4703,9 @@
     "local_thumb_path": "thumbnails/thumb_573.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.054Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "dad"
@@ -3980,6 +4723,9 @@
     "local_thumb_path": "thumbnails/thumb_572.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.052Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "dad"
@@ -3997,6 +4743,9 @@
     "local_thumb_path": "thumbnails/thumb_571.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:47.003Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4013,6 +4762,9 @@
     "local_thumb_path": "thumbnails/thumb_570.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.974Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4029,6 +4781,9 @@
     "local_thumb_path": "thumbnails/thumb_569.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.937Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4045,6 +4800,9 @@
     "local_thumb_path": "thumbnails/thumb_568.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.853Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4061,6 +4819,9 @@
     "local_thumb_path": "thumbnails/thumb_567.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.849Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4077,6 +4838,9 @@
     "local_thumb_path": "thumbnails/thumb_566.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.814Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4093,6 +4857,9 @@
     "local_thumb_path": "thumbnails/thumb_565.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.813Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4109,6 +4876,9 @@
     "local_thumb_path": "thumbnails/thumb_564.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.713Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4125,6 +4895,9 @@
     "local_thumb_path": "thumbnails/thumb_563.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.767Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4141,6 +4914,9 @@
     "local_thumb_path": "thumbnails/thumb_562.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.712Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4157,6 +4933,9 @@
     "local_thumb_path": "thumbnails/thumb_561.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.631Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4173,6 +4952,9 @@
     "local_thumb_path": "thumbnails/thumb_560.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.630Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4189,6 +4971,9 @@
     "local_thumb_path": "thumbnails/thumb_559.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.484Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4205,6 +4990,9 @@
     "local_thumb_path": "thumbnails/thumb_558.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.480Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4221,6 +5009,9 @@
     "local_thumb_path": "thumbnails/thumb_557.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.448Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4237,6 +5028,9 @@
     "local_thumb_path": "thumbnails/thumb_556.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.447Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4253,6 +5047,9 @@
     "local_thumb_path": "thumbnails/thumb_555.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.368Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4269,6 +5066,9 @@
     "local_thumb_path": "thumbnails/thumb_554.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.337Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4285,6 +5085,9 @@
     "local_thumb_path": "thumbnails/thumb_553.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.367Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4301,6 +5104,9 @@
     "local_thumb_path": "thumbnails/thumb_552.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.337Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4317,6 +5123,9 @@
     "local_thumb_path": "thumbnails/thumb_551.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.295Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4333,6 +5142,9 @@
     "local_thumb_path": "thumbnails/thumb_550.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.252Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4349,6 +5161,9 @@
     "local_thumb_path": "thumbnails/thumb_549.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.289Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4365,6 +5180,9 @@
     "local_thumb_path": "thumbnails/thumb_548.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.249Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4381,6 +5199,9 @@
     "local_thumb_path": "thumbnails/thumb_547.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.225Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Hot Pot, Wok"
@@ -4395,6 +5216,9 @@
     "local_thumb_path": "thumbnails/thumb_546.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.223Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Wok, Hot Pot, Restaurant, Dining Table, Wooden Spoon"
@@ -4409,6 +5233,9 @@
     "local_thumb_path": "thumbnails/thumb_545.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.174Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4425,6 +5252,9 @@
     "local_thumb_path": "thumbnails/thumb_544.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.133Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4441,6 +5271,9 @@
     "local_thumb_path": "thumbnails/thumb_543.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.097Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4457,6 +5290,9 @@
     "local_thumb_path": "thumbnails/thumb_542.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:46.024Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4473,6 +5309,9 @@
     "local_thumb_path": "thumbnails/thumb_541.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.984Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Packet, Book Jacket, Menu"
@@ -4487,6 +5326,9 @@
     "local_thumb_path": "thumbnails/thumb_540.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.982Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Packet, Book Jacket"
@@ -4501,6 +5343,9 @@
     "local_thumb_path": "thumbnails/thumb_539.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.931Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Cassette, Packet, Oscilloscope, Hand-Held Computer, Menu"
@@ -4515,6 +5360,9 @@
     "local_thumb_path": "thumbnails/thumb_538.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.883Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Cassette, Packet, Hard Disc, Hand-Held Computer, Menu"
@@ -4529,6 +5377,9 @@
     "local_thumb_path": "thumbnails/thumb_537.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.927Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Cassette, Packet, Oscilloscope, Web Site"
@@ -4543,6 +5394,9 @@
     "local_thumb_path": "thumbnails/thumb_536.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.882Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Cassette, Menu, Packet, Hard Disc, Hand-Held Computer"
@@ -4557,6 +5411,9 @@
     "local_thumb_path": "thumbnails/thumb_535.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.823Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4573,6 +5430,9 @@
     "local_thumb_path": "thumbnails/thumb_534.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.754Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4589,6 +5449,9 @@
     "local_thumb_path": "thumbnails/thumb_533.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.720Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Toyshop, Confectionery"
@@ -4603,6 +5466,9 @@
     "local_thumb_path": "thumbnails/thumb_532.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.753Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4619,6 +5485,9 @@
     "local_thumb_path": "thumbnails/thumb_531.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.719Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Confectionery, Toyshop, Trifle, Restaurant"
@@ -4633,6 +5502,9 @@
     "local_thumb_path": "thumbnails/thumb_530.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.642Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Slide Rule, Rule"
@@ -4647,6 +5519,9 @@
     "local_thumb_path": "thumbnails/thumb_529.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.595Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Black Widow, Ipod, Bubble, Steel Drum"
@@ -4661,6 +5536,9 @@
     "local_thumb_path": "thumbnails/thumb_528.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.640Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Slide Rule, Rule"
@@ -4675,6 +5553,9 @@
     "local_thumb_path": "thumbnails/thumb_527.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.594Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Bubble, Black Widow, Ipod"
@@ -4689,6 +5570,9 @@
     "local_thumb_path": "thumbnails/thumb_526.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.569Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Slide Rule, Rule"
@@ -4703,6 +5587,9 @@
     "local_thumb_path": "thumbnails/thumb_525.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.567Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Rule, Menu"
@@ -4717,6 +5604,9 @@
     "local_thumb_path": "thumbnails/thumb_524.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.534Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Harvestman, Long-Horned Beetle, Whiptail, Ant"
@@ -4731,6 +5621,9 @@
     "local_thumb_path": "thumbnails/thumb_523.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.502Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -4747,6 +5640,9 @@
     "local_thumb_path": "thumbnails/thumb_522.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.533Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Harvestman, Ant, Long-Horned Beetle, Walking Stick"
@@ -4761,6 +5657,9 @@
     "local_thumb_path": "thumbnails/thumb_521.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.501Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -4777,6 +5676,9 @@
     "local_thumb_path": "thumbnails/thumb_520.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.451Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4793,6 +5695,9 @@
     "local_thumb_path": "thumbnails/thumb_519.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.403Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4809,6 +5714,9 @@
     "local_thumb_path": "thumbnails/thumb_518.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.449Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4825,6 +5733,9 @@
     "local_thumb_path": "thumbnails/thumb_517.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.401Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4841,6 +5752,9 @@
     "local_thumb_path": "thumbnails/thumb_516.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.307Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4857,6 +5771,9 @@
     "local_thumb_path": "thumbnails/thumb_515.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.195Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -4873,6 +5790,9 @@
     "local_thumb_path": "thumbnails/thumb_514.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.087Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Black-Footed Ferret, Polecat, Armadillo"
@@ -4887,6 +5807,9 @@
     "local_thumb_path": "thumbnails/thumb_513.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.083Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Black-Footed Ferret, Cougar, Angora, Polecat"
@@ -4901,6 +5824,9 @@
     "local_thumb_path": "thumbnails/thumb_512.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:45.044Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "priya_kankhar"
@@ -4918,6 +5844,9 @@
     "local_thumb_path": "thumbnails/thumb_511.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.879Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -4934,6 +5863,9 @@
     "local_thumb_path": "thumbnails/thumb_510.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.833Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -4950,6 +5882,9 @@
     "local_thumb_path": "thumbnails/thumb_509.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.831Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -4966,6 +5901,9 @@
     "local_thumb_path": "thumbnails/thumb_508.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.743Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "big_bro",
@@ -4984,6 +5922,9 @@
     "local_thumb_path": "thumbnails/thumb_507.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "priya_kankhar",
@@ -5002,6 +5943,9 @@
     "local_thumb_path": "thumbnails/thumb_506.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.627Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5018,6 +5962,9 @@
     "local_thumb_path": "thumbnails/thumb_505.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.579Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5034,6 +5981,9 @@
     "local_thumb_path": "thumbnails/thumb_504.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.625Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5050,6 +6000,9 @@
     "local_thumb_path": "thumbnails/thumb_503.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.550Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5066,6 +6019,9 @@
     "local_thumb_path": "thumbnails/thumb_502.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.578Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5082,6 +6038,9 @@
     "local_thumb_path": "thumbnails/thumb_501.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.549Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5098,6 +6057,9 @@
     "local_thumb_path": "thumbnails/thumb_500.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.505Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Window Shade, Shower Curtain, Syringe, Menu, Rule"
@@ -5112,6 +6074,9 @@
     "local_thumb_path": "thumbnails/thumb_499.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.502Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Window Shade, Shower Curtain, Oscilloscope, Binder"
@@ -5126,6 +6091,9 @@
     "local_thumb_path": "thumbnails/thumb_498.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.481Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5142,6 +6110,9 @@
     "local_thumb_path": "thumbnails/thumb_497.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.394Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5158,6 +6129,9 @@
     "local_thumb_path": "thumbnails/thumb_496.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.446Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5174,6 +6148,9 @@
     "local_thumb_path": "thumbnails/thumb_495.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.393Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5190,6 +6167,9 @@
     "local_thumb_path": "thumbnails/thumb_494.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.324Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Hard Disc, Band Aid, Pick, Packet, Crossword Puzzle"
@@ -5204,6 +6184,9 @@
     "local_thumb_path": "thumbnails/thumb_493.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.322Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Hard Disc"
@@ -5218,6 +6201,9 @@
     "local_thumb_path": "thumbnails/thumb_492.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.077Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5234,6 +6220,9 @@
     "local_thumb_path": "thumbnails/thumb_491.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:44.075Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5250,6 +6239,9 @@
     "local_thumb_path": "thumbnails/thumb_490.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.626Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5266,6 +6258,9 @@
     "local_thumb_path": "thumbnails/thumb_489.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.624Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5282,6 +6277,9 @@
     "local_thumb_path": "thumbnails/thumb_488.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.411Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dad"
     ],
@@ -5298,6 +6296,9 @@
     "local_thumb_path": "thumbnails/thumb_487.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.369Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dad"
     ],
@@ -5314,6 +6315,9 @@
     "local_thumb_path": "thumbnails/thumb_486.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.289Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "American Lobster, Plastic Bag, Stretcher"
@@ -5328,6 +6332,9 @@
     "local_thumb_path": "thumbnails/thumb_485.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.288Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "American Lobster, Crayfish, Stretcher"
@@ -5342,6 +6349,9 @@
     "local_thumb_path": "thumbnails/thumb_484.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.236Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Sarong, Breastplate, Vestment, Cuirass, Carousel"
@@ -5356,6 +6366,9 @@
     "local_thumb_path": "thumbnails/thumb_483.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.166Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5372,6 +6385,9 @@
     "local_thumb_path": "thumbnails/thumb_482.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.231Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Sarong"
@@ -5386,6 +6402,9 @@
     "local_thumb_path": "thumbnails/thumb_481.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.116Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_tie"
     ],
@@ -5402,6 +6421,9 @@
     "local_thumb_path": "thumbnails/thumb_480.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.165Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5418,6 +6440,9 @@
     "local_thumb_path": "thumbnails/thumb_479.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.115Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_tie"
     ],
@@ -5434,6 +6459,9 @@
     "local_thumb_path": "thumbnails/thumb_478.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.083Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5450,6 +6478,9 @@
     "local_thumb_path": "thumbnails/thumb_477.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.055Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5466,6 +6497,9 @@
     "local_thumb_path": "thumbnails/thumb_476.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.054Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5482,6 +6516,9 @@
     "local_thumb_path": "thumbnails/thumb_475.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.004Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -5498,6 +6535,9 @@
     "local_thumb_path": "thumbnails/thumb_474.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:43.004Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -5514,6 +6554,9 @@
     "local_thumb_path": "thumbnails/thumb_473.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.925Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5530,6 +6573,9 @@
     "local_thumb_path": "thumbnails/thumb_472.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.871Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5546,6 +6592,9 @@
     "local_thumb_path": "thumbnails/thumb_471.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.871Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5562,6 +6611,9 @@
     "local_thumb_path": "thumbnails/thumb_470.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.821Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5578,6 +6630,9 @@
     "local_thumb_path": "thumbnails/thumb_469.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.819Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5594,6 +6649,9 @@
     "local_thumb_path": "thumbnails/thumb_468.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.757Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5610,6 +6668,9 @@
     "local_thumb_path": "thumbnails/thumb_467.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.785Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5626,6 +6687,9 @@
     "local_thumb_path": "thumbnails/thumb_466.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.678Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Packet, Pill Bottle"
@@ -5640,6 +6704,9 @@
     "local_thumb_path": "thumbnails/thumb_465.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.755Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5656,6 +6723,9 @@
     "local_thumb_path": "thumbnails/thumb_464.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.677Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Packet, Menu, Envelope"
@@ -5670,6 +6740,9 @@
     "local_thumb_path": "thumbnails/thumb_463.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.625Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5686,6 +6759,9 @@
     "local_thumb_path": "thumbnails/thumb_462.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.490Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5702,6 +6778,9 @@
     "local_thumb_path": "thumbnails/thumb_461.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.436Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5718,6 +6797,9 @@
     "local_thumb_path": "thumbnails/thumb_460.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.426Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5734,6 +6816,9 @@
     "local_thumb_path": "thumbnails/thumb_459.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.425Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5750,6 +6835,9 @@
     "local_thumb_path": "thumbnails/thumb_458.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.411Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5766,6 +6854,9 @@
     "local_thumb_path": "thumbnails/thumb_457.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.394Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5782,6 +6873,9 @@
     "local_thumb_path": "thumbnails/thumb_456.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.408Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5798,6 +6892,9 @@
     "local_thumb_path": "thumbnails/thumb_455.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.394Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5814,6 +6911,9 @@
     "local_thumb_path": "thumbnails/thumb_454.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.390Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5830,6 +6930,9 @@
     "local_thumb_path": "thumbnails/thumb_453.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.386Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5846,6 +6949,9 @@
     "local_thumb_path": "thumbnails/thumb_452.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.383Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5862,6 +6968,9 @@
     "local_thumb_path": "thumbnails/thumb_451.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.381Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -5878,6 +6987,9 @@
     "local_thumb_path": "thumbnails/thumb_450.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.360Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -5894,6 +7006,9 @@
     "local_thumb_path": "thumbnails/thumb_449.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.240Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5910,6 +7025,9 @@
     "local_thumb_path": "thumbnails/thumb_448.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.239Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5926,6 +7044,9 @@
     "local_thumb_path": "thumbnails/thumb_447.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.226Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -5942,6 +7063,9 @@
     "local_thumb_path": "thumbnails/thumb_446.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.199Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Uncategorized Photo"
@@ -5956,6 +7080,9 @@
     "local_thumb_path": "thumbnails/thumb_445.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.208Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom"
@@ -5973,6 +7100,9 @@
     "local_thumb_path": "thumbnails/thumb_444.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.199Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Uncategorized Photo"
@@ -5987,6 +7117,9 @@
     "local_thumb_path": "thumbnails/thumb_443.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.985Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Steel Drum, Trifle, Spatula"
@@ -6001,6 +7134,9 @@
     "local_thumb_path": "thumbnails/thumb_442.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:42.017Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -6018,6 +7154,9 @@
     "local_thumb_path": "thumbnails/thumb_441.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.985Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Trifle, Candle, Spatula, Bucket, Steel Drum"
@@ -6032,6 +7171,9 @@
     "local_thumb_path": "thumbnails/thumb_440.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.943Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -6049,6 +7191,9 @@
     "local_thumb_path": "thumbnails/thumb_439.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.917Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar"
@@ -6066,6 +7211,9 @@
     "local_thumb_path": "thumbnails/thumb_438.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.837Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Confectionery, Jigsaw Puzzle, Bakery, Starfish, Coral Reef"
@@ -6080,6 +7228,9 @@
     "local_thumb_path": "thumbnails/thumb_437.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.836Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Bakery, Jigsaw Puzzle, Quilt, Confectionery, Anemone Fish"
@@ -6094,6 +7245,9 @@
     "local_thumb_path": "thumbnails/thumb_436.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.830Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -6110,6 +7264,9 @@
     "local_thumb_path": "thumbnails/thumb_435.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.793Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Altar, Guillotine"
@@ -6124,6 +7281,9 @@
     "local_thumb_path": "thumbnails/thumb_434.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.793Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -6140,6 +7300,9 @@
     "local_thumb_path": "thumbnails/thumb_433.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.830Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -6156,6 +7319,9 @@
     "local_thumb_path": "thumbnails/thumb_432.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.789Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -6172,6 +7338,9 @@
     "local_thumb_path": "thumbnails/thumb_431.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.788Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -6188,6 +7357,9 @@
     "local_thumb_path": "thumbnails/thumb_430.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.787Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -6204,6 +7376,9 @@
     "local_thumb_path": "thumbnails/thumb_429.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.783Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "smart_tai"
@@ -6221,6 +7396,9 @@
     "local_thumb_path": "thumbnails/thumb_428.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Hair Slide, Whistle, Gyromitra, Fig, Cleaver"
@@ -6235,6 +7413,9 @@
     "local_thumb_path": "thumbnails/thumb_427.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.743Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Slide Rule"
@@ -6249,6 +7430,9 @@
     "local_thumb_path": "thumbnails/thumb_426.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.742Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Whistle, Strawberry, Hair Slide, Maraca, Gyromitra"
@@ -6263,6 +7447,9 @@
     "local_thumb_path": "thumbnails/thumb_425.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.740Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Tray, Plate"
@@ -6277,6 +7464,9 @@
     "local_thumb_path": "thumbnails/thumb_424.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.720Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "devansh",
       "small_tei"
@@ -6294,6 +7484,9 @@
     "local_thumb_path": "thumbnails/thumb_423.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.718Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Crossword Puzzle, Packet"
@@ -6308,6 +7501,9 @@
     "local_thumb_path": "thumbnails/thumb_422.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.720Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "devansh",
       "small_tei"
@@ -6325,6 +7521,9 @@
     "local_thumb_path": "thumbnails/thumb_421.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.717Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Bathtub, Doormat, Tub"
@@ -6339,6 +7538,9 @@
     "local_thumb_path": "thumbnails/thumb_420.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.718Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Menu, Crossword Puzzle, Packet"
@@ -6353,6 +7555,9 @@
     "local_thumb_path": "thumbnails/thumb_419.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.715Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Doormat, Bathtub"
@@ -6367,6 +7572,9 @@
     "local_thumb_path": "thumbnails/thumb_418.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.715Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Comic Book, Web Site, Slot, Book Jacket"
@@ -6381,6 +7589,9 @@
     "local_thumb_path": "thumbnails/thumb_417.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.712Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Papillon, Bernese Mountain Dog, Web Site, Border Collie, Appenzeller"
@@ -6395,6 +7606,9 @@
     "local_thumb_path": "thumbnails/thumb_416.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.713Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Papillon, Web Site, Border Collie"
@@ -6409,6 +7623,9 @@
     "local_thumb_path": "thumbnails/thumb_415.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.709Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site"
@@ -6423,6 +7640,9 @@
     "local_thumb_path": "thumbnails/thumb_414.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.709Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site"
@@ -6437,6 +7657,9 @@
     "local_thumb_path": "thumbnails/thumb_413.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.708Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Lotion, Lipstick, Cleaver, Fig"
@@ -6451,6 +7674,9 @@
     "local_thumb_path": "thumbnails/thumb_412.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.708Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Hamper, Cleaver, Lotion, Lipstick"
@@ -6465,6 +7691,9 @@
     "local_thumb_path": "thumbnails/thumb_411.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.705Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site, Band Aid, Street Sign"
@@ -6479,6 +7708,9 @@
     "local_thumb_path": "thumbnails/thumb_410.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.704Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Prayer Rug, Hard Disc, Hand-Held Computer, Menu, Ipod"
@@ -6493,6 +7725,9 @@
     "local_thumb_path": "thumbnails/thumb_409.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.704Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Web Site"
@@ -6507,6 +7742,9 @@
     "local_thumb_path": "thumbnails/thumb_408.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.677Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Pillow, Christmas Stocking, Quilt, Apron, Sleeping Bag"
@@ -6521,6 +7759,9 @@
     "local_thumb_path": "thumbnails/thumb_407.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.673Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke"
     ],
@@ -6537,6 +7778,9 @@
     "local_thumb_path": "thumbnails/thumb_406.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.672Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -6553,6 +7797,9 @@
     "local_thumb_path": "thumbnails/thumb_405.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.667Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "tirtharaj_more"
     ],
@@ -6569,6 +7816,9 @@
     "local_thumb_path": "thumbnails/thumb_404.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.665Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -6585,6 +7835,9 @@
     "local_thumb_path": "thumbnails/thumb_403.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.665Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -6601,6 +7854,9 @@
     "local_thumb_path": "thumbnails/thumb_402.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.661Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Book Jacket, Volcano, Brass"
@@ -6615,6 +7871,9 @@
     "local_thumb_path": "thumbnails/thumb_401.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.661Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Volcano, Book Jacket, Brass, Menu, Web Site"
@@ -6629,6 +7888,9 @@
     "local_thumb_path": "thumbnails/thumb_400.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.658Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Book Jacket, Lakeside, Barn"
@@ -6643,6 +7905,9 @@
     "local_thumb_path": "thumbnails/thumb_399.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.658Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Barn, Book Jacket, Worm Fence, Viaduct, Lakeside"
@@ -6657,6 +7922,9 @@
     "local_thumb_path": "thumbnails/thumb_398.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.648Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Butcher Shop, Potter'S Wheel, French Loaf"
@@ -6671,6 +7939,9 @@
     "local_thumb_path": "thumbnails/thumb_397.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.648Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Butcher Shop"
@@ -6685,6 +7956,9 @@
     "local_thumb_path": "thumbnails/thumb_396.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.647Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka"
     ],
@@ -6701,6 +7975,9 @@
     "local_thumb_path": "thumbnails/thumb_395.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.644Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Eggnog, Potter'S Wheel, Espresso, Mortar, Beaker"
@@ -6715,6 +7992,9 @@
     "local_thumb_path": "thumbnails/thumb_394.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.644Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Eggnog, Potter'S Wheel, Espresso"
@@ -6729,6 +8009,9 @@
     "local_thumb_path": "thumbnails/thumb_393.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.644Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Shower Curtain, Window Shade, Radiator"
@@ -6743,6 +8026,9 @@
     "local_thumb_path": "thumbnails/thumb_392.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.641Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Shower Curtain, Window Shade, Solar Dish, Binder"
@@ -6757,6 +8043,9 @@
     "local_thumb_path": "thumbnails/thumb_391.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.533Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -6774,6 +8063,9 @@
     "local_thumb_path": "thumbnails/thumb_390.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.598Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -6790,6 +8082,9 @@
     "local_thumb_path": "thumbnails/thumb_389.webp",
     "media_type": "photo",
     "captured_at": "2026-04-21T14:12:41.531Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -6807,6 +8102,9 @@
     "local_thumb_path": "thumbnails/thumb_388.webp",
     "media_type": "photo",
     "captured_at": "2026-04-20T14:12:55.173Z",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -6823,6 +8121,9 @@
     "local_thumb_path": "thumbnails/thumb_387.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:35:11",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale",
       "rajeshwar_jirewar",
@@ -6843,6 +8144,9 @@
     "local_thumb_path": "thumbnails/thumb_386.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:51",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale",
       "rajeshwar_jirewar",
@@ -6863,6 +8167,9 @@
     "local_thumb_path": "thumbnails/thumb_385.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:28",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "shyam_kathar",
       "aditya_kavde",
@@ -6882,6 +8189,9 @@
     "local_thumb_path": "thumbnails/thumb_384.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "shyam_kathar",
       "aditya_kavde",
@@ -6901,6 +8211,9 @@
     "local_thumb_path": "thumbnails/thumb_383.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:22",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -6917,6 +8230,9 @@
     "local_thumb_path": "thumbnails/thumb_381.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "nikita_ghule",
       "prasad_kankhar",
@@ -6935,6 +8251,9 @@
     "local_thumb_path": "thumbnails/thumb_382.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "no_one",
       "no_one"
@@ -6952,6 +8271,9 @@
     "local_thumb_path": "thumbnails/thumb_380.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:20",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "saad_thara",
       "prashat_gande",
@@ -6971,6 +8293,9 @@
     "local_thumb_path": "thumbnails/thumb_379.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale",
       "pratik_kamble",
@@ -6993,6 +8318,9 @@
     "local_thumb_path": "thumbnails/thumb_378.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:18",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aniruddha_khadgaonkar",
       "pratik_kamble",
@@ -7014,6 +8342,9 @@
     "local_thumb_path": "thumbnails/thumb_376.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:17",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "pratik_kamble",
       "shyam_kathar",
@@ -7032,6 +8363,9 @@
     "local_thumb_path": "thumbnails/thumb_377.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:17",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "shyam_kathar"
@@ -7049,6 +8383,9 @@
     "local_thumb_path": "thumbnails/thumb_375.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "smitaa_kasar"
@@ -7066,6 +8403,9 @@
     "local_thumb_path": "thumbnails/thumb_374.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "prashat_gande"
@@ -7083,6 +8423,9 @@
     "local_thumb_path": "thumbnails/thumb_373.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:34:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde",
       "prasad_kankhar",
@@ -7101,6 +8444,9 @@
     "local_thumb_path": "thumbnails/thumb_372.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:53",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "arpita_kalyankar",
       "prasad_kankhar"
@@ -7118,6 +8464,9 @@
     "local_thumb_path": "thumbnails/thumb_371.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:34",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale"
     ],
@@ -7134,6 +8483,9 @@
     "local_thumb_path": "thumbnails/thumb_370.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7150,6 +8502,9 @@
     "local_thumb_path": "thumbnails/thumb_369.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:29",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "jay_kanse"
     ],
@@ -7166,6 +8521,9 @@
     "local_thumb_path": "thumbnails/thumb_368.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7182,6 +8540,9 @@
     "local_thumb_path": "thumbnails/thumb_367.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:26",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aniruddha_khadgaonkar",
       "no_one"
@@ -7199,6 +8560,9 @@
     "local_thumb_path": "thumbnails/thumb_366.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:22",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdambe",
       "omkar_kale"
@@ -7216,6 +8580,9 @@
     "local_thumb_path": "thumbnails/thumb_365.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:32:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdambe",
       "omkar_kale"
@@ -7233,6 +8600,9 @@
     "local_thumb_path": "thumbnails/thumb_364.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:31:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde"
     ],
@@ -7249,6 +8619,9 @@
     "local_thumb_path": "thumbnails/thumb_363.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:31:58",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "kartik_sable",
       "prasad_kankhar"
@@ -7266,6 +8639,9 @@
     "local_thumb_path": "thumbnails/thumb_362.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:31:52",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "bhairu_salunke",
       "prasad_kankhar"
@@ -7283,6 +8659,9 @@
     "local_thumb_path": "thumbnails/thumb_361.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:31:09",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "bhairu_salunke"
     ],
@@ -7299,6 +8678,9 @@
     "local_thumb_path": "thumbnails/thumb_360.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:31:08",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali"
     ],
@@ -7315,6 +8697,9 @@
     "local_thumb_path": "thumbnails/thumb_359.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:55",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "jay_kanse"
@@ -7332,6 +8717,9 @@
     "local_thumb_path": "thumbnails/thumb_358.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande"
     ],
@@ -7348,6 +8736,9 @@
     "local_thumb_path": "thumbnails/thumb_356.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde",
       "prasad_kankhar"
@@ -7365,6 +8756,9 @@
     "local_thumb_path": "thumbnails/thumb_357.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7381,6 +8775,9 @@
     "local_thumb_path": "thumbnails/thumb_355.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:14",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "omkar_kale",
@@ -7399,6 +8796,9 @@
     "local_thumb_path": "thumbnails/thumb_354.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:08",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "pratik_kamble"
     ],
@@ -7415,6 +8815,9 @@
     "local_thumb_path": "thumbnails/thumb_353.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:30:04",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "jay_kanse",
       "no_one"
@@ -7432,6 +8835,9 @@
     "local_thumb_path": "thumbnails/thumb_350.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:24",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "jay_kanse"
     ],
@@ -7448,6 +8854,9 @@
     "local_thumb_path": "thumbnails/thumb_351.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:24",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande",
       "prasad_kankhar"
@@ -7465,6 +8874,9 @@
     "local_thumb_path": "thumbnails/thumb_352.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:24",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aniruddha_khadgaonkar",
       "prasad_kankhar"
@@ -7482,6 +8894,9 @@
     "local_thumb_path": "thumbnails/thumb_349.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde"
     ],
@@ -7498,6 +8913,9 @@
     "local_thumb_path": "thumbnails/thumb_345.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande"
     ],
@@ -7514,6 +8932,9 @@
     "local_thumb_path": "thumbnails/thumb_346.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7530,6 +8951,9 @@
     "local_thumb_path": "thumbnails/thumb_347.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "vikas_gavali",
@@ -7548,6 +8972,9 @@
     "local_thumb_path": "thumbnails/thumb_348.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande",
       "aditya_kavde",
@@ -7568,6 +8995,9 @@
     "local_thumb_path": "thumbnails/thumb_343.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "abhishek_shinde",
       "ritesh_koli"
@@ -7585,6 +9015,9 @@
     "local_thumb_path": "thumbnails/thumb_344.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7601,6 +9034,9 @@
     "local_thumb_path": "thumbnails/thumb_342.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "umesh_ambhore",
       "ritesh_koli"
@@ -7618,6 +9054,9 @@
     "local_thumb_path": "thumbnails/thumb_341.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:12",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali",
       "prasad_kankhar",
@@ -7636,6 +9075,9 @@
     "local_thumb_path": "thumbnails/thumb_340.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:09",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "ritesh_koli",
       "prasad_kankhar"
@@ -7653,6 +9095,9 @@
     "local_thumb_path": "thumbnails/thumb_338.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali",
       "vikas_gavali",
@@ -7671,6 +9116,9 @@
     "local_thumb_path": "thumbnails/thumb_339.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde"
     ],
@@ -7687,6 +9135,9 @@
     "local_thumb_path": "thumbnails/thumb_337.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:02",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aditya_kavde"
     ],
@@ -7703,6 +9154,9 @@
     "local_thumb_path": "thumbnails/thumb_335.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:01",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali"
     ],
@@ -7719,6 +9173,9 @@
     "local_thumb_path": "thumbnails/thumb_336.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:01",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali"
     ],
@@ -7735,6 +9192,9 @@
     "local_thumb_path": "thumbnails/thumb_333.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "vikas_gavali"
     ],
@@ -7751,6 +9211,9 @@
     "local_thumb_path": "thumbnails/thumb_334.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:29:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7767,6 +9230,9 @@
     "local_thumb_path": "thumbnails/thumb_332.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:13:18",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande"
     ],
@@ -7783,6 +9249,9 @@
     "local_thumb_path": "thumbnails/thumb_331.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:12:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Liner, Television"
@@ -7797,6 +9266,9 @@
     "local_thumb_path": "thumbnails/thumb_330.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:12:18",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Tub, Projector"
@@ -7811,6 +9283,9 @@
     "local_thumb_path": "thumbnails/thumb_329.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:12:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale",
       "aishwarya_jagdambe",
@@ -7832,6 +9307,9 @@
     "local_thumb_path": "thumbnails/thumb_328.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:11:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7848,6 +9326,9 @@
     "local_thumb_path": "thumbnails/thumb_327.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:11:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Packet, Menu"
@@ -7862,6 +9343,9 @@
     "local_thumb_path": "thumbnails/thumb_326.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:11:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Diaper"
@@ -7876,6 +9360,9 @@
     "local_thumb_path": "thumbnails/thumb_325.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:11:11",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdambe",
       "omkar_kale",
@@ -7895,6 +9382,9 @@
     "local_thumb_path": "thumbnails/thumb_324.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:11:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdambe",
       "omkar_kale",
@@ -7913,6 +9403,9 @@
     "local_thumb_path": "thumbnails/thumb_323.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7929,6 +9422,9 @@
     "local_thumb_path": "thumbnails/thumb_322.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:36",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Banjo, Flute, Stretcher"
@@ -7943,6 +9439,9 @@
     "local_thumb_path": "thumbnails/thumb_321.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:16",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7959,6 +9458,9 @@
     "local_thumb_path": "thumbnails/thumb_320.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7975,6 +9477,9 @@
     "local_thumb_path": "thumbnails/thumb_319.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:09",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -7991,6 +9496,9 @@
     "local_thumb_path": "thumbnails/thumb_318.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8007,6 +9515,9 @@
     "local_thumb_path": "thumbnails/thumb_317.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:10:02",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8023,6 +9534,9 @@
     "local_thumb_path": "thumbnails/thumb_316.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:58",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Breakwater, Fireboat, Dock, Liner"
@@ -8037,6 +9551,9 @@
     "local_thumb_path": "thumbnails/thumb_315.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande"
     ],
@@ -8053,6 +9570,9 @@
     "local_thumb_path": "thumbnails/thumb_314.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Stethoscope, Knee Pad"
@@ -8067,6 +9587,9 @@
     "local_thumb_path": "thumbnails/thumb_313.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:20",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Neck Brace, Barbershop, Sweatshirt"
@@ -8081,6 +9604,9 @@
     "local_thumb_path": "thumbnails/thumb_312.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8097,6 +9623,9 @@
     "local_thumb_path": "thumbnails/thumb_311.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:09:03",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8113,6 +9642,9 @@
     "local_thumb_path": "thumbnails/thumb_310.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:58",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8129,6 +9661,9 @@
     "local_thumb_path": "thumbnails/thumb_309.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:53",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Backpack, Vacuum, Sweatshirt"
@@ -8143,6 +9678,9 @@
     "local_thumb_path": "thumbnails/thumb_308.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:50",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8159,6 +9697,9 @@
     "local_thumb_path": "thumbnails/thumb_307.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8175,6 +9716,9 @@
     "local_thumb_path": "thumbnails/thumb_306.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:45",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "omkar_kale"
     ],
@@ -8191,6 +9735,9 @@
     "local_thumb_path": "thumbnails/thumb_305.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:38",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "omkar_kale"
@@ -8208,6 +9755,9 @@
     "local_thumb_path": "thumbnails/thumb_304.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:34",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande",
       "prasad_kankhar"
@@ -8225,6 +9775,9 @@
     "local_thumb_path": "thumbnails/thumb_303.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:32",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8241,6 +9794,9 @@
     "local_thumb_path": "thumbnails/thumb_302.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8257,6 +9813,9 @@
     "local_thumb_path": "thumbnails/thumb_301.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8273,6 +9832,9 @@
     "local_thumb_path": "thumbnails/thumb_300.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8289,6 +9851,9 @@
     "local_thumb_path": "thumbnails/thumb_299.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:16",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8305,6 +9870,9 @@
     "local_thumb_path": "thumbnails/thumb_298.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:14",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Comic Book, Crib, Quilt, Toyshop"
@@ -8319,6 +9887,9 @@
     "local_thumb_path": "thumbnails/thumb_297.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Grocery Store, Shoe Shop, Shopping Basket"
@@ -8333,6 +9904,9 @@
     "local_thumb_path": "thumbnails/thumb_296.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:11",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "no_one",
       "prasad_kankhar"
@@ -8350,6 +9924,9 @@
     "local_thumb_path": "thumbnails/thumb_295.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:08:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Shopping Cart, Street Sign, Beacon"
@@ -8364,6 +9941,9 @@
     "local_thumb_path": "thumbnails/thumb_294.webp",
     "media_type": "photo",
     "captured_at": "2026-03-27 18:07:55",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8380,6 +9960,9 @@
     "local_thumb_path": "thumbnails/thumb_293.webp",
     "media_type": "photo",
     "captured_at": "2026-03-12 14:57:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "sandeep_pankade",
@@ -8398,6 +9981,9 @@
     "local_thumb_path": "thumbnails/thumb_292.webp",
     "media_type": "photo",
     "captured_at": "2026-03-12 14:57:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "sandeep_pankade",
       "prasad_kankhar"
@@ -8415,6 +10001,9 @@
     "local_thumb_path": "thumbnails/thumb_291.webp",
     "media_type": "photo",
     "captured_at": "2026-03-12 14:52:37",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8431,6 +10020,9 @@
     "local_thumb_path": "thumbnails/thumb_290.webp",
     "media_type": "photo",
     "captured_at": "2026-03-12 14:52:29",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -8447,6 +10039,9 @@
     "local_thumb_path": "thumbnails/thumb_289.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -8464,6 +10059,9 @@
     "local_thumb_path": "thumbnails/thumb_288.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:25",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -8481,6 +10079,9 @@
     "local_thumb_path": "thumbnails/thumb_287.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:24",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -8498,6 +10099,9 @@
     "local_thumb_path": "thumbnails/thumb_286.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:23",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -8515,6 +10119,9 @@
     "local_thumb_path": "thumbnails/thumb_285.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8531,6 +10138,9 @@
     "local_thumb_path": "thumbnails/thumb_284.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -8548,6 +10158,9 @@
     "local_thumb_path": "thumbnails/thumb_283.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:17",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8564,6 +10177,9 @@
     "local_thumb_path": "thumbnails/thumb_282.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:11",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8580,6 +10196,9 @@
     "local_thumb_path": "thumbnails/thumb_281.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:05",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "prasad_kankhar",
@@ -8600,6 +10219,9 @@
     "local_thumb_path": "thumbnails/thumb_280.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:02",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "priya_kankhar",
@@ -8620,6 +10242,9 @@
     "local_thumb_path": "thumbnails/thumb_279.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:31:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "adhiraj_kankhar",
@@ -8638,6 +10263,9 @@
     "local_thumb_path": "thumbnails/thumb_278.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:56",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar",
@@ -8656,6 +10284,9 @@
     "local_thumb_path": "thumbnails/thumb_277.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:50",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -8673,6 +10304,9 @@
     "local_thumb_path": "thumbnails/thumb_276.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "adhiraj"
@@ -8690,6 +10324,9 @@
     "local_thumb_path": "thumbnails/thumb_275.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:38",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8706,6 +10343,9 @@
     "local_thumb_path": "thumbnails/thumb_274.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:30",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8722,6 +10362,9 @@
     "local_thumb_path": "thumbnails/thumb_273.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8738,6 +10381,9 @@
     "local_thumb_path": "thumbnails/thumb_272.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8754,6 +10400,9 @@
     "local_thumb_path": "thumbnails/thumb_271.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8770,6 +10419,9 @@
     "local_thumb_path": "thumbnails/thumb_270.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:30:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8786,6 +10438,9 @@
     "local_thumb_path": "thumbnails/thumb_269.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:29:54",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8802,6 +10457,9 @@
     "local_thumb_path": "thumbnails/thumb_268.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:29:41",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8818,6 +10476,9 @@
     "local_thumb_path": "thumbnails/thumb_267.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:29:28",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "dhananjay_raut"
@@ -8835,6 +10496,9 @@
     "local_thumb_path": "thumbnails/thumb_266.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:29:20",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "prasad_kankhar",
@@ -8854,6 +10518,9 @@
     "local_thumb_path": "thumbnails/thumb_265.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:29:04",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8870,6 +10537,9 @@
     "local_thumb_path": "thumbnails/thumb_264.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:28:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8886,6 +10556,9 @@
     "local_thumb_path": "thumbnails/thumb_263.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:28:34",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8902,6 +10575,9 @@
     "local_thumb_path": "thumbnails/thumb_262.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:28:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar",
@@ -8921,6 +10597,9 @@
     "local_thumb_path": "thumbnails/thumb_261.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:28:08",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8937,6 +10616,9 @@
     "local_thumb_path": "thumbnails/thumb_260.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:27:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -8953,6 +10635,9 @@
     "local_thumb_path": "thumbnails/thumb_259.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:27:16",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "big_wahini",
@@ -8972,6 +10657,9 @@
     "local_thumb_path": "thumbnails/thumb_258.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:27:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_wahini",
       "priya_kankhar",
@@ -8991,6 +10679,9 @@
     "local_thumb_path": "thumbnails/thumb_257.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:26:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9007,6 +10698,9 @@
     "local_thumb_path": "thumbnails/thumb_256.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:26:38",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9023,6 +10717,9 @@
     "local_thumb_path": "thumbnails/thumb_255.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:26:23",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9039,6 +10736,9 @@
     "local_thumb_path": "thumbnails/thumb_254.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:26:08",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom"
@@ -9056,6 +10756,9 @@
     "local_thumb_path": "thumbnails/thumb_253.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:25:54",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "dad"
@@ -9073,6 +10776,9 @@
     "local_thumb_path": "thumbnails/thumb_252.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:25:41",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9089,6 +10795,9 @@
     "local_thumb_path": "thumbnails/thumb_251.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:25:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9105,6 +10814,9 @@
     "local_thumb_path": "thumbnails/thumb_250.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:25:20",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9121,6 +10833,9 @@
     "local_thumb_path": "thumbnails/thumb_249.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:25:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9137,6 +10852,9 @@
     "local_thumb_path": "thumbnails/thumb_248.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:24:37",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar",
@@ -9155,6 +10873,9 @@
     "local_thumb_path": "thumbnails/thumb_247.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:24:22",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "prasad_kankhar",
@@ -9173,6 +10894,9 @@
     "local_thumb_path": "thumbnails/thumb_246.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:24:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -9192,6 +10916,9 @@
     "local_thumb_path": "thumbnails/thumb_245.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:23:54",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -9209,6 +10936,9 @@
     "local_thumb_path": "thumbnails/thumb_244.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:23:37",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9226,6 +10956,9 @@
     "local_thumb_path": "thumbnails/thumb_243.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:23:20",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9242,6 +10975,9 @@
     "local_thumb_path": "thumbnails/thumb_242.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:22:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9258,6 +10994,9 @@
     "local_thumb_path": "thumbnails/thumb_241.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:22:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9274,6 +11013,9 @@
     "local_thumb_path": "thumbnails/thumb_240.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:21:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9290,6 +11032,9 @@
     "local_thumb_path": "thumbnails/thumb_239.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:20:46",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9306,6 +11051,9 @@
     "local_thumb_path": "thumbnails/thumb_238.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:20:01",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9322,6 +11070,9 @@
     "local_thumb_path": "thumbnails/thumb_237.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:19:30",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9338,6 +11089,9 @@
     "local_thumb_path": "thumbnails/thumb_236.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:18:07",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9354,6 +11108,9 @@
     "local_thumb_path": "thumbnails/thumb_235.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:17:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "no_one",
       "prasad_kankhar",
@@ -9373,6 +11130,9 @@
     "local_thumb_path": "thumbnails/thumb_234.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:16:25",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "mom",
@@ -9391,6 +11151,9 @@
     "local_thumb_path": "thumbnails/thumb_233.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:15:55",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "ru_chi_mom",
       "priya_kankhar",
@@ -9409,6 +11172,9 @@
     "local_thumb_path": "thumbnails/thumb_232.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:15:37",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -9426,6 +11192,9 @@
     "local_thumb_path": "thumbnails/thumb_231.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:15:19",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9442,6 +11211,9 @@
     "local_thumb_path": "thumbnails/thumb_230.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:14:26",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_bro",
       "priya_kankhar"
@@ -9459,6 +11231,9 @@
     "local_thumb_path": "thumbnails/thumb_229.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:14:23",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9475,6 +11250,9 @@
     "local_thumb_path": "thumbnails/thumb_228.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:00:58",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom"
@@ -9492,6 +11270,9 @@
     "local_thumb_path": "thumbnails/thumb_227.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:00:52",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -9509,6 +11290,9 @@
     "local_thumb_path": "thumbnails/thumb_226.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:00:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9526,6 +11310,9 @@
     "local_thumb_path": "thumbnails/thumb_225.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:00:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9542,6 +11329,9 @@
     "local_thumb_path": "thumbnails/thumb_224.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 19:00:14",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9558,6 +11348,9 @@
     "local_thumb_path": "thumbnails/thumb_223.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:59:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9574,6 +11367,9 @@
     "local_thumb_path": "thumbnails/thumb_222.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:59:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9591,6 +11387,9 @@
     "local_thumb_path": "thumbnails/thumb_221.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:59:38",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9607,6 +11406,9 @@
     "local_thumb_path": "thumbnails/thumb_220.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:59:24",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9624,6 +11426,9 @@
     "local_thumb_path": "thumbnails/thumb_219.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:59:13",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9641,6 +11446,9 @@
     "local_thumb_path": "thumbnails/thumb_218.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:58:54",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "tirtharaj_more",
       "priya_kankhar",
@@ -9659,6 +11467,9 @@
     "local_thumb_path": "thumbnails/thumb_217.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:58:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dad",
       "priya_kankhar"
@@ -9676,6 +11487,9 @@
     "local_thumb_path": "thumbnails/thumb_216.webp",
     "media_type": "photo",
     "captured_at": "2026-03-11 18:58:36",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -9692,6 +11506,9 @@
     "local_thumb_path": "thumbnails/thumb_215.webp",
     "media_type": "photo",
     "captured_at": "2026-03-10 19:36:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "no_one",
       "prasad_kankhar"
@@ -9709,6 +11526,9 @@
     "local_thumb_path": "thumbnails/thumb_214.webp",
     "media_type": "photo",
     "captured_at": "2026-03-10 19:36:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "omkar_kale"
@@ -9726,6 +11546,9 @@
     "local_thumb_path": "thumbnails/thumb_213.webp",
     "media_type": "photo",
     "captured_at": "2026-03-10 19:36:15",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -9742,6 +11565,9 @@
     "local_thumb_path": "thumbnails/thumb_212.webp",
     "media_type": "photo",
     "captured_at": "2026-03-10 19:35:57",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -9758,6 +11584,9 @@
     "local_thumb_path": "thumbnails/thumb_207.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:11:03",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -9774,6 +11603,9 @@
     "local_thumb_path": "thumbnails/thumb_205.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:10:32",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -9790,6 +11622,9 @@
     "local_thumb_path": "thumbnails/thumb_199.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:08:41",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "prasad_kankhar"
@@ -9807,6 +11642,9 @@
     "local_thumb_path": "thumbnails/thumb_193.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:07:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -9824,6 +11662,9 @@
     "local_thumb_path": "thumbnails/thumb_192.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:07:56",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "gaurav_raut"
@@ -9841,6 +11682,9 @@
     "local_thumb_path": "thumbnails/thumb_191.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:07:36",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "gaurav_raut",
@@ -9861,6 +11705,9 @@
     "local_thumb_path": "thumbnails/thumb_188.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:07:28",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "priya_kankhar"
@@ -9878,6 +11725,9 @@
     "local_thumb_path": "thumbnails/thumb_186.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:07:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -9894,6 +11744,9 @@
     "local_thumb_path": "thumbnails/thumb_179.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:06:10",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -9910,6 +11763,9 @@
     "local_thumb_path": "thumbnails/thumb_178.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:06:03",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom",
       "priya_kankhar",
@@ -9928,6 +11784,9 @@
     "local_thumb_path": "thumbnails/thumb_177.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:06:00",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "adityaraj_more",
       "prasad_kankhar",
@@ -9948,6 +11807,9 @@
     "local_thumb_path": "thumbnails/thumb_176.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:57",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "prasad_kankhar",
@@ -9968,6 +11830,9 @@
     "local_thumb_path": "thumbnails/thumb_175.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:53",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "smart_tai"
     ],
@@ -9984,6 +11849,9 @@
     "local_thumb_path": "thumbnails/thumb_174.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:51",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "big_tie",
       "samruddhi_cheke"
@@ -10001,6 +11869,9 @@
     "local_thumb_path": "thumbnails/thumb_173.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke",
       "small_tei"
@@ -10018,6 +11889,9 @@
     "local_thumb_path": "thumbnails/thumb_172.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:42",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka",
       "samruddhi_cheke"
@@ -10035,6 +11909,9 @@
     "local_thumb_path": "thumbnails/thumb_171.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:05:35",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "gaurav_raut",
@@ -10053,6 +11930,9 @@
     "local_thumb_path": "thumbnails/thumb_168.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:03:33",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "mom"
     ],
@@ -10069,6 +11949,9 @@
     "local_thumb_path": "thumbnails/thumb_167.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:01:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -10087,6 +11970,9 @@
     "local_thumb_path": "thumbnails/thumb_166.webp",
     "media_type": "photo",
     "captured_at": "2026-03-09 18:00:51",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "samruddhi_cheke"
@@ -10104,6 +11990,9 @@
     "local_thumb_path": "thumbnails/thumb_165.webp",
     "media_type": "photo",
     "captured_at": "2026-03-07 18:36:36",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "samruddhi_cheke"
     ],
@@ -10120,6 +12009,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 18:19:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -10138,6 +12030,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 18:19:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "mom",
@@ -10156,6 +12051,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 18:17:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar",
@@ -10175,6 +12073,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 18:06:57",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "gaurav_raut",
       "dhananjay_raut",
@@ -10195,6 +12096,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 18:06:47",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka",
       "samruddhi_cheke",
@@ -10213,6 +12117,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar",
       "tirtharaj_more"
@@ -10230,6 +12137,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:29",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "dhananjay_raut",
       "gaurav_raut"
@@ -10247,6 +12157,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:27",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "balu-tie",
       "samruddhi_cheke"
@@ -10264,6 +12177,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:25",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka",
       "gaurav_raut"
@@ -10281,6 +12197,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:23",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka"
     ],
@@ -10297,6 +12216,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10313,6 +12235,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-07 14:20:18",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "raut_kaka",
       "dhananjay_raut"
@@ -10330,6 +12255,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:26:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -10347,6 +12275,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:26:56",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "priya_kankhar"
@@ -10364,6 +12295,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:26:54",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -10380,6 +12314,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:26:10",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -10396,6 +12333,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:24:22",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -10412,6 +12352,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:23:31",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -10428,6 +12371,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 18:23:29",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "priya_kankhar"
     ],
@@ -10444,6 +12390,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 14:59:52",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "arpita_kalyankar",
       "prasad_kankhar"
@@ -10461,6 +12410,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 14:59:49",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "jay_kanse"
@@ -10478,6 +12430,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:32:52",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10494,6 +12449,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:32:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Packet, Menu"
@@ -10508,6 +12466,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:32:14",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10524,6 +12485,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:32:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10540,6 +12504,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:31:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10556,6 +12523,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:31:48",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10572,6 +12542,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:31:33",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Breakwater, Fireboat, Dock, Liner"
@@ -10586,6 +12559,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:31:06",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prashat_gande"
     ],
@@ -10602,6 +12578,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:30:41",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Stethoscope, Knee Pad"
@@ -10616,6 +12595,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:30:29",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [],
     "tags": [
       "Neck Brace, Barbershop, Sweatshirt"
@@ -10630,6 +12612,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:30:16",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10646,6 +12631,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-05 09:29:52",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10662,6 +12650,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-04 19:17:21",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "umesh_ambhore",
       "ritesh_koli"
@@ -10679,6 +12670,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-04 19:12:36",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10695,6 +12689,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-04 18:52:45",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
@@ -10711,6 +12708,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 12:23:44",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "viksa_gavali",
@@ -10729,6 +12729,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 12:23:10",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "omkar_kale"
@@ -10746,6 +12749,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 11:08:16",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "noone",
       "prasad_kankhar"
@@ -10763,6 +12769,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 10:53:53",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdamba",
       "omkar_kale",
@@ -10781,6 +12790,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 10:53:28",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "aishwarya_jagdamba",
       "omkar_kale",
@@ -10800,6 +12812,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-03 08:28:59",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar",
       "smita_kasar"
@@ -10817,6 +12832,9 @@
     "local_thumb_path": null,
     "media_type": "photo",
     "captured_at": "2026-03-02 19:27:01",
+    "gps_lat": null,
+    "gps_lng": null,
+    "location_name": null,
     "people": [
       "prasad_kankhar"
     ],
